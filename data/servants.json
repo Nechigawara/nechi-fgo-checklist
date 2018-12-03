@@ -1,0 +1,22 @@
+{
+	"ssr": [
+		{
+			"key": "5-0",
+			"Name": "Artoria Pendragon"
+		},
+		{
+			"key": "5-1",
+			"Name": "Altera of Earth"
+		}
+	],
+	"sr": [
+		{
+			"key": "4-0",
+			"Name": "Artoria Pendragon Alter"
+		},
+		{
+			"key": "4-1",
+			"Name": "Artoria Pendragon Lily"
+		}
+	]
+}
