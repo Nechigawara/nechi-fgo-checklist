@@ -8,13 +8,13 @@
 			{
 				"id": "5-0",
 				"name": "Artoria Pendragon",
-				"img": true,
+				"img": false,
 				"imgpath": null
 			},
 			{
 				"id": "5-1",
 				"name": "Altera of Earth",
-				"img": true,
+				"img": false,
 				"imgpath": null
 			}
 		]
@@ -28,13 +28,13 @@
 			{
 				"id": "4-0",
 				"name": "Artoria Pendragon Alter",
-				"img": true,
+				"img": false,
 				"imgpath": null
 			},
 			{
 				"id": "4-1",
 				"name": "Artoria Pendragon Lily",
-				"img": true,
+				"img": false,
 				"imgpath": null
 			}
 		]
