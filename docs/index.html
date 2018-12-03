@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Nechigawara's FGO Servant Checklist with NP Count</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/select2/select2.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/select2/select2-bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/Site.css" crossorigin="anonymous">
+	<!-- JS -->
+	<script src="js/lib/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script src="js/lib/popper.min.js" crossorigin="anonymous"></script>
+	<script src="js/lib/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="js/lib/select2.full.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-secondary">
+  <span class="navbar-brand" href="#">
+    <img src="img/DSGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Nechigawara's FGO Servant Checklist with NP Count
+  </span>
+  <ul class="nav navbar-nav ml-auto">
+	<li class="nav-item">
+        <a href="https://github.com/Nechigawara/nechi-fgo-checklist/" class="fab fa-github"> GitHub</a>
+    </li>
+  </ul>
+</nav>
+<!-- Content -->
+<div class="container body-content" style="padding-top: 10px;">
+	<div class="card">
+		<div class="card-body" style="text-align:center;">
+			<p>Just another FGO Servant Checklist, but with NP Count. I gonna try my best to update the list ASAP.</p>
+			<!-- small>
+				<p>Changelog</p>
+				<ul id="changelog">
+					<li>Coffee</li>
+					<li>Tea</li>
+					<li>Milk</li>
+				</ul> 
+			</small -->
+		</div>
+	</div>
+	<hr/>
+	<div class="card" style="margin-top: 10px;">
+		<div class="card-header bg-warning">★5 SSR</div>
+		<div class="card-body">
+			<div class="row" id="ssrBox" style="display:none;"></div>
+			<div class="row" id="ssrBoxFake">
+				<div class="col">Loading...</div>
+			</div>
+		</div>
+	</div>
+	<div class="card" style="margin-top: 10px;">
+		<div class="card-header bg-warning">★4 SR</div>
+		<div class="card-body">
+			<div class="row" id="srBox" style="display:none;"></div>
+			<div class="row" id="srBoxFake">
+				<div class="col">Loading...</div>
+			</div>
+		</div>
+	</div>
+	<div class="card" style="margin-top: 10px;">
+		<div class="card-header bg-fgo-rare">★3 R</div>
+		<div class="card-body">
+			<div class="row" id="rareBox" style="display:none;"></div>
+			<div class="row" id="rareBoxFake">
+				<div class="col">Loading...</div>
+			</div>
+		</div>
+	</div>
+	<div class="card" style="margin-top: 10px;">
+		<div class="card-header bg-fgo-common">★2 Uncommon</div>
+		<div class="card-body">
+			<div class="row" id="uncommonBox" style="display:none;"></div>
+			<div class="row" id="uncommonBoxFake">
+				<div class="col">Data Not Available yet...</div>
+			</div>
+		</div>
+	</div>
+	<div class="card" style="margin-top: 10px;">
+		<div class="card-header bg-fgo-common">★1 Common</div>
+		<div class="card-body">
+			<div class="row" id="commonBox" style="display:none;"></div>
+			<div class="row" id="commonBoxFake">
+				<div class="col">Data Not Available yet...</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="card" style="margin-top: 10px;">
+		<div class="card-header bg-dark text-light">✩0 Non-Rarity</div>
+		<div class="card-body">
+			<div class="row" id="noneBox" style="display:none;"></div>
+			<div class="row" id="noneBoxFake">
+				<div class="col">Data Not Available yet...</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer -->
+<footer class="bd-footer">
+  <div class="container-fluid p-3 p-md-5">
+    <p>
+		By Nechigawara Sanzenin. This aplication is licensed under <a href="https://github.com/Nechigawara/nechi-fgo-checklist/blob/master/LICENSE">MIT</a>.<br/>
+		Fate/Grand Order and related materials are registered trademarks and properties of TYPE-MOON, Marvelous Inc., and Aniplex Inc.<br/>
+		Images Host at <a href="https://imgur.com">imgur.com</a>.
+	</p>
+  </div>
+</footer>
+<!-- Modal Add -->
+<div class="modal" tabindex="-1" role="dialog" id="addModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Servant - <span id="nameAdd"></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<form>
+			<div class="form-group">
+				<label for="npAdd">NP You have currently</label>
+				<select class="form-control" id="npAdd"></select>
+				<small id="npAddHelp" class="form-text text-muted">How many time that you np uppraded this servant?</small>
+			</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="userDataUpdate()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Update -->
+<div class="modal" tabindex="-1" role="dialog" id="updateModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update Servant - <span id="nameUpdate"></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+			<div class="form-group">
+				<label for="npUpdate">NP You have currently</label>
+				<select class="form-control" id="npUpdate"></select>
+				<small id="npUpdateHelp" class="form-text text-muted">How many time that you np uppraded this servant?</small>
+			</div>
+		</form>
+		<hr/>
+		<div style="text-align:center;">
+			<button type="button" class="btn btn-danger" onclick="userDataRemove()">Uncheck this servant</button>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="userDataUpdate()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal loading -->
+<div class="modal" tabindex="-1" role="dialog" id="loadingModal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="text-align:center">
+        <img src="img/loading.gif">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- JS After -->
+<script src="js/index.js" crossorigin="anonymous"></script>
+</body>
+
+</html> 
