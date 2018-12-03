@@ -239,7 +239,8 @@ function MakeData() {
 			}
             current_servant_html += current_servant_class + '"'
             // On Click Function
-            var current_onclick = ' onclick="memBerClick(' + "'" + current_servant.id + "', '" + current_servant.name + "')" + '"';
+			var escape_input_name = (current_servant.name.replace(/'/g, "\\'"));
+            var current_onclick = ' onclick="memBerClick(' + "'" + current_servant.id + "', '" + escape_input_name + "')" + '"';
             current_servant_html += current_onclick;
             // Close div open tags
             current_servant_html += '>';
