@@ -218,6 +218,11 @@ function MakeData() {
     for (var aa = 0, ll = servants_data.length; aa < ll; aa++) {
         // list get
         var current_rarity = servants_data[aa];
+		// Skip if Disable
+		if (current_rarity.disable) {
+			continue;
+		}
+		// Prepare
         var current_list = current_rarity.list;
         var current_element = "#" + current_rarity.list_element;
         var current_path = current_rarity.list_iconpath;

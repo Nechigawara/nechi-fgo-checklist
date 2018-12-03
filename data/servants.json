@@ -3,18 +3,19 @@
 		"list_id": "ssr",
 		"list_element": "ssrBox",
 		"list_iconpath": "",
+		"disable": false,
 		"list": [
 			{
 				"id": "5-0",
 				"name": "Artoria Pendragon",
 				"img": true,
-				"imgpath": ""
+				"imgpath": null
 			},
 			{
 				"id": "5-1",
 				"name": "Altera of Earth",
 				"img": true,
-				"imgpath": ""
+				"imgpath": null
 			}
 		]
 	},
@@ -22,6 +23,7 @@
 		"list_id": "sr",
 		"list_element": "srBox",
 		"list_iconpath": "",
+		"disable": false,
 		"list": [
 			{
 				"id": "4-0",
