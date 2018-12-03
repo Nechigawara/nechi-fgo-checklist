@@ -1,22 +1,40 @@
-{
-	"ssr": [
-		{
-			"key": "5-0",
-			"Name": "Artoria Pendragon"
-		},
-		{
-			"key": "5-1",
-			"Name": "Altera of Earth"
-		}
-	],
-	"sr": [
-		{
-			"key": "4-0",
-			"Name": "Artoria Pendragon Alter"
-		},
-		{
-			"key": "4-1",
-			"Name": "Artoria Pendragon Lily"
-		}
-	]
-}
+[
+	{
+		"list_id": "ssr",
+		"list_element": "ssrBox",
+		"list_iconpath": "",
+		"list": [
+			{
+				"id": "5-0",
+				"name": "Artoria Pendragon",
+				"img": true,
+				"imgpath": ""
+			},
+			{
+				"id": "5-1",
+				"name": "Altera of Earth",
+				"img": true,
+				"imgpath": ""
+			}
+		]
+	},
+	{
+		"list_id": "sr",
+		"list_element": "srBox",
+		"list_iconpath": "",
+		"list": [
+			{
+				"id": "4-0",
+				"name": "Artoria Pendragon Alter",
+				"img": true,
+				"imgpath": null
+			},
+			{
+				"id": "4-1",
+				"name": "Artoria Pendragon Lily",
+				"img": true,
+				"imgpath": null
+			}
+		]
+	}
+]
