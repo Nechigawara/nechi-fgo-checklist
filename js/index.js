@@ -20,6 +20,7 @@ var copy_choice_allow = [
 	{ "id": 5, "text": "NP5" }
 ];
 var copy_choice_default = 1;
+var copy_choice_max = 5;
 var raw_input_parameter = "raw";
 
 // Global Variables
@@ -83,6 +84,8 @@ function getUserData(id) {
 	return user_data[id];
 }
 
+
+// Convert Data
 function ConvertUserDataToRawInput(input_data)
 {
 	var new_raw_input = "";
@@ -96,8 +99,21 @@ function ConvertUserDataToRawInput(input_data)
 	return new_raw_input;
 }
 
+// FastMode Check
+function IsFastmode() {
+	var fastmode_enable = $('#fastmode').is(':checked');
+	return fastmode_enable;
+}
+
 // Click Div
 function memBerClick(id, name) {
+	// Fast Mode, Change Value Directly
+	if (IsFastmode()) {
+		// Change Value
+		userDataUpdateFast(id, 1);
+		// Stop
+		return;
+	}
 	// Mark current_edit
 	current_edit = id;
     var current_user_data = getUserData(id);
@@ -117,6 +133,21 @@ function memBerClick(id, name) {
 		$('#npAdd').val(copy_choice_default).trigger('change');
 		// Show New Check Modal
 		$('#addModal').modal('show');
+	}
+}
+
+// Click Div
+function memBerRightClick(id, name) {
+	// Fast Mode, Change Value Directly
+	if (!IsFastmode()) {
+		return;
+	}
+	// Mark current_edit
+	current_edit = id;
+    var current_user_data = getUserData(id);
+	// New Check or Update
+	if (current_user_data != null) {
+		userDataUpdateFast(id, -1);
 	}
 }
 
@@ -147,6 +178,41 @@ function userDataRemove() {
 	UpdateURL();
 	// clear current_edit
 	current_edit = "";
+}
+
+function userDataUpdateFast(id, val) {
+	// Mark current_edit
+    var current_user_data = getUserData(id);
+	// New Check or Update
+	if (current_user_data != null) {
+		// Get New Value
+		var new_val = current_user_data + val;
+		if (new_val <= 0 || new_val > copy_choice_max) {
+			// Remove Instead
+			// Update Member Element
+			$('#' + id).removeClass(member_class_checked);
+			// Update Value on List
+			UpdateCopyVal(id, 0);
+			delete user_data[id];
+		}
+		else {
+			// Update user data
+			user_data[id] = new_val;
+			// Update Value on List
+			UpdateCopyVal(id, new_val);
+		}
+	}
+	else {
+		if (val <= 0) {
+			return;
+		}
+		// Add user data
+		user_data[id] = 1;
+		// Update Member Element
+		$('#' + id).addClass(member_class_checked);
+	}
+	// Update Raw Input & URL
+	UpdateURL();
 }
 
 function userDataUpdate() {
@@ -247,6 +313,9 @@ function MakeData() {
 			var escape_input_name = (current_servant.name.replace(/'/g, "\\'"));
             var current_onclick = ' onclick="memBerClick(' + "'" + current_servant.id + "', '" + escape_input_name + "')" + '"';
             current_servant_html += current_onclick;
+			// On Context Function
+			var current_oncontext = ' oncontextmenu="memBerRightClick(' + "'" + current_servant.id + "', '" + escape_input_name + "');return false;" + '"';
+            current_servant_html += current_oncontext;
             // Close div open tags
             current_servant_html += '>';
             // Image
