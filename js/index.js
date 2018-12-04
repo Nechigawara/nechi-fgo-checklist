@@ -22,6 +22,7 @@ var copy_choice_allow = [
 var copy_choice_default = 1;
 var copy_choice_max = 5;
 var raw_input_parameter = "raw";
+var compress_input_parameter = "raw";
 
 // Global Variables
 var servants_data = null;
@@ -268,7 +269,13 @@ function UpdateCopyVal(id, new_val) {
 function UpdateURL() {
 	// Update Raw Input & URL
 	raw_user_input = ConvertUserDataToRawInput(user_data);
-	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + raw_input_parameter + "=" + raw_user_input;
+	var newurl = "";
+	if (raw_user_input == "") {
+		newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+	}
+	else {
+		newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + raw_input_parameter + "=" + raw_user_input;
+	}
     window.history.pushState({path:newurl},'',newurl);
 }
 
