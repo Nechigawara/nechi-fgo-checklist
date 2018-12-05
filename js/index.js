@@ -5,11 +5,13 @@ var icondefault_external_source = false;
 var datapath = "data/servants.json";
 var img_path = "img/servants/";
 var img_class = "img-fluid";
+var image_host = "https://i.imgur.com/";
 var member_class_grid = "col-1 member-outer";
 var member_class = "member-container";
 var member_class_checked = "member-checked";
 var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
 var member_clear = "Are you sure you want to clear all checked servants?";
+var capture_area = "capturearea";
 var box_fake_subfix = "Fake";
 var morecopy_text = "NP";
 var morecopy_class = "member-np";
@@ -23,6 +25,7 @@ var copy_choice_allow = [
 ];
 var copy_choice_default = 1;
 var copy_choice_max = 5;
+
 var raw_input_parameter = "raw";
 var compress_input_parameter = "pak";
 var fastmode_checkbox = "fastmode";
@@ -35,6 +38,11 @@ var rarity_count_data = {};
 var raw_user_input = "";
 var current_edit = "";
 
+// Global Objects
+var customAdapter = null;
+var list_new = null;
+var list_update = null;
+
 // Set Up
 $.ajaxSetup({
     beforeSend: function(xhr) {
@@ -43,6 +51,20 @@ $.ajaxSetup({
         }
     }
 });
+
+$.fn.select2.amd.define('select2/data/customAdapter', ['select2/data/array', 'select2/utils'],
+    function (ArrayAdapter, Utils) {
+        function CustomDataAdapter ($element, options) {
+ 	        CustomDataAdapter.__super__.constructor.call(this, $element, options);
+        }
+        Utils.Extend(CustomDataAdapter, ArrayAdapter);
+		CustomDataAdapter.prototype.updateOptions = function (data) {
+            this.$element.find('option').remove();
+            this.addOptions(this.convertToOptions(data));
+        }        
+        return CustomDataAdapter;
+    }
+);
 
 // For Image Load
 function loadSprite(src) {
@@ -53,6 +75,25 @@ function loadSprite(src) {
     };
     sprite.src = src;
     return deferred.promise();
+}
+
+// Select2 Source for lower
+function getNewCopySource(current_max, s_list) {
+	if (current_max < copy_choice_max && current_max > 0) {
+		var new_choice_allow = [];
+		for (var i = 0; i < copy_choice_allow.length; i++) {
+			if (copy_choice_allow[i].id <= current_max) {
+				new_choice_allow.push(copy_choice_allow[i]);
+			}
+			else {
+				break;
+			}
+		}
+		s_list.data('select2').dataAdapter.updateOptions(new_choice_allow);
+	}
+	else {
+		s_list.data('select2').dataAdapter.updateOptions(copy_choice_allow);
+	}
 }
 
 // For Image Part
@@ -95,19 +136,22 @@ function IsFastmode() {
 }
 
 // Click Div
-function memBerClick(id, name) {
+function memBerClick(id, name, s_element) {
 	// Fast Mode, Change Value Directly
 	if (IsFastmode()) {
 		// Change Value
-		userDataUpdateFast(id, 1);
+		userDataUpdateFast(id, 1, s_element);
 		// Stop
 		return;
 	}
 	// Mark current_edit
 	current_edit = id;
     var current_user_data = getUserData(id);
+	var current_edit_max = parseInt($(s_element).data("maxcopy"));
 	// New Check or Update
 	if (current_user_data != null) {
+		// Select 2
+		getNewCopySource(current_edit_max, list_update);
 		// Update Modal String
 		$('#nameUpdate').html(name);
 		// Reset Modal Choice to Current
@@ -116,6 +160,8 @@ function memBerClick(id, name) {
 		$('#updateModal').modal('show');
 	}
 	else {
+		// Select 2
+		getNewCopySource(current_edit_max, list_new);
 		// Update Modal String
 		$('#nameAdd').html(name);
 		// Reset Modal Choice to Default
@@ -126,13 +172,13 @@ function memBerClick(id, name) {
 }
 
 // Click Div
-function memBerRightClick(id, name) {
+function memBerRightClick(id, name, s_element) {
 	// Fast Mode, Change Value Directly
 	if (!IsFastmode()) {
 		return;
 	}
 	// Mark current_edit
-	userDataUpdateFast(id, -1);
+	userDataUpdateFast(id, -1, s_element);
 }
 
 function userDataRemove() {
@@ -164,14 +210,19 @@ function userDataRemove() {
 	current_edit = "";
 }
 
-function userDataUpdateFast(id, val) {
+function userDataUpdateFast(id, val, s_element) {
 	// Mark current_edit
     var current_user_data = getUserData(id);
+	var current_edit_max = parseInt($(s_element).data("maxcopy"));
+	// Prevent Over Data
+	if (current_edit_max > copy_choice_max) {
+		current_edit_max = copy_choice_max;
+	}
 	// New Check or Update
 	if (current_user_data != null) {
 		// Get New Value
 		var new_val = current_user_data + val;
-		if (new_val <= 0 || new_val > copy_choice_max) {
+		if (new_val <= 0 || new_val > current_edit_max) {
 			// Remove Instead
 			// Update Member Element
 			$('#' + id).removeClass(member_class_checked);
@@ -189,7 +240,7 @@ function userDataUpdateFast(id, val) {
 	else {
 		if (val <= 0) {
 			// Add user data
-			user_data[id] = copy_choice_max;
+			user_data[id] = current_edit_max;
 			// Update Member Element
 			$('#' + id).addClass(member_class_checked);
 			// Update Value on List
@@ -375,6 +426,9 @@ function MakeData() {
             var current_servant_img = '';
             // Create Servant Element
             current_servant_html += ' id="' + current_servant.id + '" title="' + current_servant.name + '"';
+			current_servant_html += ' data-toggle="tooltip-member" data-placement="bottom"';
+			current_servant_html += ' data-list_id="' + current_list.list_id + '" data-maxcopy="' + current_servant.maxcopy + '"';
+			current_servant_html += ' data-eventonly="' + current_servant.eventonly + '"';
             // Class
 			if (current_user_data != null) {
 				current_servant_class += ' ' + member_class_checked;
@@ -382,10 +436,10 @@ function MakeData() {
             current_servant_html += current_servant_class + '"'
             // On Click Function
 			var escape_input_name = (current_servant.name.replace(/'/g, "\\'"));
-            var current_onclick = ' onclick="memBerClick(' + "'" + current_servant.id + "', '" + escape_input_name + "')" + '"';
+            var current_onclick = ' onclick="memBerClick(' + "'" + current_servant.id + "', '" + escape_input_name + "', this)" + '"';
             current_servant_html += current_onclick;
 			// On Context Function
-			var current_oncontext = ' oncontextmenu="memBerRightClick(' + "'" + current_servant.id + "', '" + escape_input_name + "');return false;" + '"';
+			var current_oncontext = ' oncontextmenu="memBerRightClick(' + "'" + current_servant.id + "', '" + escape_input_name + "', this);return false;" + '"';
             current_servant_html += current_oncontext;
             // Close div open tags
             current_servant_html += '>';
@@ -423,6 +477,7 @@ function MakeData() {
             $(current_box + box_fake_subfix).hide();
             $(current_box).show();
         }
+		$('[data-toggle="tooltip-member"]').tooltip();
         $('#loadingModal').modal('hide');
     });
 }
@@ -444,17 +499,47 @@ function ClearAllData() {
 	UpdateURL();
 }
 
+// Export Canvas
+function ExportCanvas() {
+	// Confirm
+	if (window.confirm("Warning, Image result will not look exact like in the page. Capture Library problem. I recommend sharing the link or use external capture tool intead. Continue?")) {
+		// Do Nothing
+    } else {
+        return;
+    }
+	// Show Loading Modal
+    $('#loadingModal').modal('show');
+	html2canvas($('#' + capture_area)[0], { useCORS: true }).then(function(canvas) {
+		// canvas is the final rendered <canvas> element
+        var alink = document.createElement('a');
+		// toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
+		alink.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+		alink.download = 'fgo-checklist.jpg';
+		//Firefox requires the link to be in the body
+		document.body.appendChild(alink);
+		alink.click();
+		//remove the link when done
+		document.body.removeChild(alink);
+		// Close Loading Modal
+        $('#loadingModal').modal('hide')
+    });
+}
+
 // Onload
 $(document).ready(function() {
     // Show Loading Modal
     $('#loadingModal').modal('show');
+	// Prepare
+	customAdapter = $.fn.select2.amd.require('select2/data/customAdapter');
 	// Select2
-	$( "#npAdd" ).select2({
+	list_new = $( "#npAdd" ).select2({
 		theme: "bootstrap",
+		dataAdapter: customAdapter,
 		data: copy_choice_allow
 	});
-	$( "#npUpdate" ).select2({
+	list_update = $( "#npUpdate" ).select2({
 		theme: "bootstrap",
+		dataAdapter: customAdapter,
 		data: copy_choice_allow
 	});
 	// URL Params

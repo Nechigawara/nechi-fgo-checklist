@@ -1,3 +1,5 @@
+/*.modal-backdrop {background: none;}*/
+
 .bg-fgo-rare {
 	background-color: #B9B9B9 !important;
 }
@@ -9,6 +11,7 @@
 div.member-outer {
 	padding: 3px;
 	display: flex;
+	text-shadow: none;
 }
 
 div.member-container {
@@ -31,6 +34,7 @@ div.member-container > img {
     filter: alpha(opacity=25); /* For IE8 and earlier */
 	-webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
     filter: grayscale(70%);
+	text-shadow: none !important;
 }
 
 div.member-checked {
@@ -50,7 +54,7 @@ div.member-checked > img {
 	opacity: 1 !important;
     filter: alpha(opacity=100) !important; /* For IE8 and earlier */
 	-webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%)!important;
+    filter: grayscale(0%) !important;
 }
 
 /* Bottom left text */
@@ -58,9 +62,28 @@ div.member-np {
     position: absolute;
     bottom: 5%;
     right: 5%;
-	text-shadow:
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+	text-shadow: 
+     2px   0  0   #000, 
+    -2px   0  0   #000, 
+     0    2px 0   #000, 
+     0   -2px 0   #000, 
+     1px  1px 0   #000, 
+    -1px -1px 0   #000, 
+     1px -1px 0   #000, 
+    -1px  1px 0   #000,
+     1px  1px 5px #000;
+}
+
+.header-shadow {
+	color: #FFF;
+	text-shadow: 
+     2px   0  0   #000, 
+    -2px   0  0   #000, 
+     0    2px 0   #000, 
+     0   -2px 0   #000, 
+     1px  1px 0   #000, 
+    -1px -1px 0   #000, 
+     1px -1px 0   #000, 
+    -1px  1px 0   #000,
+     1px  1px 5px #000;
 }

@@ -16,6 +16,7 @@
 	<script src="js/lib/bootstrap.min.js" crossorigin="anonymous"></script>
 	<script src="js/lib/select2.full.min.js" crossorigin="anonymous"></script>
 	<script src="js/lib/lz-string.min.js" crossorigin="anonymous"></script>
+	<script src="js/lib/html2canvas.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- Navbar -->
@@ -41,6 +42,7 @@
 					<input type="checkbox" class="form-check-input" id="fastmode">
 					<label class="form-check-label" for="fastmode">Fast Mode (Left & Right Click Only)</label>
 				</div>
+				<button type="button" class="btn btn-info" onclick="ExportCanvas()">Export as Image (Slow)</button>
 				<button type="button" class="btn btn-danger" onclick="ClearAllData()">Clear</button>
 			</form>
 			<!-- small>
@@ -54,58 +56,59 @@
 		</div>
 	</div>
 	<hr/>
-	<div class="card" style="margin-top: 10px;">
-		<div class="card-header bg-warning">★5 SSR</div>
-		<div class="card-body">
-			<div class="row" id="ssrBox" style="display:none;"></div>
-			<div class="row" id="ssrBoxFake">
-				<div class="col">Loading...</div>
+	<div id="capturearea">
+		<div class="card" style="margin-top: 10px;">
+			<div class="card-header bg-warning header-shadow">★5 SSR</div>
+			<div class="card-body">
+				<div class="row" id="ssrBox" style="display:none;"></div>
+				<div class="row" id="ssrBoxFake">
+					<div class="col">Loading...</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="card" style="margin-top: 10px;">
-		<div class="card-header bg-warning">★4 SR</div>
-		<div class="card-body">
-			<div class="row" id="srBox" style="display:none;"></div>
-			<div class="row" id="srBoxFake">
-				<div class="col">Loading...</div>
+		<div class="card" style="margin-top: 10px;">
+			<div class="card-header bg-warning header-shadow">★4 SR</div>
+			<div class="card-body">
+				<div class="row" id="srBox" style="display:none;"></div>
+				<div class="row" id="srBoxFake">
+					<div class="col">Loading...</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="card" style="margin-top: 10px;">
-		<div class="card-header bg-fgo-rare">★3 R</div>
-		<div class="card-body">
-			<div class="row" id="rareBox" style="display:none;"></div>
-			<div class="row" id="rareBoxFake">
-				<div class="col">Loading...</div>
+		<div class="card" style="margin-top: 10px;">
+			<div class="card-header bg-fgo-rare header-shadow">★3 R</div>
+			<div class="card-body">
+				<div class="row" id="rareBox" style="display:none;"></div>
+				<div class="row" id="rareBoxFake">
+					<div class="col">Loading...</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="card" style="margin-top: 10px;">
-		<div class="card-header bg-fgo-common">★2 Uncommon</div>
-		<div class="card-body">
-			<div class="row" id="uncommonBox" style="display:none;"></div>
-			<div class="row" id="uncommonBoxFake">
-				<div class="col">Loading...</div>
+		<div class="card" style="margin-top: 10px;">
+			<div class="card-header bg-fgo-common header-shadow">★2 Uncommon</div>
+			<div class="card-body">
+				<div class="row" id="uncommonBox" style="display:none;"></div>
+				<div class="row" id="uncommonBoxFake">
+					<div class="col">Loading...</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="card" style="margin-top: 10px;">
-		<div class="card-header bg-fgo-common">★1 Common</div>
-		<div class="card-body">
-			<div class="row" id="commonBox" style="display:none;"></div>
-			<div class="row" id="commonBoxFake">
-				<div class="col">Loading...</div>
+		<div class="card" style="margin-top: 10px;">
+			<div class="card-header bg-fgo-common header-shadow">★1 Common</div>
+			<div class="card-body">
+				<div class="row" id="commonBox" style="display:none;"></div>
+				<div class="row" id="commonBoxFake">
+					<div class="col">Loading...</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div class="card" style="margin-top: 10px;">
-		<div class="card-header bg-dark text-light">✩0 Non-Rarity</div>
-		<div class="card-body">
-			<div class="row" id="noneBox" style="display:none;"></div>
-			<div class="row" id="noneBoxFake">
-				<div class="col">Loading...</div>
+		<div class="card" style="margin-top: 10px;">
+			<div class="card-header bg-dark header-shadow">✩0 Non-Rarity</div>
+			<div class="card-body">
+				<div class="row" id="noneBox" style="display:none;"></div>
+				<div class="row" id="noneBoxFake">
+					<div class="col">Loading...</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,7 @@
 [
 	{
 		"list_id": "ssr",
+		"list_name": "★5",
 		"list_element": "ssrBox",
 		"list_iconpath": "",
 		"disable": false,
@@ -8,12 +9,16 @@
 			{
 				"id": "5-0",
 				"name": "Artoria Pendragon",
+				"maxcopy": 5,
+				"eventonly": false,
 				"img": false,
 				"imgpath": null
 			},
 			{
 				"id": "5-1",
 				"name": "Altera of Earth",
+				"maxcopy": 5,
+				"eventonly": false,
 				"img": false,
 				"imgpath": null
 			}
@@ -28,12 +33,16 @@
 			{
 				"id": "4-0",
 				"name": "Artoria Pendragon Alter",
+				"maxcopy": 5,
+				"eventonly": false,
 				"img": false,
 				"imgpath": null
 			},
 			{
 				"id": "4-1",
 				"name": "Artoria Pendragon Lily",
+				"maxcopy": 5,
+				"eventonly": true,
 				"img": false,
 				"imgpath": null
 			}
