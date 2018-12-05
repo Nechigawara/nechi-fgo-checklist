@@ -28,6 +28,9 @@ var copy_choice_max = 5;
 var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
 var member_clear_conf = "Are you sure you want to clear all checked servants?";
 
+// Statistic
+var statistic_area = "statisticBox";
+
 // Parameters
 var raw_input_parameter = "raw";
 var compress_input_parameter = "pak";
