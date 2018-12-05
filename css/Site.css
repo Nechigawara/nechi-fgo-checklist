@@ -27,8 +27,8 @@ div.member-container {
 }
 
 div.member-container > img {
-	opacity: 0.45;
-    filter: alpha(opacity=45); /* For IE8 and earlier */
+	opacity: 0.35;
+    filter: alpha(opacity=35); /* For IE8 and earlier */
 }
 
 div.member-checked {
