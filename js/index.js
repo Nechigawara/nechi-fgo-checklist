@@ -9,8 +9,6 @@ var image_host = "https://i.imgur.com/";
 var member_class_grid = "col-1 member-outer";
 var member_class = "member-container";
 var member_class_checked = "member-checked";
-var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
-var member_clear = "Are you sure you want to clear all checked servants?";
 var capture_area = "capturearea";
 var box_fake_subfix = "Fake";
 var morecopy_text = "NP";
@@ -26,6 +24,11 @@ var copy_choice_allow = [
 var copy_choice_default = 1;
 var copy_choice_max = 5;
 
+// Confirm
+var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
+var member_clear_conf = "Are you sure you want to clear all checked servants?";
+
+// Parameters
 var raw_input_parameter = "raw";
 var compress_input_parameter = "pak";
 var fastmode_checkbox = "fastmode";
@@ -187,27 +190,37 @@ function userDataRemove() {
 		return;
 	}
 	// Confirm
-	if (window.confirm(member_uncheck_conf + ": " + $('#nameUpdate').html())) {
-		// Do Nothing
-    } else {
-        return;
-    }
-	// Get UserData
-	var current_user_data = getUserData(current_edit);
-	// Delete User Data
-	if (current_user_data != null) {
-		delete user_data[current_edit];
-	}
-	// Update Member Element
-	$('#' + current_edit).removeClass(member_class_checked);
-	// Update Value on List
-	UpdateCopyVal(current_edit, 0);
-	// Hide Update Check Modal
-	$('#updateModal').modal('hide');
-	// Update Raw Input & URL
-	UpdateURL();
-	// clear current_edit
-	current_edit = "";
+	bootbox.confirm({
+        message: member_uncheck_conf,
+        buttons: {
+            cancel: {
+                label: '<i class="fa fa-times"></i> Cancel'
+            },
+            confirm: {
+                label: '<i class="fa fa-check"></i> Confirm'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+				// Get UserData
+				var current_user_data = getUserData(current_edit);
+				// Delete User Data
+				if (current_user_data != null) {
+					delete user_data[current_edit];
+				}
+				// Update Member Element
+				$('#' + current_edit).removeClass(member_class_checked);
+				// Update Value on List
+				UpdateCopyVal(current_edit, 0);
+				// Hide Update Check Modal
+				$('#updateModal').modal('hide');
+				// Update Raw Input & URL
+				UpdateURL();
+				// clear current_edit
+				current_edit = "";
+			}
+        }
+    });
 }
 
 function userDataUpdateFast(id, val, s_element) {
@@ -485,43 +498,63 @@ function MakeData() {
 // Clear
 function ClearAllData() {
 	// Confirm
-	if (window.confirm(member_clear)) {
-		// Do Nothing
-    } else {
-        return;
-    }
-	// Remove all checked Element
-	$('div.' + member_class_checked +' > div.' + morecopy_class).html('');
-	$('div.' + member_class_checked).removeClass(member_class_checked);
-	// Clear User Data
-	user_data = {};
-	// Update Raw Input & URL
-	UpdateURL();
+	bootbox.confirm({
+        message: member_clear_conf,
+        buttons: {
+            cancel: {
+                label: '<i class="fa fa-times"></i> Cancel'
+            },
+            confirm: {
+                label: '<i class="fa fa-check"></i> Confirm'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+				// Remove all checked Element
+				$('div.' + member_class_checked +' > div.' + morecopy_class).html('');
+				$('div.' + member_class_checked).removeClass(member_class_checked);
+				// Clear User Data
+				user_data = {};
+				// Update Raw Input & URL
+				UpdateURL();
+			}
+        }
+    });
 }
 
 // Export Canvas
 function ExportCanvas() {
 	// Confirm
-	if (window.confirm("Warning, Image result will not look exact like in the page. Capture Library problem. I recommend sharing the link or use external capture tool intead. Continue?")) {
-		// Do Nothing
-    } else {
-        return;
-    }
-	// Show Loading Modal
-    $('#loadingModal').modal('show');
-	html2canvas($('#' + capture_area)[0], { useCORS: true }).then(function(canvas) {
-		// canvas is the final rendered <canvas> element
-        var alink = document.createElement('a');
-		// toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
-		alink.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
-		alink.download = 'fgo-checklist.jpg';
-		//Firefox requires the link to be in the body
-		document.body.appendChild(alink);
-		alink.click();
-		//remove the link when done
-		document.body.removeChild(alink);
-		// Close Loading Modal
-        $('#loadingModal').modal('hide')
+	bootbox.confirm({
+        message: "Warning, Image result will not look exact like in the page. Capture Library problems.<br/>I recommend sharing the link or use external capture tool intead.<br/>Continue?",
+        buttons: {
+            cancel: {
+                label: '<i class="fa fa-times"></i> Cancel'
+            },
+            confirm: {
+                label: '<i class="fa fa-check"></i> Confirm'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+				// Show Loading Modal
+				$('#loadingModal').modal('show');
+				html2canvas($('#' + capture_area)[0], { useCORS: true }).then(function(canvas) {
+					// canvas is the final rendered <canvas> element
+					var alink = document.createElement('a');
+					// toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
+					alink.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+					alink.download = 'fgo-checklist.jpg';
+					//Firefox requires the link to be in the body
+					document.body.appendChild(alink);
+					alink.click();
+					//remove the link when done
+					document.body.removeChild(alink);
+					// Close Loading Modal
+					$('#loadingModal').modal('hide')
+				});
+			}
+        }
     });
 }
 
