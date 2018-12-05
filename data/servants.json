@@ -1332,8 +1332,8 @@
 				"name": "Yu Miaoyi",
 				"maxcopy": 5,
 				"eventonly": false,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/UkpWtYo.png"
 			}
 		]
 	},
