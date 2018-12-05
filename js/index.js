@@ -9,6 +9,7 @@ var member_class_grid = "col-1 member-outer";
 var member_class = "member-container";
 var member_class_checked = "member-checked";
 var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
+var member_clear = "Are you sure you want to clear all checked servants?";
 var box_fake_subfix = "Fake";
 var morecopy_text = "NP";
 var morecopy_class = "member-np";
@@ -131,12 +132,7 @@ function memBerRightClick(id, name) {
 		return;
 	}
 	// Mark current_edit
-	current_edit = id;
-    var current_user_data = getUserData(id);
-	// New Check or Update
-	if (current_user_data != null) {
-		userDataUpdateFast(id, -1);
-	}
+	userDataUpdateFast(id, -1);
 }
 
 function userDataRemove() {
@@ -192,12 +188,19 @@ function userDataUpdateFast(id, val) {
 	}
 	else {
 		if (val <= 0) {
-			return;
+			// Add user data
+			user_data[id] = copy_choice_max;
+			// Update Member Element
+			$('#' + id).addClass(member_class_checked);
+			// Update Value on List
+			UpdateCopyVal(id, user_data[id]);
 		}
-		// Add user data
-		user_data[id] = 1;
-		// Update Member Element
-		$('#' + id).addClass(member_class_checked);
+		else {
+			// Add user data
+			user_data[id] = 1;
+			// Update Member Element
+			$('#' + id).addClass(member_class_checked);
+		}
 	}
 	// Update Raw Input & URL
 	UpdateURL();
@@ -422,6 +425,23 @@ function MakeData() {
         }
         $('#loadingModal').modal('hide');
     });
+}
+
+// Clear
+function ClearAllData() {
+	// Confirm
+	if (window.confirm(member_clear)) {
+		// Do Nothing
+    } else {
+        return;
+    }
+	// Remove all checked Element
+	$('div.' + member_class_checked +' > div.' + morecopy_class).html('');
+	$('div.' + member_class_checked).removeClass(member_class_checked);
+	// Clear User Data
+	user_data = {};
+	// Update Raw Input & URL
+	UpdateURL();
 }
 
 // Onload
