@@ -23,6 +23,8 @@ var copy_choice_allow = [
 ];
 var copy_choice_default = 1;
 var copy_choice_max = 5;
+var share_tags = "FGO,FateGrandOrder";
+var share_title = "See My Servants Here!!";
 
 // Confirm
 var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
@@ -560,6 +562,21 @@ function ExportCanvas() {
         }
     });
 }
+
+// Share
+function shareURL(site) {
+	var currentURL = window.location.href;
+	if (site == "facebook") {
+		window.open("https://www.facebook.com/sharer.php?&u=" + currentURL,"","menubar=0");
+	}
+	else if (site == "tumblr") {
+		window.open("https://www.tumblr.com/share?url=" + currentURL + "&tags=" + share_tags + "&Title=" + share_title,"","menubar=0");
+	}
+	else if (site == "twitter") {
+		window.open("https://twitter.com/intent/tweet?url=" + currentURL + "&text=" + share_title + "&hashtags=" + share_tags,"","menubar=0");
+	}
+	return false;
+};
 
 // Onload
 $(document).ready(function() {
