@@ -27,8 +27,10 @@ div.member-container {
 }
 
 div.member-container > img {
-	opacity: 0.35;
-    filter: alpha(opacity=35); /* For IE8 and earlier */
+	opacity: 0.25;
+    filter: alpha(opacity=25); /* For IE8 and earlier */
+	-webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(70%);
 }
 
 div.member-checked {
@@ -47,6 +49,8 @@ div.member-checked {
 div.member-checked > img {
 	opacity: 1 !important;
     filter: alpha(opacity=100) !important; /* For IE8 and earlier */
+	-webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%)!important;
 }
 
 /* Bottom left text */
