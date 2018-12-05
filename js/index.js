@@ -4,8 +4,9 @@ var icondefault = "default.png";
 var icondefault_external_source = false;
 var datapath = "data/servants.json";
 var img_path = "img/servants/";
-var img_class = "img-responsive";
-var member_class = "col-sm-1 member-container";
+var img_class = "img-fluid";
+var member_class_grid = "col-1 member-outer";
+var member_class = "member-container";
 var member_class_checked = "member-checked";
 var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
 var box_fake_subfix = "Fake";
@@ -22,11 +23,14 @@ var copy_choice_allow = [
 var copy_choice_default = 1;
 var copy_choice_max = 5;
 var raw_input_parameter = "raw";
-var compress_input_parameter = "raw";
+var compress_input_parameter = "pak";
+var fastmode_checkbox = "fastmode";
+var fastmode_parameter = "fast";
 
 // Global Variables
 var servants_data = null;
 var user_data = {};
+var rarity_count_data = {};
 var raw_user_input = "";
 var current_edit = "";
 
@@ -38,23 +42,6 @@ $.ajaxSetup({
         }
     }
 });
-
-// URL Parameter
-function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-	return "";
-};
 
 // For Image Load
 function loadSprite(src) {
@@ -102,7 +89,7 @@ function ConvertUserDataToRawInput(input_data)
 
 // FastMode Check
 function IsFastmode() {
-	var fastmode_enable = $('#fastmode').is(':checked');
+	var fastmode_enable = $('#' + fastmode_checkbox).is(':checked');
 	return fastmode_enable;
 }
 
@@ -266,16 +253,90 @@ function UpdateCopyVal(id, new_val) {
 	}
 }
 
+function getFastModeURLstring() {
+	if (IsFastmode()) {
+		return fastmode_parameter + "=1";
+	}
+	return "";
+}
+
 function UpdateURL() {
 	// Update Raw Input & URL
 	raw_user_input = ConvertUserDataToRawInput(user_data);
-	var newurl = "";
-	if (raw_user_input == "") {
-		newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+	var new_parameter = "";
+	// User Data
+	if (raw_user_input != "") {
+		if (!new_parameter.startsWith("?")) {
+			new_parameter = "?";
+		}
+		else {
+			new_parameter += "&";
+		}
+		// Compress
+		var compress_input = LZString.compressToEncodedURIComponent(raw_user_input);
+		// Debug : Compressed Size Reduce //
+		var decraese_len = raw_user_input.length - compress_input.length;
+		console.log("Raw Size: " + raw_user_input.length);
+		console.log("Compressed Size: " + compress_input.length);
+		console.log("Compressed Size Reduce: " + decraese_len);
+		// Put Param
+		new_parameter += compress_input_parameter + "=" + compress_input;
 	}
-	else {
-		newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + raw_input_parameter + "=" + raw_user_input;
+	// Fast Mode
+	var fastmode_str = getFastModeURLstring();
+	if (fastmode_str != "") {
+		if (!new_parameter.startsWith("?")) {
+			new_parameter = "?";
+		}
+		else {
+			new_parameter += "&";
+		}
+		new_parameter += fastmode_str;
 	}
+	// Push URL
+	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + new_parameter;
+    window.history.pushState({path:newurl},'',newurl);
+}
+
+function UpdateURLFastModeOnly() {
+	// Get Search
+	var url_part = window.location.search;
+	var urlParams = null;
+	// Fast Mode
+	var fastmode_str = getFastModeURLstring();
+	var fastmode_input = "";
+	if (fastmode_str != "") {
+		if (url_part != "") {
+			urlParams = new URLSearchParams(url_part);
+			fastmode_input = urlParams.get(fastmode_parameter);
+			if (fastmode_input != null) {
+				url_part = url_part.replace("&" + fastmode_parameter + "=" + fastmode_input,'');
+				url_part = url_part.replace(fastmode_parameter + "=" + fastmode_input,'');
+			}
+			// If not Blank, added &
+			if (url_part != "?") {
+				url_part += "&";
+			}
+		}
+		else {
+			url_part = "?";
+		}
+		url_part += fastmode_str;
+	}
+	else if (url_part != "") {
+		urlParams = new URLSearchParams(url_part);
+		fastmode_input = urlParams.get(fastmode_parameter);
+		if (fastmode_input != null) {
+			url_part = url_part.replace("&" + fastmode_parameter + "=" + fastmode_input,'');
+			url_part = url_part.replace(fastmode_parameter + "=" + fastmode_input,'');
+		}
+		// if ? left, clean Up
+		if (url_part == "?") {
+			url_part = "";
+		}
+	}
+	// Push URL
+	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + url_part;
     window.history.pushState({path:newurl},'',newurl);
 }
 
@@ -306,7 +367,7 @@ function MakeData() {
             // Prepare
             var current_servant = current_list[i];
 			var current_user_data = getUserData(current_servant.id);
-            var current_servant_html = '<div ';
+            var current_servant_html = '<div class="' + member_class_grid + '"><div';
             var current_servant_class = ' class="' + member_class;
             var current_servant_img = '';
             // Create Servant Element
@@ -345,7 +406,7 @@ function MakeData() {
 			}
             current_servant_html += '</div>';
             // Close Element
-            current_servant_html += '</div>';
+            current_servant_html += '</div></div>';
             // Add to main list
             current_html += current_servant_html;
         }
@@ -376,8 +437,30 @@ $(document).ready(function() {
 		theme: "bootstrap",
 		data: copy_choice_allow
 	});
+	// URL Params
+	var urlParams = new URLSearchParams(window.location.search);
+	// FastMode
+	var fastmode_input = urlParams.get(fastmode_parameter);
+	if (fastmode_input != null) {
+		var fastmode_enable = (parseInt(fastmode_input) > 0);
+		$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
+	}
+	// Set Checkbox Event
+	$('#' + fastmode_checkbox).change(function () {
+		UpdateURLFastModeOnly();
+	});
     // URL Reader
-    raw_user_input = getUrlParameter(raw_input_parameter);
+	var compress_input = urlParams.get(compress_input_parameter);
+	if (compress_input != null) {
+		raw_user_input = LZString.decompressFromEncodedURIComponent(compress_input);
+	}
+	else {
+		raw_user_input = urlParams.get(raw_input_parameter);
+		if (raw_user_input == null) {
+			raw_user_input = "";
+		}
+	}
+	// Convert User Data from Input
     var array_input = raw_user_input.split(",");
     for (var ii = 0, li = array_input.length; ii < li; ii++) {
         var current_split = array_input[ii].split(">");

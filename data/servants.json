@@ -1,6 +1,7 @@
 [
 	{
 		"list_id": "ssr",
+		"list_name": "★5",
 		"list_element": "ssrBox",
 		"list_iconpath": "",
 		"disable": false,
@@ -506,6 +507,7 @@
 	},
 	{
 		"list_id": "sr",
+		"list_name": "★4",
 		"list_element": "srBox",
 		"list_iconpath": "",
 		"disable": false,
@@ -1172,6 +1174,7 @@
 	},
 	{
 		"list_id": "rare",
+		"list_name": "★3",
 		"list_element": "rareBox",
 		"list_iconpath": "",
 		"disable": false,
@@ -1474,499 +1477,161 @@
 	},
 	{
 		"list_id": "uncommon",
-		"list_element": "commonBox",
+		"list_name": "★2",
+		"list_element": "uncommonBox",
 		"list_iconpath": "",
-		"disable": true,
+		"disable": false,
 		"list": [
 			{
-				"id": "3-0",
-				"name": "Artoria Pendragon (Alter)",
+				"id": "2-0",
+				"name": "Musashibō Benkei",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/Hsn5gOd.png"
 			},
 			{
-				"id": "3-1",
-				"name": "Artoria Pendragon (Lily)",
+				"id": "2-1",
+				"name": "Leonidas I",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/CwFAXFT.png"
 			},
 			{
-				"id": "3-2",
-				"name": "Gilgamesh",
+				"id": "2-2",
+				"name": "Georgios",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/hIkIe79.png"
 			},
 			{
-				"id": "3-3",
-				"name": "Zhuge Liang (Lord El-Melloi II)",
+				"id": "2-3",
+				"name": "Edward Teach",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/a3TKdca.png"
 			},
 			{
-				"id": "3-4",
-				"name": "Sakata Kintoki",
+				"id": "2-4",
+				"name": "Hans Christian Andersen",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/JfTWhfN.png"
 			},
 			{
-				"id": "3-5",
-				"name": "Vlad III",
+				"id": "2-5",
+				"name": "William Shakespeare",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/w2004wy.png"
 			},
 			{
-				"id": "3-6",
-				"name": "Jeanne d'Arc",
+				"id": "2-6",
+				"name": "Cursed Arm Hassan",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/cRTqKpW.png"
 			},
 			{
-				"id": "3-7",
-				"name": "Orion",
+				"id": "2-7",
+				"name": "Charles-Henri Sanson",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/IH8zT6Z.png"
 			},
 			{
-				"id": "3-8",
-				"name": "Tamamo no Mae",
+				"id": "2-8",
+				"name": "Phantom of the Opera",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/BRTLSxm.png"
 			},
 			{
-				"id": "3-9",
-				"name": "Francis Drake",
+				"id": "2-9",
+				"name": "Caligula",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/FwTzIzP.png"
 			},
 			{
-				"id": "3-A",
-				"name": "Okita Sōji",
+				"id": "2-A",
+				"name": "Eric Bloodaxe",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-B",
-				"name": "Scáthach",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-C",
-				"name": "Jack the Ripper",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-D",
-				"name": "Mordred",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-E",
-				"name": "Nikola Tesla",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-F",
-				"name": "Arjuna",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-G",
-				"name": "Karna",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-H",
-				"name": "Mysterious Heroine X",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-I",
-				"name": "Brynhildr",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-J",
-				"name": "Nero Claudius (Bride)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-K",
-				"name": "Ryōgi Shiki (Saber)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-L",
-				"name": "Amakusa Shirō",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-M",
-				"name": "Edmond Dantès",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-N",
-				"name": "Nightingale",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-O",
-				"name": "Cú Chulainn (Alter)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-P",
-				"name": "Medb",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-Q",
-				"name": "Jeanne d'Arc (Alter)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-R",
-				"name": "Iskandar",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-S",
-				"name": "Shuten Dōji",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-T",
-				"name": "Xuanzang Sanzang",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-U",
-				"name": "Minamoto no Raikō",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-V",
-				"name": "Ozymandias",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-W",
-				"name": "Artoria Pendragon (Lancer)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-X",
-				"name": "Leonardo Da Vinci",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-Y",
-				"name": "Tamamo no Mae (Lancer)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-Z",
-				"name": "Artoria Pendragon (Archer)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-a",
-				"name": "Illyasviel von Einzbern",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-b",
-				"name": "Cleopatra",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-c",
-				"name": "Ishtar",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-d",
-				"name": "Enkidu",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-e",
-				"name": "Quetzalcoatl",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-f",
-				"name": "Merlin",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-g",
-				"name": "Miyamoto Musashi",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-h",
-				"name": "The Old Man of the Mountain",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-i",
-				"name": "Mysterious Heroine X (Alter)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-j",
-				"name": "James Moriarty",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-k",
-				"name": "Arthur Pendragon (Prototype)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-l",
-				"name": "Hijikata Toshizō",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-m",
-				"name": "Meltlilith",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-n",
-				"name": "Sesshōin Kiara",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-o",
-				"name": "Scheherazade",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-p",
-				"name": "Sherlock Holmes",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-q",
-				"name": "Nero Claudius (Caster)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-r",
-				"name": "Artoria Pendragon (Rider Alter)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-s",
-				"name": "Osakabehime",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-t",
-				"name": "Abigail Williams",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-u",
-				"name": "Ereshkigal",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-v",
-				"name": "Katsushika Hokusai",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-w",
-				"name": "Semiramis",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
+				"imgpath": "https://i.imgur.com/e2kKgVB.png"
+			}
+		]
+	},
+	{
+		"list_id": "common",
+		"list_name": "★1",
+		"list_element": "commonBox",
+		"list_iconpath": "",
+		"disable": false,
+		"list": [
 			{
-				"id": "3-x",
-				"name": "Anastasia Nikolaevna Romanova",
+				"id": "1-0",
+				"name": "Arash",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/Ft2tyhW.png"
 			},
 			{
-				"id": "3-y",
-				"name": "Ivan the Terrible",
+				"id": "1-1",
+				"name": "Wolfgang Amadeus Mozart",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/OMtT4g7.png"
 			},
 			{
-				"id": "3-z",
-				"name": "Achilles",
+				"id": "1-2",
+				"name": "Sasaki Kojirō",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/c0qHuE6.png"
 			},
 			{
-				"id": "3-01",
-				"name": "Okita Sōji (Alter)",
+				"id": "1-3",
+				"name": "Mata Hari",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/pMtjthO.png"
 			},
 			{
-				"id": "3-02",
-				"name": "Napoleon",
+				"id": "1-4",
+				"name": "Spartacus",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/5cAFgvT.png"
 			},
 			{
-				"id": "3-03",
-				"name": "Sigurd",
+				"id": "1-5",
+				"name": "Asterios",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/rGgVyVh.png"
 			},
 			{
-				"id": "3-04",
-				"name": "Scáthach-Skaði",
+				"id": "1-6",
+				"name": "Paul Bunyan",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-05",
-				"name": "Jeanne d'Arc (Archer)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-06",
-				"name": "BB (Summer)",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
-			{
-				"id": "3-07",
-				"name": "Sitonai",
-				"maxcopy": 5,
-				"img": true,
-				"imgpath": ""
-			},
+				"imgpath": "https://i.imgur.com/tKM9teU.png"
+			}
+		]
+	},
+	{
+		"list_id": "none",
+		"list_name": "✩0",
+		"list_element": "noneBox",
+		"list_iconpath": "",
+		"disable": false,
+		"list": [
 			{
-				"id": "3-08",
-				"name": "Xiang Yu",
+				"id": "0-0",
+				"name": "Angra Mainyu",
 				"maxcopy": 5,
 				"img": true,
-				"imgpath": ""
+				"imgpath": "https://i.imgur.com/UkyfnFa.png"
 			}
 		]
 	}
