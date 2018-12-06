@@ -39,6 +39,7 @@ var statistic_area = "statisticBox";
 // Parameters
 var raw_input_parameter = "raw";
 var compress_input_parameter = "pak";
+var short_input_parameter = "ss";
 var fastmode_checkbox = "fastmode";
 var fastmode_parameter = "fast";
 
@@ -630,17 +631,16 @@ function CopyToClipboard(s_element) {
 $(document).ready(function() {
 	// Show Loading Modal
     $('#loadingModal').modal('show');
-	// Hash Check
-	if (window.location.hash != "") {
-		var hashh = window.location.hash.substr(1)
+	// URL Redirect
+	var hashh = urlParams.get(short_input_parameter);
+	if (hashh != null) {
 		$.getJSON(endpoint + "/" + hashh, function (data) {
 			data = data["result"];
 			if (data != null) {
 				window.location.href = data; //Redirect
 			}
 		});
-		// Clear Hash
-		window.location.href.split('#')[0];
+		return;
 	}
 	// Prepare
 	customAdapter = $.fn.select2.amd.require('select2/data/customAdapter');
@@ -727,7 +727,7 @@ function getrandom_hash() {
 function shorturl(longurl){
     var key = getrandom_hash();
     send_request(longurl, key);
-	return window.location.protocol + "//" + window.location.host + window.location.pathname + "#" + key;
+	return window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + short_input_parameter + "=" + key;
 }
 
 function send_request(url, key) {
