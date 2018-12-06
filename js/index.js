@@ -30,6 +30,9 @@ var share_title = "See My Servants Here!!";
 var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
 var member_clear_conf = "Are you sure you want to clear all checked servants?";
 
+// Share
+var share_text = "This is your current shortend URL. Can't gurantee how long the shortend URL will last (Use free data storage service 😜).<br/>So please keep Full URL in a safe place (Bookmark, ETC.)."
+
 // Statistic
 var statistic_area = "statisticBox";
 
@@ -38,6 +41,9 @@ var raw_input_parameter = "raw";
 var compress_input_parameter = "pak";
 var fastmode_checkbox = "fastmode";
 var fastmode_parameter = "fast";
+
+// URL Shortend
+var endpoint = "https://www.jsonstore.io/670d4eb30d66f9c2e775017731c9822f49adf477ac6571edb7185d174c8219e4";
 
 // Global Variables
 var servants_data = null;
@@ -50,6 +56,7 @@ var current_edit = "";
 var customAdapter = null;
 var list_new = null;
 var list_update = null;
+var exisiting_hash = null;
 
 // Set Up
 $.ajaxSetup({
@@ -368,6 +375,10 @@ function UpdateURL() {
 	// Push URL
 	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + new_parameter;
     window.history.pushState({path:newurl},'',newurl);
+	// Remove exisiting hash
+	exisiting_hash = null;	
+	// Return
+	return true;
 }
 
 function UpdateURLFastModeOnly() {
@@ -565,25 +576,75 @@ function ExportCanvas() {
 
 // Share
 function shareURL(site) {
+	// Get URL
 	var currentURL = window.location.href;
 	if (site == "facebook") {
 		window.open("https://www.facebook.com/sharer.php?&u=" + currentURL,"","menubar=0");
 	}
 	else if (site == "tumblr") {
-		window.open("https://www.tumblr.com/share?url=" + currentURL + "&tags=" + share_tags + "&Title=" + share_title,"","menubar=0");
+		// Shortend URL
+		var short_url = shorturl(currentURL);
+		// Share; Show Short URL
+		showShortURL(short_url);
+		// Share
+		window.open("https://www.tumblr.com/share?url=" + short_url + "&tags=" + share_tags + "&Title=" + share_title,"","menubar=0");
 	}
 	else if (site == "twitter") {
-		window.open("https://twitter.com/intent/tweet?url=" + currentURL + "&text=" + share_title + "&hashtags=" + share_tags,"","menubar=0");
+		// Shortend URL
+		var short_url = shorturl(currentURL);
+		// Share; Show Short URL
+		showShortURL(short_url);
+		// Share
+		var short_url = shorturl(currentURL);
+		window.open("https://twitter.com/intent/tweet?url=" + short_url + "&text=" + share_title + "&hashtags=" + share_tags,"","menubar=0");
+	}
+	else {
+		// Shortend URL
+		var short_url = shorturl(currentURL);
+		// Share; Show Short URL
+		showShortURL(short_url);
 	}
 	return false;
 };
 
+// Share; Show Short URL
+function showShortURL(url) {
+	var msg = share_text + '<hr/><form><div class="form-group"><div class="input-group mb-3">';
+	msg += '<input type="text" id="link-copy" class="form-control" value="' + url + '" readonly/>';
+	msg += '<div class="input-group-append">'
+	msg += '<button class="btn btn-outline-secondary" type="button" onclick="CopyToClipboard(' + "'link-copy'" +  ')">Copy</button>';
+	msg += '</div></div></div></form>';
+	var url_dialog = bootbox.dialog({
+		message: msg
+	});
+	url_dialog.init(function(){});
+}
+
+function CopyToClipboard(s_element) {
+	var copyText = document.querySelector("#" + s_element);
+	copyText.select();
+	document.execCommand("copy");
+}
+
 // Onload
 $(document).ready(function() {
-    // Show Loading Modal
+	// Show Loading Modal
     $('#loadingModal').modal('show');
+	// Hash Check
+	if (window.location.hash != "") {
+		var hashh = window.location.hash.substr(1)
+		$.getJSON(endpoint + "/" + hashh, function (data) {
+			data = data["result"];
+			if (data != null) {
+				window.location.href = data; //Redirect
+			}
+		});
+		// Clear Hash
+		window.location.href.split('#')[0];
+	}
 	// Prepare
 	customAdapter = $.fn.select2.amd.require('select2/data/customAdapter');
+	$('[data-toggle="tooltip"]').tooltip();
 	// Select2
 	list_new = $( "#npAdd" ).select2({
 		theme: "bootstrap",
@@ -650,3 +711,33 @@ $(document).ready(function() {
         }
     });
 });
+
+//=============================================================================================================================
+// Short URL
+//=============================================================================================================================
+function getrandom_hash() {
+	if (exisiting_hash != null) {
+		return exisiting_hash;
+	}
+    var exisiting_hash = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
+	exisiting_hash += Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
+    return exisiting_hash;
+}
+
+function shorturl(longurl){
+    var key = getrandom_hash();
+    send_request(longurl, key);
+	return window.location.protocol + "//" + window.location.host + window.location.pathname + "#" + key;
+}
+
+function send_request(url, key) {
+    this.url_forshort = url;
+	this.key_forshort = key;
+    $.ajax({
+        'url': endpoint + "/" + this.key_forshort,
+        'type': 'POST',
+        'data': JSON.stringify(this.url_forshort),
+        'dataType': 'json',
+        'contentType': 'application/json; charset=utf-8'
+	});
+}

@@ -54,12 +54,14 @@
 			<hr/>
 			Share the list to your friends!!
 			<div id="share">
-				 <!-- facebook -->
-				 <button type="button" class="btn facebook" onclick="shareURL('facebook')"><i class="fab fa-facebook-f"></i></button>
-				 <!-- Tumblr-->
-				 <button type="button" class="btn tumblr" onclick="shareURL('tumblr')" disabled><i class="fab fa-tumblr"></i></button>
+				 <!-- Facebook -->
+				 <button type="button" class="btn facebook" onclick="shareURL('facebook')" data-toggle="tooltip" data-placement="bottom" title="Share to Facebook"><i class="fab fa-facebook-f"></i></button>
+				 <!-- Tumblr -->
+				 <button type="button" class="btn tumblr" onclick="shareURL('tumblr')" data-toggle="tooltip" data-placement="bottom" title="Share to Tumblr"><i class="fab fa-tumblr"></i></button>
 				 <!-- Twitter -->
-				 <button type="button" class="btn twitter" onclick="shareURL('twitter')" disabled><i class="fab fa-twitter"></i></button>
+				 <button type="button" class="btn twitter" onclick="shareURL('twitter')" data-toggle="tooltip" data-placement="bottom" title="Share to Twitter"><i class="fab fa-twitter"></i></button>
+				 <!-- Just Link -->
+				 <button type="button" class="btn btn-info" onclick="shareURL('')" data-toggle="tooltip" data-placement="bottom" title="Just Shortend URL"><i class="fas fa-link"></i></button>
 			</div>
 			<!-- small>
 				<p>Changelog</p>
