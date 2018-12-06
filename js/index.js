@@ -719,7 +719,7 @@ function getrandom_hash() {
 	if (exisiting_hash != null) {
 		return exisiting_hash;
 	}
-    var exisiting_hash = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
+    exisiting_hash = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
 	exisiting_hash += Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
     return exisiting_hash;
 }
