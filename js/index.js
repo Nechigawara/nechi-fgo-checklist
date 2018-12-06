@@ -588,7 +588,7 @@ function shareURL(site) {
 		// Share; Show Short URL
 		showShortURL(short_url);
 		// Share
-		window.open("https://www.tumblr.com/share?url=" + short_url + "&tags=" + share_tags + "&Title=" + share_title,"","menubar=0");
+		window.open("https://www.tumblr.com/share?posttype=link&url=" + short_url + "&tags=" + share_tags + "&Title=" + share_title,"","menubar=0");
 	}
 	else if (site == "twitter") {
 		// Shortend URL
