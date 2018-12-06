@@ -631,6 +631,8 @@ function CopyToClipboard(s_element) {
 $(document).ready(function() {
 	// Show Loading Modal
     $('#loadingModal').modal('show');
+	// URL Params
+	var urlParams = new URLSearchParams(window.location.search);
 	// URL Redirect
 	var hashh = urlParams.get(short_input_parameter);
 	if (hashh != null) {
@@ -656,8 +658,6 @@ $(document).ready(function() {
 		dataAdapter: customAdapter,
 		data: copy_choice_allow
 	});
-	// URL Params
-	var urlParams = new URLSearchParams(window.location.search);
 	// FastMode
 	var fastmode_input = urlParams.get(fastmode_parameter);
 	if (fastmode_input != null) {
