@@ -11,6 +11,8 @@ var member_class = "member-container";
 var member_class_checked = "member-checked";
 var capture_area = "capturearea";
 var box_fake_subfix = "Fake";
+var eventonly_text = '<i class="fas fa-gift"></i>';
+var eventonly_class = "member-eventonly";
 var morecopy_text = "NP";
 var morecopy_class = "member-np";
 var morecopy_prefix = "np_";
@@ -528,7 +530,7 @@ function MakeData(servants_data) {
                 list_img.push(loadSprite(current_servant_img));
             }
             current_servant_html += '<img src="' + current_servant_img + '" class="' + img_class + '"/>';
-            // Multiple Copy Text
+            // Multiple Copy + Event Only Tag
             current_servant_html += '<div id="' + morecopy_prefix + current_servant.id + '" class="' + morecopy_class + '">';
 			if (current_user_data != null) {
 				if (current_user_data > 1) {
@@ -536,6 +538,10 @@ function MakeData(servants_data) {
 				}
 			}
             current_servant_html += '</div>';
+			if (current_servant.eventonly) {
+				current_servant_html += '<div class="' + eventonly_class + '">'
+				current_servant_html += eventonly_text + '</div>';
+			}
             // Close Element
             current_servant_html += '</div></div>';
             // Add to main list
@@ -771,6 +777,10 @@ $(document).ready(function() {
         }
     });
 });
+
+function ToggleEventIcon() {
+	$("." + eventonly_class).toggle();
+}
 
 //=============================================================================================================================
 // Short URL

@@ -63,29 +63,29 @@ div.member-np {
     bottom: 5%;
     right: 5%;
 	text-shadow: 
-     2px   0  0   #000, 
-    -2px   0  0   #000, 
-     0    2px 0   #000, 
-     0   -2px 0   #000, 
+     1px   0  0   #000, 
+    -1px   0  0   #000, 
+     0    1px 0   #000, 
+     0   -1px 0   #000, 
      1px  1px 0   #000, 
     -1px -1px 0   #000, 
      1px -1px 0   #000, 
     -1px  1px 0   #000,
-     1px  1px 5px #000;
+	1px 1px 10px #000,
+	1px 1px 10px #ccc;
+}
+
+div.member-eventonly {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+	color: #4EB2D8;
+	text-shadow:1px 1px 10px #000, 1px 1px 10px #ccc;
 }
 
 .header-shadow {
 	color: #FFF;
-	text-shadow: 
-     2px   0  0   #000, 
-    -2px   0  0   #000, 
-     0    2px 0   #000, 
-     0   -2px 0   #000, 
-     1px  1px 0   #000, 
-    -1px -1px 0   #000, 
-     1px -1px 0   #000, 
-    -1px  1px 0   #000,
-     1px  1px 5px #000;
+	text-shadow:1px 1px 10px #000, 1px 1px 10px #ccc;
 }
 
 /* share buttons */
