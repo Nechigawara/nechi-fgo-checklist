@@ -573,6 +573,14 @@
 				"eventonly": false,
 				"img": true,
 				"imgpath": "https://i.imgur.com/iUcbXSO.png"
+			},
+			{
+				"id": "5-0A",
+				"name": "Bradamante",
+				"maxcopy": 5,
+				"eventonly": false,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
@@ -1334,6 +1342,14 @@
 				"eventonly": false,
 				"img": true,
 				"imgpath": "https://i.imgur.com/UkpWtYo.png"
+			},
+			{
+				"id": "4-0X",
+				"name": "Quetzalcoatl (Samba/Santa)",
+				"maxcopy": 5,
+				"eventonly": true,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
