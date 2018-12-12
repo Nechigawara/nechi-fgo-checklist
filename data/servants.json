@@ -739,7 +739,7 @@
 				"id": "4-I",
 				"name": "Oda Nobunaga",
 				"maxcopy": 5,
-				"eventonly": false,
+				"eventonly": true,
 				"img": true,
 				"imgpath": "https://i.imgur.com/mTerhYA.png"
 			},
