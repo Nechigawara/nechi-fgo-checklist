@@ -49,7 +49,16 @@ var endpoint = "https://www.jsonstore.io/670d4eb30d66f9c2e775017731c9822f49adf47
 // Global Variables
 var servants_data = null;
 var user_data = {};
-var rarity_count_data = {};
+var rarity_count_data = {
+	"allcount": {
+		"max": 0,
+		"have": 0
+	},
+	"noteventcount": {
+		"max": 0,
+		"have": 0
+	}
+};
 var raw_user_input = "";
 var current_edit = "";
 
@@ -454,6 +463,13 @@ function MakeData() {
             var current_servant_html = '<div class="' + member_class_grid + '"><div';
             var current_servant_class = ' class="' + member_class;
             var current_servant_img = '';
+			// Count Data: All
+			rarity_count_data.allcount += 1;
+			if (current_user_data != null) {
+				rarity_count_data.have += 1;
+			}
+			// Count Data: Exclude Event Prize
+			
             // Create Servant Element
             current_servant_html += ' id="' + current_servant.id + '" title="' + current_servant.name + '"';
 			current_servant_html += ' data-toggle="tooltip-member" data-placement="bottom"';
