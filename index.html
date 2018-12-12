@@ -81,6 +81,17 @@
 	</div>
 	<hr/>
 	<div id="capturearea">
+		<div class="row" id="statisticBox" style="display:none;">
+			<div class="col">
+				<h3>All Servants</h3>
+				<h4><small>Overall:</small> <em id="statisticBoxAllPercent"></em>% <small>(<span id="statisticBoxAllHave"></span>/<span id="statisticBoxAllMax"></span>)</small></h4>
+			</div>
+			<div class="col">
+				<h3>Exclude Event Prize Servants</h3>
+				<h4><small>Overall:</small> <em id="statisticBoxNotEventPercent"></em>% <small>(<span id="statisticBoxNotEventHave"></span>/<span id="statisticBoxNotEventMax"></span>)</small></h4>
+			</div>
+		</div>
+		<hr/>
 		<div class="card" style="margin-top: 10px;">
 			<div class="card-header bg-warning header-shadow">★5 SSR</div>
 			<div class="card-body">
@@ -131,17 +142,6 @@
 			<div class="card-body">
 				<div class="row" id="noneBox" style="display:none;"></div>
 				<div class="row" id="noneBoxFake">
-					<div class="col">Loading...</div>
-				</div>
-			</div>
-		</div>
-		<div class="card" style="margin-top: 10px;">
-			<div class="card-header bg-info header-shadow">Statistic</div>
-			<div class="card-body">
-				<div class="row" id="statisticBox">
-					
-				</div>
-				<div class="row" id="statisticBoxFake" style="display:none;">
 					<div class="col">Loading...</div>
 				</div>
 			</div>

@@ -47,7 +47,7 @@ var fastmode_parameter = "fast";
 var endpoint = "https://www.jsonstore.io/670d4eb30d66f9c2e775017731c9822f49adf477ac6571edb7185d174c8219e4";
 
 // Global Variables
-var servants_data = null;
+var servants_data_list = {};
 var user_data = {};
 var rarity_count_data = {
 	"allcount": {
@@ -172,7 +172,7 @@ function memBerClick(id, name, s_element) {
 	// Mark current_edit
 	current_edit = id;
     var current_user_data = getUserData(id);
-	var current_edit_max = parseInt($(s_element).data("maxcopy"));
+	var current_edit_max = servants_data_list[id].maxcopy;
 	// New Check or Update
 	if (current_user_data != null) {
 		// Select 2
@@ -230,6 +230,8 @@ function userDataRemove() {
 				if (current_user_data != null) {
 					delete user_data[current_edit];
 				}
+				// Update Count
+				count_update(current_edit, -1);
 				// Update Member Element
 				$('#' + current_edit).removeClass(member_class_checked);
 				// Update Value on List
@@ -245,10 +247,19 @@ function userDataRemove() {
     });
 }
 
+function count_update(id, val) {
+	var current_edit_eventonly = servants_data_list[id].eventonly;
+	// Update Count
+	rarity_count_data.allcount.have += val;
+	if (!current_edit_eventonly) {
+		rarity_count_data.noteventcount.have += val;
+	}
+}
+
 function userDataUpdateFast(id, val, s_element) {
 	// Mark current_edit
     var current_user_data = getUserData(id);
-	var current_edit_max = parseInt($(s_element).data("maxcopy"));
+	var current_edit_max = servants_data_list[id].maxcopy;
 	// Prevent Over Data
 	if (current_edit_max > copy_choice_max) {
 		current_edit_max = copy_choice_max;
@@ -263,6 +274,9 @@ function userDataUpdateFast(id, val, s_element) {
 			$('#' + id).removeClass(member_class_checked);
 			// Update Value on List
 			UpdateCopyVal(id, 0);
+			// Update Count
+			count_update(id, -1);
+			// Clear Number
 			delete user_data[id];
 		}
 		else {
@@ -284,11 +298,14 @@ function userDataUpdateFast(id, val, s_element) {
 		else {
 			// Add user data
 			user_data[id] = 1;
+			// Update Count
+			count_update(id, 1);
 			// Update Member Element
 			$('#' + id).addClass(member_class_checked);
 		}
 	}
 	// Update Raw Input & URL
+	updateCountHTML();
 	UpdateURL();
 }
 
@@ -311,10 +328,14 @@ function userDataUpdate() {
 		$('#updateModal').modal('hide');
 	}
 	else {
+		// Get Event
+		var current_edit_eventonly = servants_data_list[current_edit].eventonly;
 		// Get New Value
 		var new_val = parseInt($('#npAdd').val());
 		// Add user data
 		user_data[current_edit] = new_val;
+		// Update Count
+		count_update(current_edit, 1);
 		// Update Member Element
 		$('#' + current_edit).addClass(member_class_checked);
 		// Update Value on List
@@ -323,6 +344,7 @@ function userDataUpdate() {
 		$('#addModal').modal('hide');
 	}
 	// Update Raw Input & URL
+	updateCountHTML();
 	UpdateURL();
 	// clear current_edit
 	current_edit = "";
@@ -434,7 +456,7 @@ function UpdateURLFastModeOnly() {
 }
 
 // Make Data
-function MakeData() {
+function MakeData(servants_data) {
     // Draw Button & Create User Data
     var list_box = [];
     var list_img = [];
@@ -459,17 +481,23 @@ function MakeData() {
         for (var i = 0, l = current_list.length; i < l; i++) {
             // Prepare
             var current_servant = current_list[i];
+			servants_data_list[current_servant.id] = current_list[i];
 			var current_user_data = getUserData(current_servant.id);
             var current_servant_html = '<div class="' + member_class_grid + '"><div';
             var current_servant_class = ' class="' + member_class;
             var current_servant_img = '';
 			// Count Data: All
-			rarity_count_data.allcount += 1;
+			rarity_count_data.allcount.max += 1;
 			if (current_user_data != null) {
-				rarity_count_data.have += 1;
+				rarity_count_data.allcount.have += 1;
 			}
 			// Count Data: Exclude Event Prize
-			
+			if (!current_servant.eventonly) {
+				rarity_count_data.noteventcount.max += 1;
+				if (current_user_data != null) {
+					rarity_count_data.noteventcount.have += 1;
+				}
+			}
             // Create Servant Element
             current_servant_html += ' id="' + current_servant.id + '" title="' + current_servant.name + '"';
 			current_servant_html += ' data-toggle="tooltip-member" data-placement="bottom"';
@@ -523,9 +551,26 @@ function MakeData() {
             $(current_box + box_fake_subfix).hide();
             $(current_box).show();
         }
+		// Count
+		updateCountHTML();
+		//$("#" + statistic_area + box_fake_subfix).hide();
+		$("#" + statistic_area).show();
+		// ToolTip + Box
 		$('[data-toggle="tooltip-member"]').tooltip();
         $('#loadingModal').modal('hide');
     });
+}
+
+// Update Count HTML
+function updateCountHTML() {
+	var AllPercent = Number(rarity_count_data.allcount.have / rarity_count_data.allcount.max * 100);
+	$("#" + statistic_area + "AllMax").html(rarity_count_data.allcount.max);
+	$("#" + statistic_area + "AllHave").html(rarity_count_data.allcount.have);
+	$("#" + statistic_area + "AllPercent").html(parseFloat(Math.round(AllPercent * 100) / 100).toFixed(2));
+	var NotEventPercent = Number(rarity_count_data.noteventcount.have / rarity_count_data.noteventcount.max * 100);
+	$("#" + statistic_area + "NotEventMax").html(rarity_count_data.noteventcount.max);
+	$("#" + statistic_area + "NotEventHave").html(rarity_count_data.noteventcount.have);
+	$("#" + statistic_area + "NotEventPercent").html(parseFloat(Math.round(NotEventPercent * 100) / 100).toFixed(2));
 }
 
 // Clear
@@ -716,8 +761,7 @@ $(document).ready(function() {
         },
         success: function(result) {
             // Load Data to Variable
-            servants_data = result;
-            MakeData();
+            MakeData(result);
         },
         error: function(result) {
             // Alert
