@@ -54,11 +54,13 @@ var user_data = {};
 var rarity_count_data = {
 	"allcount": {
 		"max": 0,
-		"have": 0
+		"have": 0,
+		"list": {}
 	},
 	"noteventcount": {
 		"max": 0,
-		"have": 0
+		"have": 0,
+		"list": {}
 	}
 };
 var raw_user_input = "";
@@ -251,10 +253,13 @@ function userDataRemove() {
 
 function count_update(id, val) {
 	var current_edit_eventonly = servants_data_list[id].eventonly;
+	var current_key = servants_data_list[id].key;
 	// Update Count
 	rarity_count_data.allcount.have += val;
+	rarity_count_data.allcount.list[current_key].have += val;
 	if (!current_edit_eventonly) {
 		rarity_count_data.noteventcount.have += val;
+		rarity_count_data.noteventcount.list[current_key].have += val;
 	}
 }
 
@@ -469,6 +474,18 @@ function MakeData(servants_data) {
     for (var aa = 0, ll = servants_data.length; aa < ll; aa++) {
         // list get
         var current_rarity = servants_data[aa];
+		var current_key = current_rarity.list_id;
+		// Count Data Prepare
+		rarity_count_data.allcount.list[current_key] = {
+			"list_element": current_rarity.list_element,
+			"max": 0,
+			"have": 0
+		};
+		rarity_count_data.noteventcount.list[current_key] = {
+			"list_element": current_rarity.list_element,
+			"max": 0,
+			"have": 0
+		};
 		// Skip if Disable
 		if (current_rarity.disable) {
 			continue;
@@ -481,23 +498,29 @@ function MakeData(servants_data) {
         list_box.push(current_element);
         // Loop List
         for (var i = 0, l = current_list.length; i < l; i++) {
-            // Prepare
+            // Get Data
             var current_servant = current_list[i];
 			servants_data_list[current_servant.id] = current_list[i];
+			servants_data_list[current_servant.id].key = current_key;
+			// Prepare
 			var current_user_data = getUserData(current_servant.id);
             var current_servant_html = '<div class="' + member_class_grid + '"><div';
             var current_servant_class = ' class="' + member_class;
             var current_servant_img = '';
 			// Count Data: All
 			rarity_count_data.allcount.max += 1;
+			rarity_count_data.allcount.list[current_key].max += 1;
 			if (current_user_data != null) {
 				rarity_count_data.allcount.have += 1;
+				rarity_count_data.allcount.list[current_key].have += 1;
 			}
 			// Count Data: Exclude Event Prize
 			if (!current_servant.eventonly) {
 				rarity_count_data.noteventcount.max += 1;
+				rarity_count_data.noteventcount.list[current_key].max += 1;
 				if (current_user_data != null) {
 					rarity_count_data.noteventcount.have += 1;
+					rarity_count_data.noteventcount.list[current_key].have += 1;
 				}
 			}
             // Create Servant Element
@@ -569,6 +592,7 @@ function MakeData(servants_data) {
 
 // Update Count HTML
 function updateCountHTML() {
+	// All Rarity
 	var AllPercent = Number(rarity_count_data.allcount.have / rarity_count_data.allcount.max * 100);
 	$("#" + statistic_area + "AllMax").html(rarity_count_data.allcount.max);
 	$("#" + statistic_area + "AllHave").html(rarity_count_data.allcount.have);
@@ -577,6 +601,22 @@ function updateCountHTML() {
 	$("#" + statistic_area + "NotEventMax").html(rarity_count_data.noteventcount.max);
 	$("#" + statistic_area + "NotEventHave").html(rarity_count_data.noteventcount.have);
 	$("#" + statistic_area + "NotEventPercent").html(parseFloat(Math.round(NotEventPercent * 100) / 100).toFixed(2));
+	// Each Rarity
+	for (var prop in rarity_count_data.allcount.list) {
+        // skip loop if the property is from prototype
+        if(!rarity_count_data.allcount.list.hasOwnProperty(prop)) continue;
+		// all & notevent
+		var r_allcount = rarity_count_data.allcount.list[prop];
+		var r_AllPercent = Number(r_allcount.have / r_allcount.max * 100);
+		$("#" + r_allcount.list_element + "AllMax").html(r_allcount.max);
+		$("#" + r_allcount.list_element + "AllHave").html(r_allcount.have);
+		$("#" + r_allcount.list_element + "AllPercent").html(parseFloat(Math.round(r_AllPercent * 100) / 100).toFixed(2));
+		var r_noteventcount = rarity_count_data.noteventcount.list[prop];
+		var r_NotEventPercent = Number(r_noteventcount.have / r_noteventcount.max * 100);
+		$("#" + r_noteventcount.list_element + "NotEventMax").html(r_noteventcount.max);
+		$("#" + r_noteventcount.list_element + "NotEventHave").html(r_noteventcount.have);
+		$("#" + r_noteventcount.list_element + "NotEventPercent").html(parseFloat(Math.round(r_NotEventPercent * 100) / 100).toFixed(2));
+    }
 }
 
 // Clear
