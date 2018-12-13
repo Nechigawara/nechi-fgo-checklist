@@ -579,8 +579,8 @@
 				"name": "Bradamante",
 				"maxcopy": 5,
 				"eventonly": false,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/cAAdZHF.png"
 			}
 		]
 	},
@@ -1348,8 +1348,8 @@
 				"name": "Quetzalcoatl (Samba/Santa)",
 				"maxcopy": 5,
 				"eventonly": true,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/VQrNQwe.png"
 			}
 		]
 	},
