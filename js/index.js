@@ -41,12 +41,17 @@ var statistic_area = "statisticBox";
 // Parameters
 var raw_input_parameter = "raw";
 var compress_input_parameter = "pak";
-var short_input_parameter = "ss";
+var short_input_parameter = "skey";
 var fastmode_checkbox = "fastmode";
 var fastmode_parameter = "fast";
 
+var old_short_input_parameter = "ss";
+
 // URL Shortend
-var endpoint = "https://www.jsonstore.io/670d4eb30d66f9c2e775017731c9822f49adf477ac6571edb7185d174c8219e4";
+var endpoint_old = "https://www.jsonstore.io/670d4eb30d66f9c2e775017731c9822f49adf477ac6571edb7185d174c8219e4";
+var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cbb40679791533b716810e77dc9";
+var url_checkback_part = "/checkback/";
+var url_data_part = "/data/";
 
 // Global Variables
 var servants_data_list = {};
@@ -64,6 +69,7 @@ var rarity_count_data = {
 	}
 };
 var raw_user_input = "";
+var compress_input = "";
 var current_edit = "";
 
 // Global Objects
@@ -94,6 +100,17 @@ $.fn.select2.amd.define('select2/data/customAdapter', ['select2/data/array', 'se
         return CustomDataAdapter;
     }
 );
+
+function orderKeys(not_sorted) {
+
+  var sorted = Object.keys(not_sorted)
+    .sort()
+    .reduce(function (acc, key) { 
+        acc[key] = not_sorted[key];
+        return acc;
+    }, {});
+	return sorted;
+}
 
 // For Image Load
 function loadSprite(src) {
@@ -240,9 +257,11 @@ function userDataRemove() {
 				$('#' + current_edit).removeClass(member_class_checked);
 				// Update Value on List
 				UpdateCopyVal(current_edit, 0);
+				// Update Count
 				// Hide Update Check Modal
 				$('#updateModal').modal('hide');
 				// Update Raw Input & URL
+				updateCountHTML();
 				UpdateURL();
 				// clear current_edit
 				current_edit = "";
@@ -379,6 +398,8 @@ function getFastModeURLstring() {
 }
 
 function UpdateURL() {
+	// Sort Key First
+	user_data = orderKeys(user_data);
 	// Update Raw Input & URL
 	raw_user_input = ConvertUserDataToRawInput(user_data);
 	var new_parameter = "";
@@ -391,7 +412,7 @@ function UpdateURL() {
 			new_parameter += "&";
 		}
 		// Compress
-		var compress_input = LZString.compressToEncodedURIComponent(raw_user_input);
+		compress_input = LZString.compressToEncodedURIComponent(raw_user_input);
 		// Debug : Compressed Size Reduce //
 		var decraese_len = raw_user_input.length - compress_input.length;
 		console.log("Raw Size: " + raw_user_input.length);
@@ -682,71 +703,37 @@ function ExportCanvas() {
     });
 }
 
-// Share
-function shareURL(site) {
-	// Get URL
-	var currentURL = window.location.href;
-	if (site == "facebook") {
-		window.open("https://www.facebook.com/sharer.php?&u=" + currentURL,"","menubar=0");
-	}
-	else if (site == "tumblr") {
-		// Shortend URL
-		var short_url = shorturl(currentURL);
-		// Share; Show Short URL
-		showShortURL(short_url);
-		// Share
-		window.open("https://www.tumblr.com/share?posttype=link&url=" + short_url + "&tags=" + share_tags + "&Title=" + share_title,"","menubar=0");
-	}
-	else if (site == "twitter") {
-		// Shortend URL
-		var short_url = shorturl(currentURL);
-		// Share; Show Short URL
-		showShortURL(short_url);
-		// Share
-		var short_url = shorturl(currentURL);
-		window.open("https://twitter.com/intent/tweet?url=" + short_url + "&text=" + share_title + "&hashtags=" + share_tags,"","menubar=0");
-	}
-	else {
-		// Shortend URL
-		var short_url = shorturl(currentURL);
-		// Share; Show Short URL
-		showShortURL(short_url);
-	}
-	return false;
-};
-
-// Share; Show Short URL
-function showShortURL(url) {
-	var msg = share_text + '<hr/><form><div class="form-group"><div class="input-group mb-3">';
-	msg += '<input type="text" id="link-copy" class="form-control" value="' + url + '" readonly/>';
-	msg += '<div class="input-group-append">'
-	msg += '<button class="btn btn-outline-secondary" type="button" onclick="CopyToClipboard(' + "'link-copy'" +  ')">Copy</button>';
-	msg += '</div></div></div></form>';
-	var url_dialog = bootbox.dialog({
-		message: msg
-	});
-	url_dialog.init(function(){});
-}
-
-function CopyToClipboard(s_element) {
-	var copyText = document.querySelector("#" + s_element);
-	copyText.select();
-	document.execCommand("copy");
-}
-
 // Onload
 $(document).ready(function() {
 	// Show Loading Modal
     $('#loadingModal').modal('show');
 	// URL Params
 	var urlParams = new URLSearchParams(window.location.search);
-	// URL Redirect
-	var hashh = urlParams.get(short_input_parameter);
-	if (hashh != null) {
-		$.getJSON(endpoint + "/" + hashh, function (data) {
+	// URL Redirect; Old
+	var hashh_old = urlParams.get(old_short_input_parameter);
+	if (hashh_old != null) {
+		// Old End Point
+		$.getJSON(endpoint_old + "/" + hashh_old, function (data) {
 			data = data["result"];
 			if (data != null) {
 				window.location.href = data; //Redirect
+			}
+		});
+		return;
+	}
+	// URL Redirect; New
+	var hashh = urlParams.get(short_input_parameter);
+	if (hashh != null) {
+		// New End Point
+		$.getJSON(endpoint + url_data_part + hashh, function (data) {
+			data = data["result"];
+			if (data != null) {
+				var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + compress_input_parameter + "=" + data;
+				window.location.href = new_url; //Redirect
+			}
+			else {
+				var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+				window.location.href = new_url; //Redirect
 			}
 		});
 		return;
@@ -776,7 +763,7 @@ $(document).ready(function() {
 		UpdateURLFastModeOnly();
 	});
     // URL Reader
-	var compress_input = urlParams.get(compress_input_parameter);
+	compress_input = urlParams.get(compress_input_parameter);
 	if (compress_input != null) {
 		raw_user_input = LZString.decompressFromEncodedURIComponent(compress_input);
 	}
@@ -794,6 +781,8 @@ $(document).ready(function() {
 			user_data[current_split[0]] = parseInt(current_split[1]);
 		}
     }
+	// Update URL
+	UpdateURL();
     // Ajax
     $.ajax({
         url: datapath,
@@ -825,6 +814,87 @@ function ToggleEventIcon() {
 //=============================================================================================================================
 // Short URL
 //=============================================================================================================================
+function shareURL(site) {
+	// Check for Existing Key
+	$.getJSON(endpoint + "/checkback/" + compress_input, function (get_data) {
+		exisiting_data = get_data["result"];
+		if (exisiting_data != null) {
+			var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + short_input_parameter + "=" + exisiting_data;
+			shareURL_Do(site, new_url);
+		}
+		else {
+			var key = getrandom_hash();
+			$.ajax({
+				'url': endpoint + url_data_part + key,
+				'type': 'POST',
+				'data': JSON.stringify(compress_input),
+				'dataType': 'json',
+				'contentType': 'application/json; charset=utf-8',
+				'success': function(data){
+					$.ajax({
+						'url': endpoint + url_checkback_part + compress_input,
+						'type': 'POST',
+						'data': JSON.stringify(key),
+						'dataType': 'json',
+						'contentType': 'application/json; charset=utf-8',
+						'success': function(data){
+							var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + short_input_parameter + "=" + key;
+							shareURL_Do(site, new_url);
+						}
+					});
+				}
+			});
+		}
+	});
+	return false;
+};
+
+function shareURL_Do(site, short_url) {
+	// Show
+	if (site == "facebook") {
+		// Share; Show Short URL
+		showShortURL(short_url);
+		// Share
+		window.open("https://www.facebook.com/sharer.php?&u=" + short_url,"","menubar=0");
+	}
+	else if (site == "tumblr") {
+		// Share; Show Short URL
+		showShortURL(short_url);
+		// Share
+		window.open("https://www.tumblr.com/share?posttype=link&url=" + short_url + "&tags=" + share_tags + "&Title=" + share_title,"","menubar=0");
+	}
+	else if (site == "twitter") {
+		// Share; Show Short URL
+		showShortURL(short_url);
+		// Share
+		window.open("https://twitter.com/intent/tweet?url=" + short_url + "&text=" + share_title + "&hashtags=" + share_tags,"","menubar=0");
+	}
+	else {
+		// Share; Show Short URL
+		showShortURL(short_url);
+	}
+	return false;
+};
+
+// Share; Show Short URL
+function showShortURL(url) {
+	var msg = share_text + '<hr/><form><div class="form-group"><div class="input-group mb-3">';
+	msg += '<input type="text" id="link-copy" class="form-control" value="' + url + '" readonly/>';
+	msg += '<div class="input-group-append">'
+	msg += '<button class="btn btn-outline-secondary" type="button" onclick="CopyToClipboard(' + "'link-copy'" +  ')">Copy</button>';
+	msg += '</div></div></div></form>';
+	var url_dialog = bootbox.dialog({
+		message: msg
+	});
+	url_dialog.init(function(){});
+}
+
+function CopyToClipboard(s_element) {
+	var copyText = document.querySelector("#" + s_element);
+	copyText.select();
+	document.execCommand("copy");
+}
+
 function getrandom_hash() {
 	if (exisiting_hash != null) {
 		return exisiting_hash;
@@ -834,17 +904,17 @@ function getrandom_hash() {
     return exisiting_hash;
 }
 
-function shorturl(longurl){
+function shorturl(val){
     var key = getrandom_hash();
-    send_request(longurl, key);
+    send_request(val, key);
 	return window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + short_input_parameter + "=" + key;
 }
 
-function send_request(url, key) {
-    this.url_forshort = url;
+function send_request(val, key) {
+    this.val_forshort = val;
 	this.key_forshort = key;
     $.ajax({
-        'url': endpoint + "/" + this.key_forshort,
+        'url': endpoint + "/" + this.val_forshort,
         'type': 'POST',
         'data': JSON.stringify(this.url_forshort),
         'dataType': 'json',

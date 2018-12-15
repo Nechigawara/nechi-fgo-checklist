@@ -1,5 +1,5 @@
 Just another FGO Servant Checklist, but with NP Count.
-I make it possible to use with other gasha game with use multiple copy fomula.
+I make it possible to use with other gasha game which use multiple copy fomula.
 
 Library Use:
 * jQuery
@@ -15,4 +15,4 @@ External Sevice Use:
 * jsonstore.io
 
 What to do:
-* Statistic
+* Improve the site as I see fit?
