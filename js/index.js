@@ -33,7 +33,7 @@ var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
 var member_clear_conf = "Are you sure you want to clear all checked servants?";
 
 // Share
-var share_text = "This is your current shortend URL. Can't gurantee how long the shortend URL will last (Use free data storage service 😜).<br/>So please keep Full URL in a safe place (Bookmark, ETC.)."
+var share_text = "This is your current shorted URL. Can't guarantee how long the shorted URL will last (Use free data storage service 😜).<br/>So please keep Full URL in a safe place (Bookmark, ETC.)."
 
 // Statistic
 var statistic_area = "statisticBox";
