@@ -10,7 +10,7 @@
 				"id": "5-0",
 				"name": "Artoria Pendragon",
 				"maxcopy": 5,
-				"eventonly": false,
+				"stype": 0,
 				"img": false,
 				"imgpath": null
 			},
@@ -18,7 +18,7 @@
 				"id": "5-1",
 				"name": "Altera of Earth",
 				"maxcopy": 5,
-				"eventonly": false,
+				"stype": 0,
 				"img": false,
 				"imgpath": null
 			}
@@ -34,7 +34,7 @@
 				"id": "4-0",
 				"name": "Artoria Pendragon Alter",
 				"maxcopy": 5,
-				"eventonly": false,
+				"stype": 0,
 				"img": false,
 				"imgpath": null
 			},

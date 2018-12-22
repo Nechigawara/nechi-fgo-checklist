@@ -81,6 +81,22 @@ div.member-np {
 	1px 1px 10px #ccc;
 }
 
+div.member-locked {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+	color: #F1D65B;
+	text-shadow:1px 1px 10px #000, 1px 1px 10px #ccc;
+}
+
+div.member-limited {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+	color: #636E7D;
+	text-shadow:1px 1px 10px #000, 1px 1px 10px #ccc;
+}
+
 div.member-eventonly {
     position: absolute;
     bottom: 5%;

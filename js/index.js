@@ -11,8 +11,7 @@ var member_class = "member-container";
 var member_class_checked = "member-checked";
 var capture_area = "capturearea";
 var box_fake_subfix = "Fake";
-var eventonly_text = '<i class="fas fa-gift"></i>';
-var eventonly_class = "member-eventonly";
+
 var morecopy_text = "NP";
 var morecopy_class = "member-np";
 var morecopy_prefix = "np_";
@@ -27,6 +26,15 @@ var copy_choice_default = 1;
 var copy_choice_max = 5;
 var share_tags = "FGO,FateGrandOrder";
 var share_title = "See My Servants Here!!";
+
+// Servant Type
+var servant_type_box_class = "member-type";
+var sevent_typelist = [
+	{ "id": 0, "show": false, "eventonly": false, "ctext": null, "class": null }, // Default
+	{ "id": 1, "show": true, "eventonly": false, "ctext": '<i class="fas fa-lock"></i>', "class": "member-locked" }, // Story Locked
+	{ "id": 2, "show": true, "eventonly": false, "ctext": '<i class="fas fa-star"></i>', "class": "member-limited" }, // Limited
+	{ "id": 3, "show": true, "eventonly": true, "ctext": '<i class="fas fa-gift"></i>', "class": "member-eventonly" } // Event Prizes
+];
 
 // Confirm
 var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
@@ -521,8 +529,10 @@ function MakeData(servants_data) {
         for (var i = 0, l = current_list.length; i < l; i++) {
             // Get Data
             var current_servant = current_list[i];
+			var current_type = sevent_typelist[current_servant.stype];
 			servants_data_list[current_servant.id] = current_list[i];
 			servants_data_list[current_servant.id].key = current_key;
+			servants_data_list[current_servant.id].eventonly = current_type.eventonly; 
 			// Prepare
 			var current_user_data = getUserData(current_servant.id);
             var current_servant_html = '<div class="' + member_class_grid + '"><div';
@@ -547,8 +557,8 @@ function MakeData(servants_data) {
             // Create Servant Element
             current_servant_html += ' id="' + current_servant.id + '" title="' + current_servant.name + '"';
 			current_servant_html += ' data-toggle="tooltip-member" data-placement="bottom"';
-			current_servant_html += ' data-list_id="' + current_list.list_id + '" data-maxcopy="' + current_servant.maxcopy + '"';
-			current_servant_html += ' data-eventonly="' + current_servant.eventonly + '"';
+			//current_servant_html += ' data-list_id="' + current_list.list_id + '" data-maxcopy="' + current_servant.maxcopy + '"';
+			//current_servant_html += ' data-eventonly="' + current_servant.eventonly + '"';
             // Class
 			if (current_user_data != null) {
 				current_servant_class += ' ' + member_class_checked;
@@ -582,9 +592,9 @@ function MakeData(servants_data) {
 				}
 			}
             current_servant_html += '</div>';
-			if (current_servant.eventonly) {
-				current_servant_html += '<div class="' + eventonly_class + '">'
-				current_servant_html += eventonly_text + '</div>';
+			if (current_type.show) {
+				current_servant_html += '<div class="' + servant_type_box_class + ' ' + current_type.class + '">'
+				current_servant_html += current_type.ctext + '</div>';
 			}
             // Close Element
             current_servant_html += '</div></div>';
@@ -808,7 +818,7 @@ $(document).ready(function() {
 });
 
 function ToggleEventIcon() {
-	$("." + eventonly_class).toggle();
+	$("." + servant_type_box_class).toggle();
 }
 
 //=============================================================================================================================
