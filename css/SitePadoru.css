@@ -1,0 +1,106 @@
+/*Keyframes*/
+@keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+	}
+	 100% {
+		background-position : 600px 900px, 300px 300px, 200px 200px, 800px 780px;
+	}
+}
+
+@-moz-keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+	}
+	 100% {
+		background-position : 600px 900px, 300px 300px, 200px 200px, 800px 780px;
+	}
+}
+
+@-webkit-keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+	}
+	 100% {
+		background-position : 600px 900px, 300px 300px, 200px 200px, 800px 780px;
+	}
+}
+
+@-ms-keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+	}
+	 100% {
+		background-position : 600px 900px, 300px 300px, 200px 200px, 800px 780px;
+	}
+}
+
+body {
+	background-color: #342045;
+}
+
+div.snowfall {
+	background-image : url('../img/padoru/snow.png'), url('../img/padoru/snow3.png'), url('../img/padoru/snow2.png'), url('../img/padoru/snow4.png');
+	-webkit-animation: snow 20s linear infinite;
+	-moz-animation: snow 20s linear infinite;
+	-ms-animation: snow 20s linear infinite;
+	animation: snow 20s linear infinite;
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+
+#statisticBox, #footer, #note
+{
+	color: #FFF;
+	text-shadow: 
+     1px   0  0   #000, 
+    -1px   0  0   #000, 
+     0    1px 0   #000, 
+     0   -1px 0   #000, 
+     1px  1px 0   #000, 
+    -1px -1px 0   #000, 
+     1px -1px 0   #000, 
+    -1px  1px 0   #000,
+	1px 1px 10px #000,
+	1px 1px 10px #ccc;
+}
+
+/* Walk */
+
+@keyframes stroll {
+  from { transform: translateX(-10%); }
+  to { transform: translateX(100%); }
+}
+
+@-moz-keyframes stroll {
+  from { transform: translateX(-10%); }
+  to { transform: translateX(100%); }
+}
+
+@-webkit-keyframes stroll {
+  from { transform: translateX(-100); }
+  to { transform: translateX(100%); }
+}
+
+@-ms-keyframes stroll {
+  from { transform: translateX(-100); }
+  to { transform: translateX(100%); }
+}
+
+#walk-container {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	-webkit-animation: stroll 30s linear infinite;
+	-moz-animation: stroll 30s linear infinite;
+	-ms-animation: stroll 30s linear infinite;
+	animation: stroll 30s linear infinite;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
