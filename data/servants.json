@@ -1380,7 +1380,7 @@
 				"id": "3-1",
 				"name": "Gaius Julius Caesar",
 				"maxcopy": 5,
-				"stype": 0,
+				"stype": 1,
 				"img": true,
 				"imgpath": "https://i.imgur.com/DapVmOB.png"
 			},
@@ -1388,7 +1388,7 @@
 				"id": "3-2",
 				"name": "Gilles de Rais (Saber)",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/4rTvs50.png"
 			},
