@@ -53,10 +53,7 @@ var short_input_parameter = "skey";
 var fastmode_checkbox = "fastmode";
 var fastmode_parameter = "fast";
 
-var old_short_input_parameter = "ss";
-
 // URL Shortend
-var endpoint_old = "https://www.jsonstore.io/670d4eb30d66f9c2e775017731c9822f49adf477ac6571edb7185d174c8219e4";
 var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cbb40679791533b716810e77dc9";
 var url_checkback_part = "/checkback/";
 var url_data_part = "/data/";
@@ -719,18 +716,6 @@ $(document).ready(function() {
     $('#loadingModal').modal('show');
 	// URL Params
 	var urlParams = new URLSearchParams(window.location.search);
-	// URL Redirect; Old
-	var hashh_old = urlParams.get(old_short_input_parameter);
-	if (hashh_old != null) {
-		// Old End Point
-		$.getJSON(endpoint_old + "/" + hashh_old, function (data) {
-			data = data["result"];
-			if (data != null) {
-				window.location.href = data; //Redirect
-			}
-		});
-		return;
-	}
 	// URL Redirect; New
 	var hashh = urlParams.get(short_input_parameter);
 	if (hashh != null) {
