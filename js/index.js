@@ -788,6 +788,7 @@ function saveLocalData() {
         callback: function (result) {
             if (result) {
 				localStorage[list_local] = compress_input;
+				$('#' + load_btn).prop('disabled', false);
 				bootbox.alert(save_fin_text, null);
 			}
         }
