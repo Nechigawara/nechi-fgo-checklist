@@ -58,6 +58,19 @@ var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cb
 var url_checkback_part = "/checkback/";
 var url_data_part = "/data/";
 
+// Save & Load
+var fast_mode_local = "fgo_fastmode";
+var list_local = "fgo_list";
+
+var load_text = "List Data found on your current browser. Would you like to load it?";
+var save_text = "Would you like to save current list data? This will overwrite the old data if exist.";
+
+var load_fin_text = "List Loaded";
+var save_fin_text = "List Saved";
+
+var load_btn = "loadbutton";
+var save_btn = "savebutton";
+
 // Global Variables
 var servants_data_list = {};
 var user_data = {};
@@ -425,6 +438,12 @@ function UpdateURL() {
 		console.log("Compressed Size Reduce: " + decraese_len);
 		// Put Param
 		new_parameter += compress_input_parameter + "=" + compress_input;
+		// Button
+		$('#' + save_btn).prop('disabled', false);
+	}
+	else {
+		compress_input = null;
+		$('#' + save_btn).prop('disabled', true);
 	}
 	// Fast Mode
 	var fastmode_str = getFastModeURLstring();
@@ -490,6 +509,8 @@ function UpdateURLFastModeOnly() {
 
 // Make Data
 function MakeData(servants_data) {
+	// Clear Tooltip
+	$('[data-toggle="tooltip-member"]').tooltip('dispose');
     // Draw Button & Create User Data
     var list_box = [];
     var list_img = [];
@@ -710,6 +731,69 @@ function ExportCanvas() {
     });
 }
 
+// Load
+function loadLocalData() {
+	// Confirm
+	bootbox.confirm({
+        message: load_text,
+        buttons: {
+            cancel: {
+                label: '<i class="fa fa-times"></i> Cancel'
+            },
+            confirm: {
+                label: '<i class="fa fa-check"></i> Confirm'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+				// Show Loading Modal
+				$('#loadingModal').modal('show');
+				// Load List
+				compress_input = localStorage[list_local];
+				raw_user_input = LZString.decompressFromEncodedURIComponent(compress_input);
+				// Update HTML
+				finish_loading();
+				// Alert
+				bootbox.alert(load_fin_text, null);
+			}
+			else {
+				if (raw_user_input == null)
+				{
+					// Blank Raw
+					raw_user_input = "";
+					// Finish Loading
+					finish_loading();
+				}
+			}
+        }
+    });
+}
+
+function saveLocalData() {
+	// Update URL First
+	UpdateURL();
+	// Confirm if compress_input not null
+	if (compress_input == null) return;
+	// Confirm 
+	bootbox.confirm({
+        message: save_text,
+        buttons: {
+            cancel: {
+                label: '<i class="fa fa-times"></i> Cancel'
+            },
+            confirm: {
+                label: '<i class="fa fa-check"></i> Confirm'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+				localStorage[list_local] = compress_input;
+				bootbox.alert(save_fin_text, null);
+			}
+        }
+    });
+}
+
 // Onload
 $(document).ready(function() {
 	// Show Loading Modal
@@ -747,27 +831,58 @@ $(document).ready(function() {
 		dataAdapter: customAdapter,
 		data: copy_choice_allow
 	});
-	// FastMode
 	var fastmode_input = urlParams.get(fastmode_parameter);
+	compress_input = urlParams.get(compress_input_parameter);
+	// FastMode
 	if (fastmode_input != null) {
 		var fastmode_enable = (parseInt(fastmode_input) > 0);
 		$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
+	}
+	else {
+		// FastMode
+		if (localStorage[fast_mode_local]) {
+			var fastmode_enable = (parseInt(localStorage[fast_mode_local]) > 0);
+			$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
+		}
+	}
+	// Load From URL
+	if (compress_input != null) {
+		// List Reader
+		raw_user_input = LZString.decompressFromEncodedURIComponent(compress_input);
+		// Finish Loading
+		finish_loading();
+	}
+	else {
+		raw_user_input = urlParams.get(raw_input_parameter);
+		if (raw_user_input != null) {
+			// Finish Loading
+			finish_loading();
+		}
+		else 
+		{
+			// List Reader
+			if (localStorage[list_local]) {
+				loadLocalData();
+			}
+			else {
+				// Blank Raw
+				raw_user_input = "";
+				// Finish Loading
+				finish_loading();
+			}
+		}
+	}
+	// Set Load Button Status
+	if (localStorage[list_local ]) {
+		$('#' + load_btn).prop('disabled', false);
 	}
 	// Set Checkbox Event
 	$('#' + fastmode_checkbox).change(function () {
 		UpdateURLFastModeOnly();
 	});
-    // URL Reader
-	compress_input = urlParams.get(compress_input_parameter);
-	if (compress_input != null) {
-		raw_user_input = LZString.decompressFromEncodedURIComponent(compress_input);
-	}
-	else {
-		raw_user_input = urlParams.get(raw_input_parameter);
-		if (raw_user_input == null) {
-			raw_user_input = "";
-		}
-	}
+});
+
+function finish_loading() {
 	// Convert User Data from Input
     var array_input = raw_user_input.split(",");
     for (var ii = 0, li = array_input.length; ii < li; ii++) {
@@ -800,7 +915,7 @@ $(document).ready(function() {
             $('#loadingModal').modal('hide')
         }
     });
-});
+}
 
 function ToggleEventIcon() {
 	$("." + servant_type_box_class).toggle();
