@@ -489,6 +489,7 @@ function UpdateURLFastModeOnly() {
 			url_part = "?";
 		}
 		url_part += fastmode_str;
+		localStorage[fast_mode_local] = 1;
 	}
 	else if (url_part != "") {
 		urlParams = new URLSearchParams(url_part);
@@ -501,6 +502,7 @@ function UpdateURLFastModeOnly() {
 		if (url_part == "?") {
 			url_part = "";
 		}
+		localStorage[fast_mode_local] = 0;
 	}
 	// Push URL
 	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + url_part;
