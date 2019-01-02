@@ -874,7 +874,7 @@ $(document).ready(function() {
 		}
 	}
 	// Set Load Button Status
-	if (localStorage[list_local ]) {
+	if (localStorage[list_local]) {
 		$('#' + load_btn).prop('disabled', false);
 	}
 	// Set Checkbox Event
