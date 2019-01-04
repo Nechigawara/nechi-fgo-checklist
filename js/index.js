@@ -497,12 +497,15 @@ function UpdateURLFastModeOnly() {
 		if (fastmode_input != null) {
 			url_part = url_part.replace("&" + fastmode_parameter + "=" + fastmode_input,'');
 			url_part = url_part.replace(fastmode_parameter + "=" + fastmode_input,'');
+			localStorage[fast_mode_local] = 1;
+		}
+		else {
+			localStorage[fast_mode_local] = 0;
 		}
 		// if ? left, clean Up
 		if (url_part == "?") {
 			url_part = "";
 		}
-		localStorage[fast_mode_local] = 0;
 	}
 	// Push URL
 	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + url_part;
