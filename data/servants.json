@@ -594,7 +594,7 @@
 				"id": "5-0C",
 				"name": "Li Shuwen",
 				"maxcopy": 5,
-				"stype": 0,
+				"stype": 1,
 				"img": true,
 				"imgpath": "https://i.imgur.com/PnhHqrW.png"
 			}
