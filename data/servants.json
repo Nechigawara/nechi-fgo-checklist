@@ -1372,8 +1372,8 @@
 				"name": "Miyu Edelfelt",
 				"maxcopy": 5,
 				"stype": 2,
-				"img": false,
-				"imgpath": null
+				"img": true,
+				"imgpath": "https://i.imgur.com/AWwJB8j.png"
 			}
 		]
 	},
