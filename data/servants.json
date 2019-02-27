@@ -605,6 +605,14 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/uaE8WFR.png"
+			},
+			{
+				"id": "5-0E",
+				"name": "Kingprotea",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": false,
+				"imgpath": null
 			}
 		]
 	},
