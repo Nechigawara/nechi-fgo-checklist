@@ -619,8 +619,8 @@
 				"name": "Kama",
 				"maxcopy": 5,
 				"stype": 2,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/fBWCcJh.png"
 			}
 		]
 	},
