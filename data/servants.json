@@ -621,6 +621,14 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/fBWCcJh.png"
+			},
+			{
+				"id": "5-0G",
+				"name": "Sima Yi (Reines)",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HTFOVOe.png"
 			}
 		]
 	},
@@ -1398,6 +1406,22 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AWwJB8j.png"
+			},
+			{
+				"id": "4-0Z",
+				"name": "Gray",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": ""
+			},
+			{
+				"id": "4-0a",
+				"name": "Astraea",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/1lMj1p5.png"
 			}
 		]
 	},
