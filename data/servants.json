@@ -1412,8 +1412,8 @@
 				"name": "Gray",
 				"maxcopy": 5,
 				"stype": 3,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/HGxUIN0.png"
 			},
 			{
 				"id": "4-0a",
