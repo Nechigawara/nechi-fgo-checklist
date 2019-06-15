@@ -634,7 +634,7 @@
 				"id": "5-0H",
 				"name": "Giant Statue God AKA Jinako Karigiri ",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 0,
 				"img": false,
 				"imgpath": ""
 			}
@@ -1435,7 +1435,7 @@
 				"id": "4-0b",
 				"name": "Lakshmibai",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 0,
 				"img": false,
 				"imgpath": ""
 			}
@@ -1788,7 +1788,7 @@
 				"id": "3-g",
 				"name": "William Tell",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 0,
 				"img": false,
 				"imgpath": ""
 			}
