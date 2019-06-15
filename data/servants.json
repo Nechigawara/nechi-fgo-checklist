@@ -629,6 +629,14 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/HTFOVOe.png"
+			},
+			{
+				"id": "5-0H",
+				"name": "Giant Statue God AKA Jinako Karigiri ",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
@@ -1422,6 +1430,14 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/1lMj1p5.png"
+			},
+			{
+				"id": "4-0b",
+				"name": "Lakshmibai",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
@@ -1767,6 +1783,14 @@
 				"stype": 1,
 				"img": true,
 				"imgpath": "https://i.imgur.com/QKBUrlz.png"
+			},
+			{
+				"id": "3-g",
+				"name": "William Tell",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
