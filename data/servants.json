@@ -636,7 +636,7 @@
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
-				"imgpath": "https://i.imgur.com/oQOjNRO.png"
+				"imgpath": "https://i.imgur.com/6KAvals.png"
 			}
 		]
 	},
@@ -1436,8 +1436,8 @@
 				"name": "Lakshmibai",
 				"maxcopy": 5,
 				"stype": 0,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/Y0OynEU.png"
 			}
 		]
 	},
@@ -1789,8 +1789,8 @@
 				"name": "William Tell",
 				"maxcopy": 5,
 				"stype": 0,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/wFWgkLf.png"
 			}
 		]
 	},
