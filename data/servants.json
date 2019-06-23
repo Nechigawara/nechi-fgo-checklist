@@ -632,11 +632,19 @@
 			},
 			{
 				"id": "5-0H",
-				"name": "Great Statue God AKA Jinako Karigiri ",
+				"name": "Great Statue God AKA Jinako Karigiri",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/6KAvals.png"
+			},
+			{
+				"id": "5-0I",
+				"name": "Arjuna (Alter)",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/zmW2wBT.png"
 			}
 		]
 	},
@@ -1438,6 +1446,14 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Y0OynEU.png"
+			},
+			{
+				"id": "4-0c",
+				"name": "Aśvatthāman",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/cMR7gNR.png"
 			}
 		]
 	},
@@ -1791,6 +1807,14 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/wFWgkLf.png"
+			},
+			{
+				"id": "3-h",
+				"name": "Asclepius",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/fvpJMOJ.png"
 			}
 		]
 	},
