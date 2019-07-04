@@ -645,6 +645,14 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/zmW2wBT.png"
+			},
+			{
+				"id": "5-0J",
+				"name": "Demon King Nobunaga",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
@@ -1454,6 +1462,14 @@
 				"stype": 1,
 				"img": true,
 				"imgpath": "https://i.imgur.com/cMR7gNR.png"
+			},
+			{
+				"id": "4-0d",
+				"name": "Nagao Kagetora",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
@@ -1815,6 +1831,14 @@
 				"stype": 1,
 				"img": true,
 				"imgpath": "https://i.imgur.com/fvpJMOJ.png"
+			},
+			{
+				"id": "3-i",
+				"name": "Mori Nagayoshi",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
