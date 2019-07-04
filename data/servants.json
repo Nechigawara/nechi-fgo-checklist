@@ -651,8 +651,8 @@
 				"name": "Demon King Nobunaga",
 				"maxcopy": 5,
 				"stype": 2,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/0u1bVkJ.png"
 			}
 		]
 	},
@@ -1837,8 +1837,8 @@
 				"name": "Mori Nagayoshi",
 				"maxcopy": 5,
 				"stype": 2,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/A38JJ67.png"
 			}
 		]
 	},
