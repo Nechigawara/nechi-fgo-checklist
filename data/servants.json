@@ -653,6 +653,14 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/0u1bVkJ.png"
+			},
+			{
+				"id": "5-0K",
+				"name": "Leonardo Da Vinci (Rider)",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AaVrEvE.png"
 			}
 		]
 	},
@@ -1936,6 +1944,38 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/e2kKgVB.png"
+			},
+			{
+				"id": "2-B",
+				"name": "Paris",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZH7v7W2.png"
+			},
+			{
+				"id": "2-C",
+				"name": "Gareth",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/sWyAivK.png"
+			},
+			{
+				"id": "2-D",
+				"name": "Chen Gong",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/u1EXNsx.png"
+			},
+			{
+				"id": "2-E",
+				"name": "Salome",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/9JsVxzr.png"
 			}
 		]
 	},
@@ -2001,6 +2041,30 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/tKM9teU.png"
+			},
+			{
+				"id": "1-7",
+				"name": "Jason",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ynppaIO.png"
+			},
+			{
+				"id": "1-8",
+				"name": "Bartholomew Roberts",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KiJ55kZ.png"
+			},
+			{
+				"id": "1-9",
+				"name": "Charlotte Corday",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AjouoOf.png"
 			}
 		]
 	},
