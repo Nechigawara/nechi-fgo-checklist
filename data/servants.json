@@ -661,6 +661,14 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AaVrEvE.png"
+			},
+			{
+				"id": "5-0J",
+				"name": "Miyamoto Musashi (Berserker)",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/TnI8OTo.png"
 			}
 		]
 	},
@@ -1478,6 +1486,30 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/qeptThQ.png"
+			},
+			{
+				"id": "4-0e",
+				"name": "Osakabehime (Archer)",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/DzXTQrn.png"
+			},
+			{
+				"id": "4-0f",
+				"name": "Carmilla (Rider)",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/M3DesaG.png"
+			},
+			{
+				"id": "4-0g",
+				"name": "Katsushika Hokusai (Saber)",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/o0fNTHH.png"
 			}
 		]
 	},
