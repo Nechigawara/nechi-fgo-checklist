@@ -669,6 +669,14 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/TnI8OTo.png"
+			},
+			{
+				"id": "5-0M",
+				"name": "Artoria Pendragon (Ruler)",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/1b1DsD7.png"
 			}
 		]
 	},
@@ -1510,6 +1518,22 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/o0fNTHH.png"
+			},
+			{
+				"id": "4-0h",
+				"name": "Mysterious Alter Ego Λ",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ha9fB6a.png"
+			},
+			{
+				"id": "4-0i",
+				"name": "Okita J Sōji",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/CzWEU7w.png"
 			}
 		]
 	},
