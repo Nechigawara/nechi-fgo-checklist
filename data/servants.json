@@ -9,6 +9,7 @@
 			{
 				"id": "5-0",
 				"name": "Artoria Pendragon",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -17,6 +18,7 @@
 			{
 				"id": "5-1",
 				"name": "Attila",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -25,6 +27,7 @@
 			{
 				"id": "5-2",
 				"name": "Gilgamesh",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -33,6 +36,7 @@
 			{
 				"id": "5-3",
 				"name": "Zhuge Liang (Lord El-Melloi II)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -41,6 +45,7 @@
 			{
 				"id": "5-4",
 				"name": "Sakata Kintoki",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -49,6 +54,7 @@
 			{
 				"id": "5-5",
 				"name": "Vlad III",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -57,6 +63,7 @@
 			{
 				"id": "5-6",
 				"name": "Jeanne d'Arc",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -65,6 +72,7 @@
 			{
 				"id": "5-7",
 				"name": "Orion",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -73,6 +81,7 @@
 			{
 				"id": "5-8",
 				"name": "Tamamo no Mae",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -81,6 +90,7 @@
 			{
 				"id": "5-9",
 				"name": "Francis Drake",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -89,6 +99,7 @@
 			{
 				"id": "5-A",
 				"name": "Okita Sōji",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -97,6 +108,7 @@
 			{
 				"id": "5-B",
 				"name": "Scáthach",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -105,6 +117,7 @@
 			{
 				"id": "5-C",
 				"name": "Jack the Ripper",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -113,6 +126,7 @@
 			{
 				"id": "5-D",
 				"name": "Mordred",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -121,6 +135,7 @@
 			{
 				"id": "5-E",
 				"name": "Nikola Tesla",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -129,6 +144,7 @@
 			{
 				"id": "5-F",
 				"name": "Arjuna",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -137,6 +153,7 @@
 			{
 				"id": "5-G",
 				"name": "Karna",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -145,6 +162,7 @@
 			{
 				"id": "5-H",
 				"name": "Mysterious Heroine X",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -153,6 +171,7 @@
 			{
 				"id": "5-I",
 				"name": "Brynhildr",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -161,6 +180,7 @@
 			{
 				"id": "5-J",
 				"name": "Nero Claudius (Bride)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -169,6 +189,7 @@
 			{
 				"id": "5-K",
 				"name": "Ryōgi Shiki (Saber)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -177,6 +198,7 @@
 			{
 				"id": "5-L",
 				"name": "Amakusa Shirō",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -185,6 +207,7 @@
 			{
 				"id": "5-M",
 				"name": "Edmond Dantès",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -193,6 +216,7 @@
 			{
 				"id": "5-N",
 				"name": "Nightingale",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -201,6 +225,7 @@
 			{
 				"id": "5-O",
 				"name": "Cú Chulainn (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -209,6 +234,7 @@
 			{
 				"id": "5-P",
 				"name": "Medb",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -217,6 +243,7 @@
 			{
 				"id": "5-Q",
 				"name": "Jeanne d'Arc (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -225,6 +252,7 @@
 			{
 				"id": "5-R",
 				"name": "Iskandar",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -233,6 +261,7 @@
 			{
 				"id": "5-S",
 				"name": "Shuten Dōji",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -241,6 +270,7 @@
 			{
 				"id": "5-T",
 				"name": "Xuanzang Sanzang",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -249,6 +279,7 @@
 			{
 				"id": "5-U",
 				"name": "Minamoto no Raikō",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -257,6 +288,7 @@
 			{
 				"id": "5-V",
 				"name": "Ozymandias",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -265,6 +297,7 @@
 			{
 				"id": "5-W",
 				"name": "Artoria Pendragon (Lancer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -273,6 +306,7 @@
 			{
 				"id": "5-X",
 				"name": "Leonardo Da Vinci",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -281,6 +315,7 @@
 			{
 				"id": "5-Y",
 				"name": "Tamamo no Mae (Lancer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -289,6 +324,7 @@
 			{
 				"id": "5-Z",
 				"name": "Artoria Pendragon (Archer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -297,6 +333,7 @@
 			{
 				"id": "5-a",
 				"name": "Illyasviel von Einzbern",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -305,6 +342,7 @@
 			{
 				"id": "5-b",
 				"name": "Cleopatra",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -313,6 +351,7 @@
 			{
 				"id": "5-c",
 				"name": "Ishtar",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -321,6 +360,7 @@
 			{
 				"id": "5-d",
 				"name": "Enkidu",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -329,6 +369,7 @@
 			{
 				"id": "5-e",
 				"name": "Quetzalcoatl",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -337,6 +378,7 @@
 			{
 				"id": "5-f",
 				"name": "Merlin",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -345,6 +387,7 @@
 			{
 				"id": "5-g",
 				"name": "Miyamoto Musashi",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -353,6 +396,7 @@
 			{
 				"id": "5-h",
 				"name": "The Old Man of the Mountain",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -361,6 +405,7 @@
 			{
 				"id": "5-i",
 				"name": "Mysterious Heroine X (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -369,6 +414,7 @@
 			{
 				"id": "5-j",
 				"name": "James Moriarty",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -377,6 +423,7 @@
 			{
 				"id": "5-k",
 				"name": "Arthur Pendragon (Prototype)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -385,6 +432,7 @@
 			{
 				"id": "5-l",
 				"name": "Hijikata Toshizō",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -393,6 +441,7 @@
 			{
 				"id": "5-m",
 				"name": "Meltlilith",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -401,6 +450,7 @@
 			{
 				"id": "5-n",
 				"name": "Sesshōin Kiara",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -409,6 +459,7 @@
 			{
 				"id": "5-o",
 				"name": "Scheherazade",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -417,6 +468,7 @@
 			{
 				"id": "5-p",
 				"name": "Sherlock Holmes",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -425,6 +477,7 @@
 			{
 				"id": "5-q",
 				"name": "Nero Claudius (Caster)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -433,6 +486,7 @@
 			{
 				"id": "5-r",
 				"name": "Artoria Pendragon (Rider Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -441,6 +495,7 @@
 			{
 				"id": "5-s",
 				"name": "Osakabehime",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -449,6 +504,7 @@
 			{
 				"id": "5-t",
 				"name": "Abigail Williams",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -457,6 +513,7 @@
 			{
 				"id": "5-u",
 				"name": "Ereshkigal",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -465,6 +522,7 @@
 			{
 				"id": "5-v",
 				"name": "Katsushika Hokusai",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -473,6 +531,7 @@
 			{
 				"id": "5-w",
 				"name": "Semiramis",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -481,6 +540,7 @@
 			{
 				"id": "5-x",
 				"name": "Anastasia Nikolaevna Romanova",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -489,6 +549,7 @@
 			{
 				"id": "5-y",
 				"name": "Ivan the Terrible",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -497,6 +558,7 @@
 			{
 				"id": "5-z",
 				"name": "Achilles",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -505,6 +567,7 @@
 			{
 				"id": "5-01",
 				"name": "Okita Sōji (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -513,6 +576,7 @@
 			{
 				"id": "5-02",
 				"name": "Napoleon",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -521,6 +585,7 @@
 			{
 				"id": "5-03",
 				"name": "Sigurd",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -529,6 +594,7 @@
 			{
 				"id": "5-04",
 				"name": "Scáthach-Skaði",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -537,6 +603,7 @@
 			{
 				"id": "5-05",
 				"name": "Jeanne d'Arc (Archer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -545,6 +612,7 @@
 			{
 				"id": "5-06",
 				"name": "BB (Summer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -553,6 +621,7 @@
 			{
 				"id": "5-07",
 				"name": "Sitonai",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -561,6 +630,7 @@
 			{
 				"id": "5-08",
 				"name": "Xiang Yu",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -569,6 +639,7 @@
 			{
 				"id": "5-09",
 				"name": "Shi Huang Di",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -577,6 +648,7 @@
 			{
 				"id": "5-0A",
 				"name": "Bradamante",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -585,6 +657,7 @@
 			{
 				"id": "5-0B",
 				"name": "Beni-enma",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -593,6 +666,7 @@
 			{
 				"id": "5-0C",
 				"name": "Li Shuwen",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -601,6 +675,7 @@
 			{
 				"id": "5-0D",
 				"name": "Murasaki Shikibu",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -609,6 +684,7 @@
 			{
 				"id": "5-0E",
 				"name": "Kingprotea",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -617,6 +693,7 @@
 			{
 				"id": "5-0F",
 				"name": "Kama",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -625,6 +702,7 @@
 			{
 				"id": "5-0G",
 				"name": "Sima Yi (Reines)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -633,6 +711,7 @@
 			{
 				"id": "5-0H",
 				"name": "Great Statue God AKA Jinako Karigiri",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -641,6 +720,7 @@
 			{
 				"id": "5-0I",
 				"name": "Arjuna (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -649,6 +729,7 @@
 			{
 				"id": "5-0J",
 				"name": "Demon King Nobunaga",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -657,6 +738,7 @@
 			{
 				"id": "5-0K",
 				"name": "Leonardo Da Vinci (Rider)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -665,6 +747,7 @@
 			{
 				"id": "5-0L",
 				"name": "Miyamoto Musashi (Berserker)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -673,6 +756,7 @@
 			{
 				"id": "5-0M",
 				"name": "Artoria Pendragon (Ruler)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -690,6 +774,7 @@
 			{
 				"id": "4-0",
 				"name": "Artoria Pendragon (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -698,6 +783,7 @@
 			{
 				"id": "4-1",
 				"name": "Artoria Pendragon (Lily)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -706,6 +792,7 @@
 			{
 				"id": "4-2",
 				"name": "Nero Claudius",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -714,6 +801,7 @@
 			{
 				"id": "4-3",
 				"name": "Siegfried",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -722,6 +810,7 @@
 			{
 				"id": "4-4",
 				"name": "Chevalier d'Eon",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -730,6 +819,7 @@
 			{
 				"id": "4-5",
 				"name": "EMIYA",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -738,6 +828,7 @@
 			{
 				"id": "4-6",
 				"name": "Atalanta",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -746,6 +837,7 @@
 			{
 				"id": "4-7",
 				"name": "Elizabeth Báthory",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -754,6 +846,7 @@
 			{
 				"id": "4-8",
 				"name": "Marie Antoinette",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -762,6 +855,7 @@
 			{
 				"id": "4-9",
 				"name": "Martha",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -770,6 +864,7 @@
 			{
 				"id": "4-A",
 				"name": "Stheno",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -778,6 +873,7 @@
 			{
 				"id": "4-B",
 				"name": "Carmilla",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -786,6 +882,7 @@
 			{
 				"id": "4-C",
 				"name": "Heracles",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -794,6 +891,7 @@
 			{
 				"id": "4-D",
 				"name": "Lancelot",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -802,6 +900,7 @@
 			{
 				"id": "4-E",
 				"name": "Tamamo Cat",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -810,6 +909,7 @@
 			{
 				"id": "4-F",
 				"name": "Elizabeth Báthory (Halloween)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -818,6 +918,7 @@
 			{
 				"id": "4-G",
 				"name": "Anne Bonny & Mary Read",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -826,6 +927,7 @@
 			{
 				"id": "4-H",
 				"name": "Medea (Lily)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -834,6 +936,7 @@
 			{
 				"id": "4-I",
 				"name": "Oda Nobunaga",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -842,6 +945,7 @@
 			{
 				"id": "4-J",
 				"name": "Artoria Pendragon (Santa Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -850,6 +954,7 @@
 			{
 				"id": "4-K",
 				"name": "Nursery Rhyme",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -858,6 +963,7 @@
 			{
 				"id": "4-L",
 				"name": "Artoria Pendragon (Lancer Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -866,6 +972,7 @@
 			{
 				"id": "4-M",
 				"name": "Frankenstein",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -874,6 +981,7 @@
 			{
 				"id": "4-N",
 				"name": "Fionn mac Cumhaill",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -882,6 +990,7 @@
 			{
 				"id": "4-O",
 				"name": "Beowulf",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -890,6 +999,7 @@
 			{
 				"id": "4-P",
 				"name": "Ryōgi Shiki (Assassin)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -898,6 +1008,7 @@
 			{
 				"id": "4-Q",
 				"name": "Astolfo",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -906,6 +1017,7 @@
 			{
 				"id": "4-R",
 				"name": "Helena Blavatsky",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -914,6 +1026,7 @@
 			{
 				"id": "4-S",
 				"name": "Rama",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -922,6 +1035,7 @@
 			{
 				"id": "4-T",
 				"name": "Li Shuwen (Lancer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -930,6 +1044,7 @@
 			{
 				"id": "4-U",
 				"name": "Thomas Edison",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -938,6 +1053,7 @@
 			{
 				"id": "4-V",
 				"name": "EMIYA (Assassin)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -946,6 +1062,7 @@
 			{
 				"id": "4-W",
 				"name": "Irisviel (Dress of Heaven)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -954,6 +1071,7 @@
 			{
 				"id": "4-X",
 				"name": "Sakata Kintoki (Rider)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -962,6 +1080,7 @@
 			{
 				"id": "4-Y",
 				"name": "Ibaraki Dōji",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -970,6 +1089,7 @@
 			{
 				"id": "4-Z",
 				"name": "Nitocris",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -978,6 +1098,7 @@
 			{
 				"id": "4-a",
 				"name": "Lancelot (Saber)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -986,6 +1107,7 @@
 			{
 				"id": "4-b",
 				"name": "Tristan",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -994,6 +1116,7 @@
 			{
 				"id": "4-c",
 				"name": "Gawain",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1002,6 +1125,7 @@
 			{
 				"id": "4-d",
 				"name": "Marie Antoinette (Caster)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1010,6 +1134,7 @@
 			{
 				"id": "4-e",
 				"name": "Anne Bonny & Mary Read (Archer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1018,6 +1143,7 @@
 			{
 				"id": "4-f",
 				"name": "Mordred (Rider)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1026,6 +1152,7 @@
 			{
 				"id": "4-g",
 				"name": "Scáthach (Assassin)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1034,6 +1161,7 @@
 			{
 				"id": "4-h",
 				"name": "Kiyohime (Lancer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1042,6 +1170,7 @@
 			{
 				"id": "4-i",
 				"name": "Martha (Ruler)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1050,6 +1179,7 @@
 			{
 				"id": "4-j",
 				"name": "Chloe von Einzbern",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1058,6 +1188,7 @@
 			{
 				"id": "4-k",
 				"name": "Elizabeth Báthory (Brave)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1066,6 +1197,7 @@
 			{
 				"id": "4-l",
 				"name": "Vlad III (EXTRA)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1074,6 +1206,7 @@
 			{
 				"id": "4-m",
 				"name": "Jeanne d'Arc (Alter) (Santa Lily)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1082,6 +1215,7 @@
 			{
 				"id": "4-n",
 				"name": "Gilgamesh (Caster)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1090,6 +1224,7 @@
 			{
 				"id": "4-o",
 				"name": "Medusa (Lancer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1098,6 +1233,7 @@
 			{
 				"id": "4-p",
 				"name": "Gorgon",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1106,6 +1242,7 @@
 			{
 				"id": "4-q",
 				"name": "EMIYA (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1114,6 +1251,7 @@
 			{
 				"id": "4-r",
 				"name": "Hessian Lobo",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1122,6 +1260,7 @@
 			{
 				"id": "4-s",
 				"name": "Yan Qing",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1130,6 +1269,7 @@
 			{
 				"id": "4-t",
 				"name": "Chacha",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1138,6 +1278,7 @@
 			{
 				"id": "4-u",
 				"name": "Passionlip",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1146,6 +1287,7 @@
 			{
 				"id": "4-v",
 				"name": "Suzuka Gozen",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1154,6 +1296,7 @@
 			{
 				"id": "4-w",
 				"name": "BB",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1162,6 +1305,7 @@
 			{
 				"id": "4-x",
 				"name": "Wu Zetian",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1170,6 +1314,7 @@
 			{
 				"id": "4-y",
 				"name": "Penthesilea",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1178,6 +1323,7 @@
 			{
 				"id": "4-z",
 				"name": "Frankenstein (Saber)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1186,6 +1332,7 @@
 			{
 				"id": "4-01",
 				"name": "Nitocris (Assassin)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1194,6 +1341,7 @@
 			{
 				"id": "4-02",
 				"name": "Oda Nobunaga (Berserker)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1202,6 +1350,7 @@
 			{
 				"id": "4-03",
 				"name": "Helena Blavatsky (Archer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1210,6 +1359,7 @@
 			{
 				"id": "4-04",
 				"name": "Minamoto no Raikō (Lancer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1218,6 +1368,7 @@
 			{
 				"id": "4-05",
 				"name": "Ishtar (Rider)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1226,6 +1377,7 @@
 			{
 				"id": "4-06",
 				"name": "Parvati",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1234,6 +1386,7 @@
 			{
 				"id": "4-07",
 				"name": "Tomoe Gozen",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1242,6 +1395,7 @@
 			{
 				"id": "4-08",
 				"name": "Mochizuki Chiyome",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1250,6 +1404,7 @@
 			{
 				"id": "4-09",
 				"name": "Yagyū Munenori",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1258,6 +1413,7 @@
 			{
 				"id": "4-0A",
 				"name": "Katō Danzō",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1266,6 +1422,7 @@
 			{
 				"id": "4-0B",
 				"name": "Mecha Eli-chan",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1274,6 +1431,7 @@
 			{
 				"id": "4-0C",
 				"name": "Mecha Eli-chan Mk.II",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1282,6 +1440,7 @@
 			{
 				"id": "4-0D",
 				"name": "Circe",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1290,6 +1449,7 @@
 			{
 				"id": "4-0E",
 				"name": "Nezha",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1298,6 +1458,7 @@
 			{
 				"id": "4-0F",
 				"name": "Queen of Sheba",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1306,6 +1467,7 @@
 			{
 				"id": "4-0G",
 				"name": "Attila the San(ta)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1314,6 +1476,7 @@
 			{
 				"id": "4-0H",
 				"name": "Asagami Fujino",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1322,6 +1485,7 @@
 			{
 				"id": "4-0I",
 				"name": "Atalanta (Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1330,6 +1494,7 @@
 			{
 				"id": "4-0J",
 				"name": "Chiron",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1338,6 +1503,7 @@
 			{
 				"id": "4-0K",
 				"name": "Sieg",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1346,6 +1512,7 @@
 			{
 				"id": "4-0L",
 				"name": "Sakamoto Ryōma",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1354,6 +1521,7 @@
 			{
 				"id": "4-0M",
 				"name": "Valkyrie",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1362,6 +1530,7 @@
 			{
 				"id": "4-0N",
 				"name": "Ibaraki Dōji (Lancer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1370,6 +1539,7 @@
 			{
 				"id": "4-0O",
 				"name": "Ushiwakamaru (Assassin)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1378,6 +1548,7 @@
 			{
 				"id": "4-0P",
 				"name": "Jeanne d'Arc (Berserker Alter)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1386,6 +1557,7 @@
 			{
 				"id": "4-0Q",
 				"name": "Medb (Saber)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1394,6 +1566,7 @@
 			{
 				"id": "4-0R",
 				"name": "Mysterious Heroine XX",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1402,6 +1575,7 @@
 			{
 				"id": "4-0S",
 				"name": "Diarmuid Ua Duibhne (Saber)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1410,6 +1584,7 @@
 			{
 				"id": "4-0T",
 				"name": "Shuten Dōji (Caster)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1418,6 +1593,7 @@
 			{
 				"id": "4-0U",
 				"name": "Lanling Wang",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1426,6 +1602,7 @@
 			{
 				"id": "4-0V",
 				"name": "Qin Liangyu",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1434,6 +1611,7 @@
 			{
 				"id": "4-0W",
 				"name": "Yu Miaoyi",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1442,6 +1620,7 @@
 			{
 				"id": "4-0X",
 				"name": "Quetzalcoatl (Samba/Santa)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1450,6 +1629,7 @@
 			{
 				"id": "4-0Y",
 				"name": "Miyu Edelfelt",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1458,6 +1638,7 @@
 			{
 				"id": "4-0a",
 				"name": "Astraea",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1466,6 +1647,7 @@
 			{
 				"id": "4-0Z",
 				"name": "Gray",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1474,6 +1656,7 @@
 			{
 				"id": "4-0b",
 				"name": "Lakshmibai",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1482,6 +1665,7 @@
 			{
 				"id": "4-0c",
 				"name": "Aśvatthāman",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1490,6 +1674,7 @@
 			{
 				"id": "4-0d",
 				"name": "Nagao Kagetora",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1498,6 +1683,7 @@
 			{
 				"id": "4-0e",
 				"name": "Osakabehime (Archer)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1506,6 +1692,7 @@
 			{
 				"id": "4-0f",
 				"name": "Carmilla (Rider)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1514,6 +1701,7 @@
 			{
 				"id": "4-0g",
 				"name": "Katsushika Hokusai (Saber)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -1522,6 +1710,7 @@
 			{
 				"id": "4-0h",
 				"name": "Mysterious Alter Ego Λ",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1530,6 +1719,7 @@
 			{
 				"id": "4-0i",
 				"name": "Okita J Sōji",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1547,6 +1737,7 @@
 			{
 				"id": "3-0",
 				"name": "Mashu Kyrielight",
+				"game_id": "",
 				"maxcopy": 3,
 				"stype": 0,
 				"img": true,
@@ -1555,6 +1746,7 @@
 			{
 				"id": "3-1",
 				"name": "Gaius Julius Caesar",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1563,6 +1755,7 @@
 			{
 				"id": "3-2",
 				"name": "Gilles de Rais (Saber)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1571,6 +1764,7 @@
 			{
 				"id": "3-3",
 				"name": "Robin Hood",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1579,6 +1773,7 @@
 			{
 				"id": "3-4",
 				"name": "Euryale",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1587,6 +1782,7 @@
 			{
 				"id": "3-5",
 				"name": "Cú Chulainn",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1595,6 +1791,7 @@
 			{
 				"id": "3-6",
 				"name": "Cú Chulainn (Prototype)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1603,6 +1800,7 @@
 			{
 				"id": "3-7",
 				"name": "Romulus",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1611,6 +1809,7 @@
 			{
 				"id": "3-8",
 				"name": "Medusa",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1619,6 +1818,7 @@
 			{
 				"id": "3-9",
 				"name": "Boudica",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1627,6 +1827,7 @@
 			{
 				"id": "3-A",
 				"name": "Ushiwakamaru",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1635,6 +1836,7 @@
 			{
 				"id": "3-B",
 				"name": "Alexander",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1643,6 +1845,7 @@
 			{
 				"id": "3-C",
 				"name": "Medea",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1651,6 +1854,7 @@
 			{
 				"id": "3-D",
 				"name": "Gilles de Rais",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1659,6 +1863,7 @@
 			{
 				"id": "3-E",
 				"name": "Mephistopheles",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1667,6 +1872,7 @@
 			{
 				"id": "3-F",
 				"name": "Cú Chulainn (Caster)",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1675,6 +1881,7 @@
 			{
 				"id": "3-G",
 				"name": "Jing Ke",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1683,6 +1890,7 @@
 			{
 				"id": "3-H",
 				"name": "Lu Bu Fengxian",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1691,6 +1899,7 @@
 			{
 				"id": "3-I",
 				"name": "Darius III",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1699,6 +1908,7 @@
 			{
 				"id": "3-J",
 				"name": "Kiyohime",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1707,6 +1917,7 @@
 			{
 				"id": "3-K",
 				"name": "David",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1715,6 +1926,7 @@
 			{
 				"id": "3-L",
 				"name": "Hector",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1723,6 +1935,7 @@
 			{
 				"id": "3-M",
 				"name": "Diarmuid Ua Duibhne",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1731,6 +1944,7 @@
 			{
 				"id": "3-N",
 				"name": "Fergus mac Róich",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1739,6 +1953,7 @@
 			{
 				"id": "3-O",
 				"name": "Paracelsus von Hohenheim",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1747,6 +1962,7 @@
 			{
 				"id": "3-P",
 				"name": "Charles Babbage",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1755,6 +1971,7 @@
 			{
 				"id": "3-Q",
 				"name": "Henry Jekyll & Hyde",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1763,6 +1980,7 @@
 			{
 				"id": "3-R",
 				"name": "Kid Gil",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1771,6 +1989,7 @@
 			{
 				"id": "3-S",
 				"name": "Geronimo",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1779,6 +1998,7 @@
 			{
 				"id": "3-T",
 				"name": "Billy the Kid",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1787,6 +2007,7 @@
 			{
 				"id": "3-U",
 				"name": "Hundred-Faced Hassan",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1795,6 +2016,7 @@
 			{
 				"id": "3-V",
 				"name": "Fūma Kotarō",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1803,6 +2025,7 @@
 			{
 				"id": "3-W",
 				"name": "Hassan of Serenity",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1811,6 +2034,7 @@
 			{
 				"id": "3-X",
 				"name": "Tawara Tōta",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1819,6 +2043,7 @@
 			{
 				"id": "3-Y",
 				"name": "Bedivere",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1827,6 +2052,7 @@
 			{
 				"id": "3-Z",
 				"name": "Jaguar Man",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1835,6 +2061,7 @@
 			{
 				"id": "3-a",
 				"name": "Christopher Columbus",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1843,6 +2070,7 @@
 			{
 				"id": "3-b",
 				"name": "Hōzōin Inshun",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1851,6 +2079,7 @@
 			{
 				"id": "3-c",
 				"name": "Avicebron",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1859,6 +2088,7 @@
 			{
 				"id": "3-d",
 				"name": "Antonio Salieri",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1867,6 +2097,7 @@
 			{
 				"id": "3-e",
 				"name": "Okada Izō",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1875,6 +2106,7 @@
 			{
 				"id": "3-f",
 				"name": "Red Hare",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1883,6 +2115,7 @@
 			{
 				"id": "3-g",
 				"name": "William Tell",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1891,6 +2124,7 @@
 			{
 				"id": "3-h",
 				"name": "Asclepius",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
 				"img": true,
@@ -1899,6 +2133,7 @@
 			{
 				"id": "3-i",
 				"name": "Mori Nagayoshi",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
@@ -1916,6 +2151,7 @@
 			{
 				"id": "2-0",
 				"name": "Musashibō Benkei",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1924,6 +2160,7 @@
 			{
 				"id": "2-1",
 				"name": "Leonidas I",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1932,6 +2169,7 @@
 			{
 				"id": "2-2",
 				"name": "Georgios",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1940,6 +2178,7 @@
 			{
 				"id": "2-3",
 				"name": "Edward Teach",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1948,6 +2187,7 @@
 			{
 				"id": "2-4",
 				"name": "Hans Christian Andersen",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1956,6 +2196,7 @@
 			{
 				"id": "2-5",
 				"name": "William Shakespeare",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1964,6 +2205,7 @@
 			{
 				"id": "2-6",
 				"name": "Cursed Arm Hassan",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1972,6 +2214,7 @@
 			{
 				"id": "2-7",
 				"name": "Charles-Henri Sanson",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1980,6 +2223,7 @@
 			{
 				"id": "2-8",
 				"name": "Phantom of the Opera",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1988,6 +2232,7 @@
 			{
 				"id": "2-9",
 				"name": "Caligula",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -1996,6 +2241,7 @@
 			{
 				"id": "2-A",
 				"name": "Eric Bloodaxe",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2004,6 +2250,7 @@
 			{
 				"id": "2-B",
 				"name": "Paris",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2012,6 +2259,7 @@
 			{
 				"id": "2-C",
 				"name": "Gareth",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2020,6 +2268,7 @@
 			{
 				"id": "2-D",
 				"name": "Chen Gong",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2028,6 +2277,7 @@
 			{
 				"id": "2-E",
 				"name": "Salome",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2045,6 +2295,7 @@
 			{
 				"id": "1-0",
 				"name": "Arash",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2053,6 +2304,7 @@
 			{
 				"id": "1-1",
 				"name": "Wolfgang Amadeus Mozart",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2061,6 +2313,7 @@
 			{
 				"id": "1-2",
 				"name": "Sasaki Kojirō",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2069,6 +2322,7 @@
 			{
 				"id": "1-3",
 				"name": "Mata Hari",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2077,6 +2331,7 @@
 			{
 				"id": "1-4",
 				"name": "Spartacus",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2085,6 +2340,7 @@
 			{
 				"id": "1-5",
 				"name": "Asterios",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2093,6 +2349,7 @@
 			{
 				"id": "1-6",
 				"name": "Paul Bunyan",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -2101,6 +2358,7 @@
 			{
 				"id": "1-7",
 				"name": "Jason",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2109,6 +2367,7 @@
 			{
 				"id": "1-8",
 				"name": "Bartholomew Roberts",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2117,6 +2376,7 @@
 			{
 				"id": "1-9",
 				"name": "Charlotte Corday",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
@@ -2134,6 +2394,7 @@
 			{
 				"id": "0-0",
 				"name": "Angra Mainyu",
+				"game_id": "",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
