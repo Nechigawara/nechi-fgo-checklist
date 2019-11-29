@@ -199,7 +199,7 @@
 			{
 				"id": "5-J",
 				"name": "Nero Claudius (Bride)",
-				"class": "",
+				"class": "saber",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
@@ -529,7 +529,7 @@
 			{
 				"id": "5-q",
 				"name": "Nero Claudius (Caster)",
-				"class": "",
+				"class": "caster",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
@@ -829,7 +829,7 @@
 			{
 				"id": "5-0L",
 				"name": "Miyamoto Musashi (Berserker)",
-				"class": "",
+				"class": "berserker",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
@@ -839,7 +839,7 @@
 			{
 				"id": "5-0M",
 				"name": "Artoria Pendragon (Ruler)",
-				"class": "",
+				"class": "ruler",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
@@ -849,12 +849,22 @@
 			{
 				"id": "5-0N",
 				"name": "Space Ishtar",
-				"class": "",
+				"class": "avenger",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Th1W4Lo.png"
+			},
+			{
+				"id": "5-0O",
+				"name": "Astolfo (Saber)",
+				"class": "saber",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Gk3cYv0.png"
 			}
 		]
 	},
@@ -868,7 +878,7 @@
 			{
 				"id": "4-0",
 				"name": "Artoria Pendragon (Alter)",
-				"class": "",
+				"class": "saber",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
@@ -878,7 +888,7 @@
 			{
 				"id": "4-1",
 				"name": "Artoria Pendragon (Lily)",
-				"class": "",
+				"class": "saber",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 3,
@@ -888,7 +898,7 @@
 			{
 				"id": "4-2",
 				"name": "Nero Claudius",
-				"class": "",
+				"class": "saber",
 				"game_id": "",
 				"maxcopy": 5,
 				"stype": 1,
@@ -1934,6 +1944,16 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/klbjNgV.png"
+			},
+			{
+				"id": "4-0k",
+				"name": "Nightingale (Santa)",
+				"class": "",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/PnYqRMR.png"
 			}
 		]
 	},
