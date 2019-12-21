@@ -865,6 +865,26 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Gk3cYv0.png"
+			},
+			{
+				"id": "5-0P",
+				"name": "Super Orion",
+				"class": "archer",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/giAO0ab.png"
+			},
+			{
+				"id": "5-0Q",
+				"name": "Europa",
+				"class": "rider",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/STBS8DP.png"
 			}
 		]
 	},
@@ -2413,6 +2433,16 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/A38JJ67.png"
+			},
+			{
+				"id": "3-j",
+				"name": "Mandricardo",
+				"class": "",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/pZI7ux8.png"
 			}
 		]
 	},
