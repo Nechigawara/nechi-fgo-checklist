@@ -895,6 +895,16 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/GMaVbRz.png"
+			},
+			{
+				"id": "5-0S",
+				"name": "Sei Shōnagon",
+				"class": "archer",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/u8bajyx.png"
 			}
 		]
 	},
