@@ -905,6 +905,16 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/u8bajyx.png"
+			},
+			{
+				"id": "5-0T",
+				"name": "Odysseus",
+				"class": "rider",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/DL75zxT.png"
 			}
 		]
 	},
