@@ -925,6 +925,16 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/k9v634N.png"
+			},
+			{
+				"id": "5-0V",
+				"name": "Romulus-Quirinus",
+				"class": "lancer",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/2htHbs9.png"
 			}
 		]
 	},
