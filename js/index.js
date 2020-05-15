@@ -27,6 +27,9 @@ var copy_choice_max = 5;
 var share_tags = "FGO,FateGrandOrder";
 var share_title = "See My Servants Here!!";
 
+// Class Config
+var class_divide_class = "ByClass";
+
 // Servant Type
 var servant_type_box_class = "member-type";
 var sevent_typelist = [
@@ -54,7 +57,7 @@ var fastmode_checkbox = "fastmode";
 var fastmode_parameter = "fast";
 
 var classmode_checkbox = "classmode";
-var classmode_parameter = "fast";
+var classmode_parameter = "classlist";
 
 // URL Shortend
 var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cbb40679791533b716810e77dc9";
@@ -425,6 +428,13 @@ function getFastModeURLstring() {
 	return "";
 }
 
+function getClassModeURLstring() {
+	if (IsClassmode()) {
+		return classmode_parameter + "=1";
+	}
+	return "";
+}
+
 function UpdateURL() {
 	// Sort Key First
 	user_data = orderKeys(user_data);
@@ -455,6 +465,19 @@ function UpdateURL() {
 		compress_input = null;
 		$('#' + save_btn).prop('disabled', true);
 	}
+	
+	// Class Mode
+	var classmode_str = getClassModeURLstring();
+	if (classmode_str != "") {
+		if (!new_parameter.startsWith("?")) {
+			new_parameter = "?";
+		}
+		else {
+			new_parameter += "&";
+		}
+		new_parameter += classmode_str;
+	}
+	
 	// Fast Mode
 	var fastmode_str = getFastModeURLstring();
 	if (fastmode_str != "") {
@@ -466,6 +489,7 @@ function UpdateURL() {
 		}
 		new_parameter += fastmode_str;
 	}
+	
 	// Push URL
 	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + new_parameter;
     window.history.pushState({path:newurl},'',newurl);
@@ -475,17 +499,28 @@ function UpdateURL() {
 	return true;
 }
 
-function UpdateURLFastModeOnly() {
+function UpdateURLOptionModeOnly() {
 	// Get Search
 	var url_part = window.location.search;
 	var urlParams = null;
-	// Fast Mode
+	
+	// Option Check
+	var classmode_str = getClassModeURLstring();
+	var classmode_input = "";
+	
 	var fastmode_str = getFastModeURLstring();
 	var fastmode_input = "";
-	if (fastmode_str != "") {
+	
+	// Mode String Founded
+	if (classmode_str != "" || fastmode_str != "") {
 		if (url_part != "") {
 			urlParams = new URLSearchParams(url_part);
+			classmode_input = urlParams.get(classmode_parameter);
 			fastmode_input = urlParams.get(fastmode_parameter);
+			if (classmode_input != null) {
+				url_part = url_part.replace("&" + classmode_parameter + "=" + classmode_input,'');
+				url_part = url_part.replace(classmode_parameter + "=" + classmode_input,'');
+			}
 			if (fastmode_input != null) {
 				url_part = url_part.replace("&" + fastmode_parameter + "=" + fastmode_input,'');
 				url_part = url_part.replace(fastmode_parameter + "=" + fastmode_input,'');
@@ -498,25 +533,69 @@ function UpdateURLFastModeOnly() {
 		else {
 			url_part = "?";
 		}
-		url_part += fastmode_str;
-		localStorage[fast_mode_local] = 1;
+		
+		// Finish Input
+		var last_str = "";
+		
+		// Option Checked; Class Mode
+		if (classmode_str != "")
+		{
+			last_str += classmode_str;
+			localStorage[class_mode_local] = 1;
+		}
+		else
+		{
+			localStorage[class_mode_local] = 0;
+		}
+		
+		// Option Checked; Fast Mode
+		if (fastmode_str != "")
+		{
+			if (last_str != "")
+			{
+				last_str += "&" + fastmode_str;
+			}
+			else
+			{
+				last_str += fastmode_str;
+			}
+			localStorage[fast_mode_local] = 1;
+		}
+		else
+		{
+			localStorage[fast_mode_local] = 0;
+		}
+		
+		// Finish
+		url_part += last_str;
 	}
 	else if (url_part != "") {
 		urlParams = new URLSearchParams(url_part);
+		classmode_input = urlParams.get(classmode_parameter);
 		fastmode_input = urlParams.get(fastmode_parameter);
+		if (classmode_input != null) {
+			url_part = url_part.replace("&" + classmode_parameter + "=" + classmode_input,'');
+			url_part = url_part.replace(classmode_parameter + "=" + classmode_input,'');
+		}
 		if (fastmode_input != null) {
 			url_part = url_part.replace("&" + fastmode_parameter + "=" + fastmode_input,'');
 			url_part = url_part.replace(fastmode_parameter + "=" + fastmode_input,'');
-			localStorage[fast_mode_local] = 1;
 		}
-		else {
-			localStorage[fast_mode_local] = 0;
-		}
-		// if ? left, clean Up
-		if (url_part == "?") {
-			url_part = "";
-		}
+		// Local Storage Option
+		localStorage[class_mode_local] = 0;
+		localStorage[fast_mode_local] = 0;
 	}
+	else {
+		// Local Storage Option
+		localStorage[class_mode_local] = 0;
+		localStorage[fast_mode_local] = 0;
+	}
+	
+	// if ? left, clean Up
+	if (url_part == "?") {
+		url_part = "";
+	}
+	
 	// Push URL
 	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + url_part;
     window.history.pushState({path:newurl},'',newurl);
@@ -607,15 +686,15 @@ function MakeData(servants_data) {
             // Close div open tags
             current_servant_html += '>';
             // Image
-            if (current_servant.img == false) {
+            //if (current_servant.img == false) {
                 current_servant_img = img_default;
-            } else if (current_servant.imgpath == null) {
-                current_servant_img = getImagePath(current_path + '/' + current_servant.id + icontype, false);
-                list_img.push(loadSprite(current_servant_img));
-            } else {
-                current_servant_img = getImagePath(current_servant.imgpath, true);
-                list_img.push(loadSprite(current_servant_img));
-            }
+            //} else if (current_servant.imgpath == null) {
+            //    current_servant_img = getImagePath(current_path + '/' + current_servant.id + icontype, false);
+            //    list_img.push(loadSprite(current_servant_img));
+            //} else {
+            //    current_servant_img = getImagePath(current_servant.imgpath, true);
+            //    list_img.push(loadSprite(current_servant_img));
+            //}
             current_servant_html += '<img src="' + current_servant_img + '" class="' + img_class + '"/>';
             // Multiple Copy + Event Only Tag
             current_servant_html += '<div id="' + morecopy_prefix + current_servant.id + '" class="' + morecopy_class + '">';
@@ -848,7 +927,10 @@ $(document).ready(function() {
 		data: copy_choice_allow
 	});
 	var fastmode_input = urlParams.get(fastmode_parameter);
+	var classmode_input = urlParams.get(classmode_parameter);
 	compress_input = urlParams.get(compress_input_parameter);
+	
+	
 	// FastMode
 	if (fastmode_input != null) {
 		var fastmode_enable = (parseInt(fastmode_input) > 0);
@@ -861,6 +943,20 @@ $(document).ready(function() {
 			$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
 		}
 	}
+	
+	// ClassMode
+	if (classmode_input != null) {
+		var classmode_enable = (parseInt(classmode_input) > 0);
+		$('#' + classmode_checkbox).prop('checked', classmode_enable);
+	}
+	else {
+		// ClassMode
+		if (localStorage[class_mode_local]) {
+			var classmode_enable = (parseInt(localStorage[class_mode_local]) > 0);
+			$('#' + classmode_checkbox).prop('checked', classmode_enable);
+		}
+	}
+	
 	// Load From URL
 	if (compress_input != null) {
 		// List Reader
@@ -894,7 +990,10 @@ $(document).ready(function() {
 	}
 	// Set Checkbox Event
 	$('#' + fastmode_checkbox).change(function () {
-		UpdateURLFastModeOnly();
+		UpdateURLOptionModeOnly();
+	});
+	$('#' + classmode_checkbox).change(function () {
+		UpdateURLOptionModeOnly();
 	});
 });
 
