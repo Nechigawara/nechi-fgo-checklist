@@ -2158,7 +2158,7 @@
 				"id": "3-B",
 				"name": "Alexander",
 				"class": "rider",
-				"game_id": ""28,
+				"game_id": "28",
 				"maxcopy": 5,
 				"stype": 0,
 				"img": true,
