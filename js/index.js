@@ -53,6 +53,9 @@ var short_input_parameter = "skey";
 var fastmode_checkbox = "fastmode";
 var fastmode_parameter = "fast";
 
+var classmode_checkbox = "classmode";
+var classmode_parameter = "fast";
+
 // URL Shortend
 var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cbb40679791533b716810e77dc9";
 var url_checkback_part = "/checkback/";
@@ -60,6 +63,7 @@ var url_data_part = "/data/";
 
 // Save & Load
 var fast_mode_local = "fgo_fastmode";
+var class_mode_local = "fgo_classmode";
 var list_local = "fgo_list";
 
 var load_text = "List Data found on your current browser. Would you like to load it?";
@@ -197,6 +201,12 @@ function ConvertUserDataToRawInput(input_data)
 function IsFastmode() {
 	var fastmode_enable = $('#' + fastmode_checkbox).is(':checked');
 	return fastmode_enable;
+}
+
+// ClassMode Check
+function IsClassmode() {
+	var classmode_enable = $('#' + classmode_checkbox).is(':checked');
+	return classmode_enable;
 }
 
 // Click Div
