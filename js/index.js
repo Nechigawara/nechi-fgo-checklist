@@ -52,6 +52,7 @@ var member_clear_conf = "Are you sure you want to clear all checked servants?";
 
 // Share
 var share_text = "This is your current shorted URL. Can't guarantee how long the shorted URL will last (Use free data storage service 😜).<br/>So please keep Full URL in a safe place (Bookmark, ETC.)."
+var share_none_text = "There is nothing to share."
 
 // Statistic
 var statistic_area = "statisticBox";
@@ -73,8 +74,6 @@ var mashuSR_parameter = "mashu";
 var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cbb40679791533b716810e77dc9";
 var url_checkback_part = "/checkback/";
 var url_data_part = "/data/";
-
-var shortenLink_api = "http://tinyurl.com/api-create.php"
 
 // Save & Load
 var fast_mode_local = "fgo_fastmode";
@@ -1130,7 +1129,7 @@ $(document).ready(function() {
 		$('#' + mashuSR_checkbox).prop('checked', Mashu_IS_SR);
 	}
 	else {
-		// ClassMode
+		// Mashu is SR
 		if (localStorage[mashuSR_local]) {
 			var Mashu_IS_SR = (parseInt(localStorage[mashuSR_local]) > 0);
 			$('#' + mashuSR_checkbox).prop('checked', Mashu_IS_SR);
@@ -1285,14 +1284,22 @@ function ToggleEventIcon() {
 // Short URL
 //=============================================================================================================================
 function shareURL(site) {
-	$.get(
-        shortenLink_api,
-        {	url: window.location.href	},
-        function(data){
-            shareURL_Do(site, data);
-        }
-    );
-	return false;
+	if (compress_input == "")
+	{
+		bootbox.alert(share_none_text);
+		return;
+	}
+	// Make Share URL
+	var full_url = var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + compress_input_parameter + "=" + compress_input;
+	var mashuSR_str = getMashuSRURLstring();
+	if (mashuSR_str != "")
+	{
+		full_url += "&" + mashuSR_str
+	}
+	// URL Compress
+	tinyurl(full_url, () => {
+		shareURL_Do(site, tinyurl.url);
+    });
 };
 
 
