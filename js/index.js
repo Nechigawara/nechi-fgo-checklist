@@ -74,6 +74,8 @@ var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cb
 var url_checkback_part = "/checkback/";
 var url_data_part = "/data/";
 
+var shortenLink_api = "http://tinyurl.com/api-create.php"
+
 // Save & Load
 var fast_mode_local = "fgo_fastmode";
 var class_mode_local = "fgo_classmode";
@@ -1283,6 +1285,18 @@ function ToggleEventIcon() {
 // Short URL
 //=============================================================================================================================
 function shareURL(site) {
+	$.get(
+        shortenLink_api,
+        {	url: window.location.href	},
+        function(data){
+            shareURL_Do(site, data);
+        }
+    );
+	return false;
+};
+
+
+function shareURL_old(site) {
 	var current_compress_input = get_compress_input();
 	// Check for Existing Key
 	$.getJSON(endpoint + "/checkback/" + current_compress_input, function (get_data) {
