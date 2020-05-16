@@ -1290,7 +1290,7 @@ function shareURL(site) {
 		return;
 	}
 	// Make Share URL
-	var full_url = var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + compress_input_parameter + "=" + compress_input;
+	var full_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + compress_input_parameter + "=" + compress_input;
 	var mashuSR_str = getMashuSRURLstring();
 	if (mashuSR_str != "")
 	{
