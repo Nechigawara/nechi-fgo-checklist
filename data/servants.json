@@ -4,6 +4,7 @@
 		"list_name": "★5",
 		"list_element": "ssrBox",
 		"list_iconpath": "",
+		"class_available": ["saber","archer","lancer","rider","caster","assassin","berserker","ruler","avenger","mooncancer","alterego","foreigner"],
 		"disable": false,
 		"list": [
 			{
@@ -943,6 +944,7 @@
 		"list_name": "★4",
 		"list_element": "srBox",
 		"list_iconpath": "",
+		"class_available": ["saber","archer","lancer","rider","caster","assassin","berserker","ruler","avenger","mooncancer","alterego","foreigner"],
 		"disable": false,
 		"list": [
 			{
@@ -2042,6 +2044,7 @@
 		"list_name": "★3",
 		"list_element": "rareBox",
 		"list_iconpath": "",
+		"class_available": ["saber","archer","lancer","rider","caster","assassin","berserker","avenger"],
 		"disable": false,
 		"list": [
 			{
@@ -2511,6 +2514,7 @@
 		"list_name": "★2",
 		"list_element": "uncommonBox",
 		"list_iconpath": "",
+		"class_available": ["archer","lancer","rider","caster","assassin","berserker"],
 		"disable": false,
 		"list": [
 			{
@@ -2670,6 +2674,7 @@
 		"list_name": "★1",
 		"list_element": "commonBox",
 		"list_iconpath": "",
+		"class_available": ["saber","archer","rider","caster","assassin","berserker"],
 		"disable": false,
 		"list": [
 			{
@@ -2779,6 +2784,7 @@
 		"list_name": "✩0",
 		"list_element": "noneBox",
 		"list_iconpath": "",
+		"class_available": ["avenger"],
 		"disable": false,
 		"list": [
 			{

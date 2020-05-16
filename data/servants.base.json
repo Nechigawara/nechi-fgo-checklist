@@ -4,6 +4,7 @@
 		"list_name": "★5",
 		"list_element": "ssrBox",
 		"list_iconpath": "",
+		"class_available": [],
 		"disable": false,
 		"list": [
 			{
@@ -30,6 +31,7 @@
 		"list_id": "sr",
 		"list_element": "srBox",
 		"list_iconpath": "",
+		"class_available": [],
 		"disable": false,
 		"list": [
 			{
