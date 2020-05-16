@@ -29,6 +29,8 @@ var share_title = "See My Servants Here!!";
 
 // Class Config
 var class_divide_class = "ByClass";
+var class_div_icon_class = "col-2";
+var class_div_list_class = "col";
 
 // Servant Type
 var servant_type_box_class = "member-type";
@@ -616,6 +618,10 @@ function MakeData(servants_data) {
         // list get
         var current_rarity = servants_data[aa];
 		var current_key = current_rarity.list_id;
+		// Skip if Disable
+		if (current_rarity.disable) {
+			continue;
+		}
 		// Count Data Prepare
 		rarity_count_data.allcount.list[current_key] = {
 			"list_element": current_rarity.list_element,
@@ -627,16 +633,39 @@ function MakeData(servants_data) {
 			"max": 0,
 			"have": 0
 		};
-		// Skip if Disable
-		if (current_rarity.disable) {
-			continue;
-		}
-		// Prepare
+		
+				// Prepare Var for Member Loop
         var current_list = current_rarity.list;
         var current_element = "#" + current_rarity.list_element;
         var current_path = current_rarity.list_iconpath;
         var current_html = "";
         list_box.push(current_element);
+		
+		// Class Mode; Prepare Element
+		if (IsClassmode())
+		{
+			var list_class_available = current_rarity.class_available;
+			var current_class_html = "";
+			for (var bb = 0, bb_s = list_class_available.length; bb < bb_s; bb++) {
+				// Class Var
+				var current_class = list_class_available[bb];
+				// Prepare Div
+				current_class_html += '<div class="row">';
+				current_class_html += '<div class="' + class_div_icon_class + '">'
+				current_class_html += current_class;
+				current_class_html += "</div>";
+				current_class_html += '<div class="row ' + class_div_list_class + '" id="' + current_rarity.list_element + '_' + current_class + '">';
+				//current_class_html += current_class; //Test
+				current_class_html += "</div>";
+				current_class_html += "</div>";
+				current_class_html += "<hr />";
+				
+			}
+			// Update List Div
+			$(current_element + "-" + class_divide_class).html(current_class_html);
+			$(current_element + "-" + class_divide_class).show();
+		}
+
         // Loop List
         for (var i = 0, l = current_list.length; i < l; i++) {
             // Get Data
@@ -711,10 +740,20 @@ function MakeData(servants_data) {
             // Close Element
             current_servant_html += '</div></div>';
             // Add to main list
-            current_html += current_servant_html;
+			if (!IsClassmode())
+			{
+				current_html += current_servant_html;
+			}
+			else
+			{
+				$(current_element + '_' + current_servant.class).append(current_servant_html);
+			}
         }
         // Update List Div
-        $(current_element).html(current_html);
+		if (!IsClassmode())
+		{
+			$(current_element).html(current_html);
+		}
     }
     // Refresh, Close Loading Modal
     $.when.apply(null, list_img).done(function() {
