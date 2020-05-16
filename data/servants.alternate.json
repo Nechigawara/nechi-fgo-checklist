@@ -33,7 +33,7 @@
 				"class": "archer",
 				"game_id": "12",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/i7lN19t.png"
 			},
@@ -53,7 +53,7 @@
 				"class": "berserker",
 				"game_id": "51",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/m0P6UXh.png"
 			},
@@ -113,7 +113,7 @@
 				"class": "saber",
 				"game_id": "68",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/t6G3tae.png"
 			},
@@ -123,7 +123,7 @@
 				"class": "lancer",
 				"game_id": "70",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/8qkG3wM.png"
 			},
@@ -153,7 +153,7 @@
 				"class": "archer",
 				"game_id": "77",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/rz9yJH9.png"
 			},
@@ -183,7 +183,7 @@
 				"class": "assassin",
 				"game_id": "86",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/ZJSD2OV.png"
 			},
@@ -193,7 +193,7 @@
 				"class": "lancer",
 				"game_id": "88",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/xDT2YhG.png"
 			},
@@ -203,7 +203,7 @@
 				"class": "saber",
 				"game_id": "90",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/kKavYXL.png"
 			},
@@ -213,7 +213,7 @@
 				"class": "saber",
 				"game_id": "91",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/5KYVUOi.png"
 			},
@@ -223,7 +223,7 @@
 				"class": "ruler",
 				"game_id": "93",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/M4AOMP0.png"
 			},
@@ -233,7 +233,7 @@
 				"class": "avenger",
 				"game_id": "96",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/9svYzO5.png"
 			},
@@ -253,7 +253,7 @@
 				"class": "berserker",
 				"game_id": "98",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/GE0rz9Y.png"
 			},
@@ -263,7 +263,7 @@
 				"class": "rider",
 				"game_id": "99",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/ToShCmI.png"
 			},
@@ -273,7 +273,7 @@
 				"class": "avenger",
 				"game_id": "106",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/BpD9TX5.png"
 			},
@@ -283,7 +283,7 @@
 				"class": "rider",
 				"game_id": "108",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/DhUyHJ1.png"
 			},
@@ -293,7 +293,7 @@
 				"class": "assassin",
 				"game_id": "112",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/zp8U0ju.png"
 			},
@@ -313,7 +313,7 @@
 				"class": "berserker",
 				"game_id": "114",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AydH6Cv.png"
 			},
@@ -333,7 +333,7 @@
 				"class": "lancer",
 				"game_id": "119",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Ok95AKi.png"
 			},
@@ -343,7 +343,7 @@
 				"class": "caster",
 				"game_id": "127",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/nKk0OLq.png"
 			},
@@ -353,7 +353,7 @@
 				"class": "lancer",
 				"game_id": "128",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/R8tRpQT.png"
 			},
@@ -363,7 +363,7 @@
 				"class": "archer",
 				"game_id": "129",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/5dAsqfx.png"
 			},
@@ -373,7 +373,7 @@
 				"class": "caster",
 				"game_id": "136",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/4UKEZDj.png"
 			},
@@ -383,7 +383,7 @@
 				"class": "assassin",
 				"game_id": "139",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/dfa5LOV.png"
 			},
@@ -393,7 +393,7 @@
 				"class": "archer",
 				"game_id": "142",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/e1misJz.png"
 			},
@@ -413,7 +413,7 @@
 				"class": "rider",
 				"game_id": "144",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/IfUaKLN.png"
 			},
@@ -423,7 +423,7 @@
 				"class": "caster",
 				"game_id": "150",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/aLCrb5i.png"
 			},
@@ -433,7 +433,7 @@
 				"class": "saber",
 				"game_id": "153",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/1itUwoZ.png"
 			},
@@ -443,7 +443,7 @@
 				"class": "assassin",
 				"game_id": "154",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/tYKdx8X.png"
 			},
@@ -453,7 +453,7 @@
 				"class": "berserker",
 				"game_id": "155",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/hi1oBeP.png"
 			},
@@ -463,7 +463,7 @@
 				"class": "archer",
 				"game_id": "156",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/lkIns4W.png"
 			},
@@ -473,7 +473,7 @@
 				"class": "saber",
 				"game_id": "160",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Kf4PehT.png"
 			},
@@ -483,7 +483,7 @@
 				"class": "berserker",
 				"game_id": "161",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/nEtYNSN.png"
 			},
@@ -493,7 +493,7 @@
 				"class": "alterego",
 				"game_id": "163",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/GjvESk5.png"
 			},
@@ -503,7 +503,7 @@
 				"class": "alterego",
 				"game_id": "167",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/nPEXEL1.png"
 			},
@@ -523,7 +523,7 @@
 				"class": "ruler",
 				"game_id": "173",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/u8q3stJ.png"
 			},
@@ -533,7 +533,7 @@
 				"class": "caster",
 				"game_id": "175",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/oQ1V588.png"
 			},
@@ -543,7 +543,7 @@
 				"class": "rider",
 				"game_id": "179",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/EHZ86HQ.png"
 			},
@@ -563,7 +563,7 @@
 				"class": "foreigner",
 				"game_id": "195",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/hhYWOTZ.png"
 			},
@@ -573,7 +573,7 @@
 				"class": "lancer",
 				"game_id": "196",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/axQkEyd.png"
 			},
@@ -583,7 +583,7 @@
 				"class": "foreigner",
 				"game_id": "198",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/IQ1AgQM.png"
 			},
@@ -593,7 +593,7 @@
 				"class": "assassin",
 				"game_id": "199",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/lbzXP2O.png"
 			},
@@ -613,7 +613,7 @@
 				"class": "rider",
 				"game_id": "205",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/TbJOAK3.png"
 			},
@@ -633,7 +633,7 @@
 				"class": "alterego",
 				"game_id": "209",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/qwGKsvo.png"
 			},
@@ -653,7 +653,7 @@
 				"class": "saber",
 				"game_id": "213",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/9u2BT52.png"
 			},
@@ -663,7 +663,7 @@
 				"class": "caster",
 				"game_id": "215",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/idcfGg9.png"
 			},
@@ -673,7 +673,7 @@
 				"class": "archer",
 				"game_id": "216",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/gaoc3hK.png"
 			},
@@ -683,7 +683,7 @@
 				"class": "mooncancer",
 				"game_id": "220",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Nj04aB1.png"
 			},
@@ -693,7 +693,7 @@
 				"class": "alterego",
 				"game_id": "224",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/49EcdkF.png"
 			},
@@ -713,7 +713,7 @@
 				"class": "ruler",
 				"game_id": "229",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/iUcbXSO.png"
 			},
@@ -733,7 +733,7 @@
 				"class": "saber",
 				"game_id": "234",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/veNIm1P.png"
 			},
@@ -743,7 +743,7 @@
 				"class": "assassin",
 				"game_id": "235",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/PnhHqrW.png"
 			},
@@ -753,7 +753,7 @@
 				"class": "caster",
 				"game_id": "237",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/uaE8WFR.png"
 			},
@@ -763,7 +763,7 @@
 				"class": "alterego",
 				"game_id": "238",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Wujff9Y.png"
 			},
@@ -773,7 +773,7 @@
 				"class": "assassin",
 				"game_id": "239",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/fBWCcJh.png"
 			},
@@ -783,7 +783,7 @@
 				"class": "rider",
 				"game_id": "241",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/HTFOVOe.png"
 			},
@@ -803,7 +803,7 @@
 				"class": "berserker",
 				"game_id": "247",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/zmW2wBT.png"
 			},
@@ -813,7 +813,7 @@
 				"class": "avenger",
 				"game_id": "250",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/0u1bVkJ.png"
 			},
@@ -823,7 +823,7 @@
 				"class": "rider",
 				"game_id": "253",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AaVrEvE.png"
 			},
@@ -833,7 +833,7 @@
 				"class": "berserker",
 				"game_id": "261",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/TnI8OTo.png"
 			},
@@ -843,7 +843,7 @@
 				"class": "ruler",
 				"game_id": "265",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/1b1DsD7.png"
 			},
@@ -853,7 +853,7 @@
 				"class": "avenger",
 				"game_id": "268",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Th1W4Lo.png"
 			},
@@ -863,7 +863,7 @@
 				"class": "saber",
 				"game_id": "270",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Gk3cYv0.png"
 			},
@@ -873,7 +873,7 @@
 				"class": "archer",
 				"game_id": "272",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/giAO0ab.png"
 			},
@@ -893,7 +893,7 @@
 				"class": "foreigner",
 				"game_id": "275",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/GMaVbRz.png"
 			},
@@ -903,7 +903,7 @@
 				"class": "archer",
 				"game_id": "276",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/u8bajyx.png"
 			},
@@ -933,7 +933,7 @@
 				"class": "lancer",
 				"game_id": "280",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/2htHbs9.png"
 			}
@@ -953,7 +953,7 @@
 				"class": "shielder",
 				"game_id": "1",
 				"maxcopy": 3,
-				"stype": 0,
+				"stype": 1,
 				"img": true,
 				"imgpath": "https://i.imgur.com/xmQUmfg.png"
 			},
@@ -963,7 +963,7 @@
 				"class": "saber",
 				"game_id": "3",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/pNYZgBz.png"
 			},
@@ -973,7 +973,7 @@
 				"class": "saber",
 				"game_id": "4",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/owPXnSd.png"
 			},
@@ -983,7 +983,7 @@
 				"class": "saber",
 				"game_id": "5",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/ycUdS92.png"
 			},
@@ -1113,7 +1113,7 @@
 				"class": "caster",
 				"game_id": "61",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/YVeutxw.png"
 			},
@@ -1133,7 +1133,7 @@
 				"class": "caster",
 				"game_id": "67",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/x8VK5iK.png"
 			},
@@ -1143,7 +1143,7 @@
 				"class": "archer",
 				"game_id": "69",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/mTerhYA.png"
 			},
@@ -1153,7 +1153,7 @@
 				"class": "rider",
 				"game_id": "73",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/f5rRAmE.png"
 			},
@@ -1173,7 +1173,7 @@
 				"class": "lancer",
 				"game_id": "78",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/rJWJQoE.png"
 			},
@@ -1213,7 +1213,7 @@
 				"class": "assassin",
 				"game_id": "92",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/cADN3Jt.png"
 			},
@@ -1253,7 +1253,7 @@
 				"class": "lancer",
 				"game_id": "102",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/7pjUy3s.png"
 			},
@@ -1263,7 +1263,7 @@
 				"class": "caster",
 				"game_id": "103",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/93i37QE.png"
 			},
@@ -1283,7 +1283,7 @@
 				"class": "caster",
 				"game_id": "111",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/5JQwcU4.png"
 			},
@@ -1293,7 +1293,7 @@
 				"class": "rider",
 				"game_id": "115",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/POc8Lya.png"
 			},
@@ -1333,7 +1333,7 @@
 				"class": "archer",
 				"game_id": "122",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/i4vX0yK.png"
 			},
@@ -1343,7 +1343,7 @@
 				"class": "saber",
 				"game_id": "123",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/j6pPjfm.png"
 			},
@@ -1353,7 +1353,7 @@
 				"class": "caster",
 				"game_id": "130",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/JBMiHGg.png"
 			},
@@ -1363,7 +1363,7 @@
 				"class": "archer",
 				"game_id": "131",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/vC3Wv9d.png"
 			},
@@ -1373,7 +1373,7 @@
 				"class": "rider",
 				"game_id": "132",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/xfScowO.png"
 			},
@@ -1383,7 +1383,7 @@
 				"class": "assassin",
 				"game_id": "133",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/FrYitjn.png"
 			},
@@ -1393,7 +1393,7 @@
 				"class": "lancer",
 				"game_id": "134",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/qQsMU0w.png"
 			},
@@ -1403,7 +1403,7 @@
 				"class": "ruler",
 				"game_id": "135",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/V2iZpW7.png"
 			},
@@ -1413,7 +1413,7 @@
 				"class": "archer",
 				"game_id": "137",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/dVwx4iT.png"
 			},
@@ -1423,7 +1423,7 @@
 				"class": "saber",
 				"game_id": "138",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/cYj5JZG.png"
 			},
@@ -1443,7 +1443,7 @@
 				"class": "lancer",
 				"game_id": "141",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/1mXrBw5.png"
 			},
@@ -1473,7 +1473,7 @@
 				"class": "avenger",
 				"game_id": "147",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/VZfZJcJ.png"
 			},
@@ -1483,7 +1483,7 @@
 				"class": "archer",
 				"game_id": "157",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/qBjrk4k.png"
 			},
@@ -1513,7 +1513,7 @@
 				"class": "berserker",
 				"game_id": "162",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/zur21da.png"
 			},
@@ -1523,7 +1523,7 @@
 				"class": "alterego",
 				"game_id": "164",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/k2FBAGi.png"
 			},
@@ -1543,7 +1543,7 @@
 				"class": "mooncancer",
 				"game_id": "166",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/KHoO7Sl.png"
 			},
@@ -1573,7 +1573,7 @@
 				"class": "saber",
 				"game_id": "176",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/39wRmTP.png"
 			},
@@ -1583,7 +1583,7 @@
 				"class": "assassin",
 				"game_id": "177",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/CR1MZTJ.png"
 			},
@@ -1593,7 +1593,7 @@
 				"class": "berserker",
 				"game_id": "178",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/M8JssGy.png"
 			},
@@ -1603,7 +1603,7 @@
 				"class": "archer",
 				"game_id": "180",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/oH614nX.png"
 			},
@@ -1613,7 +1613,7 @@
 				"class": "lancer",
 				"game_id": "181",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/OydihdE.png"
 			},
@@ -1623,7 +1623,7 @@
 				"class": "rider",
 				"game_id": "182",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/I4TMbgM.png"
 			},
@@ -1663,7 +1663,7 @@
 				"class": "saber",
 				"game_id": "187",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/KSIIKiW.png"
 			},
@@ -1673,7 +1673,7 @@
 				"class": "assassin",
 				"game_id": "188",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/TohyCJ6.png"
 			},
@@ -1683,7 +1683,7 @@
 				"class": "alterego",
 				"game_id": "190",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/7pxfN2Q.png"
 			},
@@ -1693,7 +1693,7 @@
 				"class": "alterego",
 				"game_id": "191",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/ZrYD1ub.png"
 			},
@@ -1723,7 +1723,7 @@
 				"class": "caster",
 				"game_id": "194",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/FXchwcz.png"
 			},
@@ -1733,7 +1733,7 @@
 				"class": "archer",
 				"game_id": "197",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/HYegZwx.png"
 			},
@@ -1743,7 +1743,7 @@
 				"class": "archer",
 				"game_id": "200",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/FbAEinn.png"
 			},
@@ -1773,7 +1773,7 @@
 				"class": "caster",
 				"game_id": "208",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/r1ztH0F.png"
 			},
@@ -1783,7 +1783,7 @@
 				"class": "rider",
 				"game_id": "211",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/gffxNZA.png"
 			},
@@ -1803,7 +1803,7 @@
 				"class": "lancer",
 				"game_id": "217",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/HWN4xRV.png"
 			},
@@ -1813,7 +1813,7 @@
 				"class": "assassin",
 				"game_id": "218",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/HhrEKCf.png"
 			},
@@ -1823,7 +1823,7 @@
 				"class": "berserker",
 				"game_id": "219",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/WWyi70Q.png"
 			},
@@ -1833,7 +1833,7 @@
 				"class": "saber",
 				"game_id": "221",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/MGB3fB9.png"
 			},
@@ -1843,7 +1843,7 @@
 				"class": "foreigner",
 				"game_id": "222",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/qECPI0s.png"
 			},
@@ -1863,7 +1863,7 @@
 				"class": "caster",
 				"game_id": "225",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/RbSai5b.png"
 			},
@@ -1893,7 +1893,7 @@
 				"class": "assassin",
 				"game_id": "230",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/UkpWtYo.png"
 			},
@@ -1903,7 +1903,7 @@
 				"class": "ruler",
 				"game_id": "233",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/VQrNQwe.png"
 			},
@@ -1913,7 +1913,7 @@
 				"class": "caster",
 				"game_id": "236",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AWwJB8j.png"
 			},
@@ -1933,7 +1933,7 @@
 				"class": "assassin",
 				"game_id": "243",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/HGxUIN0.png"
 			},
@@ -1953,7 +1953,7 @@
 				"class": "archer",
 				"game_id": "248",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/cMR7gNR.png"
 			},
@@ -1963,7 +1963,7 @@
 				"class": "lancer",
 				"game_id": "252",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/qeptThQ.png"
 			},
@@ -1973,7 +1973,7 @@
 				"class": "archer",
 				"game_id": "262",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/DzXTQrn.png"
 			},
@@ -1983,7 +1983,7 @@
 				"class": "rider",
 				"game_id": "263",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/M3DesaG.png"
 			},
@@ -1993,7 +1993,7 @@
 				"class": "saber",
 				"game_id": "264",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/o0fNTHH.png"
 			},
@@ -2003,7 +2003,7 @@
 				"class": "lancer",
 				"game_id": "266",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/ha9fB6a.png"
 			},
@@ -2013,7 +2013,7 @@
 				"class": "assassin",
 				"game_id": "267",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/CzWEU7w.png"
 			},
@@ -2023,7 +2023,7 @@
 				"class": "archer",
 				"game_id": "269",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/klbjNgV.png"
 			},
@@ -2033,7 +2033,7 @@
 				"class": "archer",
 				"game_id": "271",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/PnYqRMR.png"
 			},
@@ -2043,7 +2043,7 @@
 				"class": "lancer",
 				"game_id": "279",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AClFtK4.png"
 			}
@@ -2183,7 +2183,7 @@
 				"class": "caster",
 				"game_id": "32",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/KJt5dSc.png"
 			},
@@ -2203,7 +2203,7 @@
 				"class": "caster",
 				"game_id": "38",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/UYIpYrd.png"
 			},
@@ -2393,7 +2393,7 @@
 				"class": "saber",
 				"game_id": "126",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/XmjEtuv.png"
 			},
@@ -2403,7 +2403,7 @@
 				"class": "lancer",
 				"game_id": "148",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/wtwYgU8.png"
 			},
@@ -2413,7 +2413,7 @@
 				"class": "rider",
 				"game_id": "172",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/yIG1Eoh.png"
 			},
@@ -2443,7 +2443,7 @@
 				"class": "avenger",
 				"game_id": "204",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/LJIE2Eg.png"
 			},
@@ -2453,7 +2453,7 @@
 				"class": "assassin",
 				"game_id": "230",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/SzhIfdS.png"
 			},
@@ -2463,7 +2463,7 @@
 				"class": "rider",
 				"game_id": "231",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/QKBUrlz.png"
 			},
@@ -2483,7 +2483,7 @@
 				"class": "caster",
 				"game_id": "249",
 				"maxcopy": 5,
-				"stype": 1,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/fvpJMOJ.png"
 			},
@@ -2493,7 +2493,7 @@
 				"class": "berserker",
 				"game_id": "251",
 				"maxcopy": 5,
-				"stype": 2,
+				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/A38JJ67.png"
 			},
@@ -2743,7 +2743,7 @@
 				"class": "berserker",
 				"game_id": "174",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/tKM9teU.png"
 			},
