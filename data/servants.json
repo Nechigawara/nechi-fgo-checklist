@@ -2044,7 +2044,7 @@
 		"list_name": "★3",
 		"list_element": "rareBox",
 		"list_iconpath": "",
-		"class_available": ["saber","archer","lancer","rider","caster","assassin","berserker","avenger"],
+		"class_available": ["shielder","saber","archer","lancer","rider","caster","assassin","berserker","avenger"],
 		"disable": false,
 		"list": [
 			{
