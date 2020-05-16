@@ -1,0 +1,2802 @@
+[
+	{
+		"list_id": "ssr",
+		"list_name": "★5",
+		"list_element": "ssrBox",
+		"list_iconpath": "",
+		"class_available": ["saber","archer","lancer","rider","caster","assassin","berserker","ruler","avenger","mooncancer","alterego","foreigner"],
+		"disable": false,
+		"list": [
+			{
+				"id": "5-0",
+				"name": "Artoria Pendragon",
+				"class": "saber",
+				"game_id": "2",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/bdTYD2w.png"
+			},
+			{
+				"id": "5-1",
+				"name": "Attila",
+				"class": "saber",
+				"game_id": "8",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/VDQCbs1.png"
+			},
+			{
+				"id": "5-2",
+				"name": "Gilgamesh",
+				"class": "archer",
+				"game_id": "12",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/i7lN19t.png"
+			},
+			{
+				"id": "5-3",
+				"name": "Zhuge Liang (Lord El-Melloi II)",
+				"class": "caster",
+				"game_id": "37",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/z27AaK9.png"
+			},
+			{
+				"id": "5-4",
+				"name": "Sakata Kintoki",
+				"class": "berserker",
+				"game_id": "51",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/m0P6UXh.png"
+			},
+			{
+				"id": "5-5",
+				"name": "Vlad III",
+				"class": "berserker",
+				"game_id": "52",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/jbzFWs9.png"
+			},
+			{
+				"id": "5-6",
+				"name": "Jeanne d'Arc",
+				"class": "ruler",
+				"game_id": "59",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/IZONsfN.png"
+			},
+			{
+				"id": "5-7",
+				"name": "Orion",
+				"class": "archer",
+				"game_id": "60",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/o9U7kYZ.png"
+			},
+			{
+				"id": "5-8",
+				"name": "Tamamo no Mae",
+				"class": "caster",
+				"game_id": "62",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/rN2vx2r.png"
+			},
+			{
+				"id": "5-9",
+				"name": "Francis Drake",
+				"class": "rider",
+				"game_id": "65",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/nI8grLm.png"
+			},
+			{
+				"id": "5-A",
+				"name": "Okita Sōji",
+				"class": "saber",
+				"game_id": "68",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/t6G3tae.png"
+			},
+			{
+				"id": "5-B",
+				"name": "Scáthach",
+				"class": "lancer",
+				"game_id": "70",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/8qkG3wM.png"
+			},
+			{
+				"id": "5-C",
+				"name": "Jack the Ripper",
+				"class": "assassin",
+				"game_id": "75",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/VeVjKaE.png"
+			},
+			{
+				"id": "5-D",
+				"name": "Mordred",
+				"class": "saber",
+				"game_id": "76",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ShODTcZ.png"
+			},
+			{
+				"id": "5-E",
+				"name": "Nikola Tesla",
+				"class": "archer",
+				"game_id": "77",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/rz9yJH9.png"
+			},
+			{
+				"id": "5-F",
+				"name": "Arjuna",
+				"class": "archer",
+				"game_id": "84",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/7v2pihQ.png"
+			},
+			{
+				"id": "5-G",
+				"name": "Karna",
+				"class": "lancer",
+				"game_id": "85",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/rdvdLXX.png"
+			},
+			{
+				"id": "5-H",
+				"name": "Mysterious Heroine X",
+				"class": "assassin",
+				"game_id": "86",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZJSD2OV.png"
+			},
+			{
+				"id": "5-I",
+				"name": "Brynhildr",
+				"class": "lancer",
+				"game_id": "88",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/xDT2YhG.png"
+			},
+			{
+				"id": "5-J",
+				"name": "Nero Claudius (Bride)",
+				"class": "saber",
+				"game_id": "90",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/kKavYXL.png"
+			},
+			{
+				"id": "5-K",
+				"name": "Ryōgi Shiki (Saber)",
+				"class": "saber",
+				"game_id": "91",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/5KYVUOi.png"
+			},
+			{
+				"id": "5-L",
+				"name": "Amakusa Shirō",
+				"class": "ruler",
+				"game_id": "93",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/M4AOMP0.png"
+			},
+			{
+				"id": "5-M",
+				"name": "Edmond Dantès",
+				"class": "avenger",
+				"game_id": "96",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/9svYzO5.png"
+			},
+			{
+				"id": "5-N",
+				"name": "Nightingale",
+				"class": "berserker",
+				"game_id": "97",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/xhfqHZc.png"
+			},
+			{
+				"id": "5-O",
+				"name": "Cú Chulainn (Alter)",
+				"class": "berserker",
+				"game_id": "98",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/GE0rz9Y.png"
+			},
+			{
+				"id": "5-P",
+				"name": "Medb",
+				"class": "rider",
+				"game_id": "99",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ToShCmI.png"
+			},
+			{
+				"id": "5-Q",
+				"name": "Jeanne d'Arc (Alter)",
+				"class": "avenger",
+				"game_id": "106",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/BpD9TX5.png"
+			},
+			{
+				"id": "5-R",
+				"name": "Iskandar",
+				"class": "rider",
+				"game_id": "108",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/DhUyHJ1.png"
+			},
+			{
+				"id": "5-S",
+				"name": "Shuten Dōji",
+				"class": "assassin",
+				"game_id": "112",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/zp8U0ju.png"
+			},
+			{
+				"id": "5-T",
+				"name": "Xuanzang Sanzang",
+				"class": "caster",
+				"game_id": "113",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/0XVgtO1.png"
+			},
+			{
+				"id": "5-U",
+				"name": "Minamoto no Raikō",
+				"class": "berserker",
+				"game_id": "114",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AydH6Cv.png"
+			},
+			{
+				"id": "5-V",
+				"name": "Ozymandias",
+				"class": "rider",
+				"game_id": "118",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/VEG1b4Y.png"
+			},
+			{
+				"id": "5-W",
+				"name": "Artoria Pendragon (Lancer)",
+				"class": "lancer",
+				"game_id": "119",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Ok95AKi.png"
+			},
+			{
+				"id": "5-X",
+				"name": "Leonardo Da Vinci",
+				"class": "caster",
+				"game_id": "127",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/nKk0OLq.png"
+			},
+			{
+				"id": "5-Y",
+				"name": "Tamamo no Mae (Lancer)",
+				"class": "lancer",
+				"game_id": "128",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/R8tRpQT.png"
+			},
+			{
+				"id": "5-Z",
+				"name": "Artoria Pendragon (Archer)",
+				"class": "archer",
+				"game_id": "129",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/5dAsqfx.png"
+			},
+			{
+				"id": "5-a",
+				"name": "Illyasviel von Einzbern",
+				"class": "caster",
+				"game_id": "136",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/4UKEZDj.png"
+			},
+			{
+				"id": "5-b",
+				"name": "Cleopatra",
+				"class": "assassin",
+				"game_id": "139",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/dfa5LOV.png"
+			},
+			{
+				"id": "5-c",
+				"name": "Ishtar",
+				"class": "archer",
+				"game_id": "142",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/e1misJz.png"
+			},
+			{
+				"id": "5-d",
+				"name": "Enkidu",
+				"class": "lancer",
+				"game_id": "143",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/7uAVKnk.png"
+			},
+			{
+				"id": "5-e",
+				"name": "Quetzalcoatl",
+				"class": "rider",
+				"game_id": "144",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/IfUaKLN.png"
+			},
+			{
+				"id": "5-f",
+				"name": "Merlin",
+				"class": "caster",
+				"game_id": "150",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/aLCrb5i.png"
+			},
+			{
+				"id": "5-g",
+				"name": "Miyamoto Musashi",
+				"class": "saber",
+				"game_id": "153",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/1itUwoZ.png"
+			},
+			{
+				"id": "5-h",
+				"name": "The Old Man of the Mountain",
+				"class": "assassin",
+				"game_id": "154",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/tYKdx8X.png"
+			},
+			{
+				"id": "5-i",
+				"name": "Mysterious Heroine X (Alter)",
+				"class": "berserker",
+				"game_id": "155",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/hi1oBeP.png"
+			},
+			{
+				"id": "5-j",
+				"name": "James Moriarty",
+				"class": "archer",
+				"game_id": "156",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/lkIns4W.png"
+			},
+			{
+				"id": "5-k",
+				"name": "Arthur Pendragon (Prototype)",
+				"class": "saber",
+				"game_id": "160",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Kf4PehT.png"
+			},
+			{
+				"id": "5-l",
+				"name": "Hijikata Toshizō",
+				"class": "berserker",
+				"game_id": "161",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/nEtYNSN.png"
+			},
+			{
+				"id": "5-m",
+				"name": "Meltlilith",
+				"class": "alterego",
+				"game_id": "163",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/GjvESk5.png"
+			},
+			{
+				"id": "5-n",
+				"name": "Sesshōin Kiara",
+				"class": "alterego",
+				"game_id": "167",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/nPEXEL1.png"
+			},
+			{
+				"id": "5-o",
+				"name": "Scheherazade",
+				"class": "caster",
+				"game_id": "169",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/V87yvoL.png"
+			},
+			{
+				"id": "5-p",
+				"name": "Sherlock Holmes",
+				"class": "ruler",
+				"game_id": "173",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/u8q3stJ.png"
+			},
+			{
+				"id": "5-q",
+				"name": "Nero Claudius (Caster)",
+				"class": "caster",
+				"game_id": "175",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/oQ1V588.png"
+			},
+			{
+				"id": "5-r",
+				"name": "Artoria Pendragon (Rider Alter)",
+				"class": "rider",
+				"game_id": "179",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/EHZ86HQ.png"
+			},
+			{
+				"id": "5-s",
+				"name": "Osakabehime",
+				"class": "assassin",
+				"game_id": "189",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/GkbmeDY.png"
+			},
+			{
+				"id": "5-t",
+				"name": "Abigail Williams",
+				"class": "foreigner",
+				"game_id": "195",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/hhYWOTZ.png"
+			},
+			{
+				"id": "5-u",
+				"name": "Ereshkigal",
+				"class": "lancer",
+				"game_id": "196",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/axQkEyd.png"
+			},
+			{
+				"id": "5-v",
+				"name": "Katsushika Hokusai",
+				"class": "foreigner",
+				"game_id": "198",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/IQ1AgQM.png"
+			},
+			{
+				"id": "5-w",
+				"name": "Semiramis",
+				"class": "assassin",
+				"game_id": "199",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/lbzXP2O.png"
+			},
+			{
+				"id": "5-x",
+				"name": "Anastasia Nikolaevna Romanova",
+				"class": "caster",
+				"game_id": "201",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/GTV4UQ6.png"
+			},
+			{
+				"id": "5-y",
+				"name": "Ivan the Terrible",
+				"class": "rider",
+				"game_id": "205",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/TbJOAK3.png"
+			},
+			{
+				"id": "5-z",
+				"name": "Achilles",
+				"class": "rider",
+				"game_id": "206",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/3QUtElu.png"
+			},
+			{
+				"id": "5-01",
+				"name": "Okita Sōji (Alter)",
+				"class": "alterego",
+				"game_id": "209",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/qwGKsvo.png"
+			},
+			{
+				"id": "5-02",
+				"name": "Napoléon",
+				"class": "archer",
+				"game_id": "212",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/21LBma1.png"
+			},
+			{
+				"id": "5-03",
+				"name": "Sigurd",
+				"class": "saber",
+				"game_id": "213",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/9u2BT52.png"
+			},
+			{
+				"id": "5-04",
+				"name": "Scáthach-Skaði",
+				"class": "caster",
+				"game_id": "215",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/idcfGg9.png"
+			},
+			{
+				"id": "5-05",
+				"name": "Jeanne d'Arc (Archer)",
+				"class": "archer",
+				"game_id": "216",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/gaoc3hK.png"
+			},
+			{
+				"id": "5-06",
+				"name": "BB (Summer)",
+				"class": "mooncancer",
+				"game_id": "220",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Nj04aB1.png"
+			},
+			{
+				"id": "5-07",
+				"name": "Sitonai",
+				"class": "alterego",
+				"game_id": "224",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/49EcdkF.png"
+			},
+			{
+				"id": "5-08",
+				"name": "Xiang Yu",
+				"class": "berserker",
+				"game_id": "226",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/6pqLNNx.png"
+			},
+			{
+				"id": "5-09",
+				"name": "Shi Huang Di",
+				"class": "ruler",
+				"game_id": "229",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/iUcbXSO.png"
+			},
+			{
+				"id": "5-0A",
+				"name": "Bradamante",
+				"class": "lancer",
+				"game_id": "232",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/cAAdZHF.png"
+			},
+			{
+				"id": "5-0B",
+				"name": "Beni-enma",
+				"class": "saber",
+				"game_id": "234",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/veNIm1P.png"
+			},
+			{
+				"id": "5-0C",
+				"name": "Li Shuwen",
+				"class": "assassin",
+				"game_id": "235",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/PnhHqrW.png"
+			},
+			{
+				"id": "5-0D",
+				"name": "Murasaki Shikibu",
+				"class": "caster",
+				"game_id": "237",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/uaE8WFR.png"
+			},
+			{
+				"id": "5-0E",
+				"name": "Kingprotea",
+				"class": "alterego",
+				"game_id": "238",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Wujff9Y.png"
+			},
+			{
+				"id": "5-0F",
+				"name": "Kama",
+				"class": "assassin",
+				"game_id": "239",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/fBWCcJh.png"
+			},
+			{
+				"id": "5-0G",
+				"name": "Sima Yi (Reines)",
+				"class": "rider",
+				"game_id": "241",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HTFOVOe.png"
+			},
+			{
+				"id": "5-0H",
+				"name": "Great Statue God AKA Jinako Karigiri",
+				"class": "mooncancer",
+				"game_id": "244",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/6KAvals.png"
+			},
+			{
+				"id": "5-0I",
+				"name": "Arjuna (Alter)",
+				"class": "berserker",
+				"game_id": "247",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/zmW2wBT.png"
+			},
+			{
+				"id": "5-0J",
+				"name": "Demon King Nobunaga",
+				"class": "avenger",
+				"game_id": "250",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/0u1bVkJ.png"
+			},
+			{
+				"id": "5-0K",
+				"name": "Leonardo Da Vinci (Rider)",
+				"class": "rider",
+				"game_id": "253",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AaVrEvE.png"
+			},
+			{
+				"id": "5-0L",
+				"name": "Miyamoto Musashi (Berserker)",
+				"class": "berserker",
+				"game_id": "261",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/TnI8OTo.png"
+			},
+			{
+				"id": "5-0M",
+				"name": "Artoria Pendragon (Ruler)",
+				"class": "ruler",
+				"game_id": "265",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/1b1DsD7.png"
+			},
+			{
+				"id": "5-0N",
+				"name": "Space Ishtar",
+				"class": "avenger",
+				"game_id": "268",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Th1W4Lo.png"
+			},
+			{
+				"id": "5-0O",
+				"name": "Astolfo (Saber)",
+				"class": "saber",
+				"game_id": "270",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Gk3cYv0.png"
+			},
+			{
+				"id": "5-0P",
+				"name": "Super Orion",
+				"class": "archer",
+				"game_id": "272",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/giAO0ab.png"
+			},
+			{
+				"id": "5-0Q",
+				"name": "Europa",
+				"class": "rider",
+				"game_id": "274",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/STBS8DP.png"
+			},
+			{
+				"id": "5-0R",
+				"name": "Yang Guifei",
+				"class": "foreigner",
+				"game_id": "275",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/GMaVbRz.png"
+			},
+			{
+				"id": "5-0S",
+				"name": "Sei Shōnagon",
+				"class": "archer",
+				"game_id": "276",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/u8bajyx.png"
+			},
+			{
+				"id": "5-0T",
+				"name": "Odysseus",
+				"class": "rider",
+				"game_id": "277",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/DL75zxT.png"
+			},
+			{
+				"id": "5-0U",
+				"name": "Dioscuri",
+				"class": "saber",
+				"game_id": "278",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/k9v634N.png"
+			},
+			{
+				"id": "5-0V",
+				"name": "Romulus-Quirinus",
+				"class": "lancer",
+				"game_id": "280",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/2htHbs9.png"
+			}
+		]
+	},
+	{
+		"list_id": "sr",
+		"list_name": "★4",
+		"list_element": "srBox",
+		"list_iconpath": "",
+		"class_available": ["shielder","saber","archer","lancer","rider","caster","assassin","berserker","ruler","avenger","mooncancer","alterego","foreigner"],
+		"disable": false,
+		"list": [
+			{
+				"id": "3-0",
+				"name": "Mashu Kyrielight",
+				"class": "shielder",
+				"game_id": "1",
+				"maxcopy": 3,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/xmQUmfg.png"
+			},
+			{
+				"id": "4-0",
+				"name": "Artoria Pendragon (Alter)",
+				"class": "saber",
+				"game_id": "3",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/pNYZgBz.png"
+			},
+			{
+				"id": "4-1",
+				"name": "Artoria Pendragon (Lily)",
+				"class": "saber",
+				"game_id": "4",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/owPXnSd.png"
+			},
+			{
+				"id": "4-2",
+				"name": "Nero Claudius",
+				"class": "saber",
+				"game_id": "5",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ycUdS92.png"
+			},
+			{
+				"id": "4-3",
+				"name": "Siegfried",
+				"class": "saber",
+				"game_id": "6",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/jlcmIp5.png"
+			},
+			{
+				"id": "4-4",
+				"name": "Chevalier d'Eon",
+				"class": "saber",
+				"game_id": "10",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/bJFGMsX.png"
+			},
+			{
+				"id": "4-5",
+				"name": "EMIYA",
+				"class": "Archer",
+				"game_id": "11",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/oH2Lghq.png"
+			},
+			{
+				"id": "4-6",
+				"name": "Atalanta",
+				"class": "archer",
+				"game_id": "14",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KLcemvi.png"
+			},
+			{
+				"id": "4-7",
+				"name": "Elizabeth Báthory",
+				"class": "lancer",
+				"game_id": "18",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/sa7PKip.png"
+			},
+			{
+				"id": "4-8",
+				"name": "Marie Antoinette",
+				"class": "rider",
+				"game_id": "29",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/rXkF34k.png"
+			},
+			{
+				"id": "4-9",
+				"name": "Martha",
+				"class": "rider",
+				"game_id": "30",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/XMeuYPd.png"
+			},
+			{
+				"id": "4-A",
+				"name": "Stheno",
+				"class": "assassin",
+				"game_id": "41",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/uaPdq4A.png"
+			},
+			{
+				"id": "4-B",
+				"name": "Carmilla",
+				"class": "assassin",
+				"game_id": "46",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/wX1H9ce.png"
+			},
+			{
+				"id": "4-C",
+				"name": "Heracles",
+				"class": "berserker",
+				"game_id": "47",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/BWH6f8C.png"
+			},
+			{
+				"id": "4-D",
+				"name": "Lancelot",
+				"class": "berserker",
+				"game_id": "48",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/P9q9SPF.png"
+			},
+			{
+				"id": "4-E",
+				"name": "Tamamo Cat",
+				"class": "berserker",
+				"game_id": "58",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/tA1fFBa.png"
+			},
+			{
+				"id": "4-F",
+				"name": "Elizabeth Báthory (Halloween)",
+				"class": "caster",
+				"game_id": "61",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/YVeutxw.png"
+			},
+			{
+				"id": "4-G",
+				"name": "Anne Bonny & Mary Read",
+				"class": "rider",
+				"game_id": "66",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/X75pQ4A.png"
+			},
+			{
+				"id": "4-H",
+				"name": "Medea (Lily)",
+				"class": "caster",
+				"game_id": "67",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/x8VK5iK.png"
+			},
+			{
+				"id": "4-I",
+				"name": "Oda Nobunaga",
+				"class": "archer",
+				"game_id": "69",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/mTerhYA.png"
+			},
+			{
+				"id": "4-J",
+				"name": "Artoria Pendragon (Santa Alter)",
+				"class": "rider",
+				"game_id": "73",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/f5rRAmE.png"
+			},
+			{
+				"id": "4-K",
+				"name": "Nursery Rhyme",
+				"class": "caster",
+				"game_id": "74",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/x8R9XYm.png"
+			},
+			{
+				"id": "4-L",
+				"name": "Artoria Pendragon (Lancer Alter)",
+				"class": "lancer",
+				"game_id": "78",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/rJWJQoE.png"
+			},
+			{
+				"id": "4-M",
+				"name": "Frankenstein",
+				"class": "berserker",
+				"game_id": "82",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/O9pAhC4.png"
+			},
+			{
+				"id": "4-N",
+				"name": "Fionn mac Cumhaill",
+				"class": "lancer",
+				"game_id": "87",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HlK6IQq.png"
+			},
+			{
+				"id": "4-O",
+				"name": "Beowulf",
+				"class": "berserker",
+				"game_id": "89",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/oRk1eoL.png"
+			},
+			{
+				"id": "4-P",
+				"name": "Ryōgi Shiki (Assassin)",
+				"class": "assassin",
+				"game_id": "92",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/cADN3Jt.png"
+			},
+			{
+				"id": "4-Q",
+				"name": "Astolfo",
+				"class": "rider",
+				"game_id": "94",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/lf0ztRB.png"
+			},
+			{
+				"id": "4-R",
+				"name": "Helena Blavatsky",
+				"class": "caster",
+				"game_id": "100",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ko8wDhu.png"
+			},
+			{
+				"id": "4-S",
+				"name": "Rama",
+				"class": "saber",
+				"game_id": "101",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Hn6yrJm.png"
+			},
+			{
+				"id": "4-T",
+				"name": "Li Shuwen (Lancer)",
+				"class": "lancer",
+				"game_id": "102",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/7pjUy3s.png"
+			},
+			{
+				"id": "4-U",
+				"name": "Thomas Edison",
+				"class": "caster",
+				"game_id": "103",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/93i37QE.png"
+			},
+			{
+				"id": "4-V",
+				"name": "EMIYA (Assassin)",
+				"class": "assassin",
+				"game_id": "109",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/JhhVx9f.png"
+			},
+			{
+				"id": "4-W",
+				"name": "Irisviel (Dress of Heaven)",
+				"class": "caster",
+				"game_id": "111",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/5JQwcU4.png"
+			},
+			{
+				"id": "4-X",
+				"name": "Sakata Kintoki (Rider)",
+				"class": "rider",
+				"game_id": "115",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/POc8Lya.png"
+			},
+			{
+				"id": "4-Y",
+				"name": "Ibaraki Dōji",
+				"class": "berserker",
+				"game_id": "116",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/UfkJpPX.png"
+			},
+			{
+				"id": "4-Z",
+				"name": "Nitocris",
+				"class": "caster",
+				"game_id": "120",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/arSlB1n.png"
+			},
+			{
+				"id": "4-a",
+				"name": "Lancelot (Saber)",
+				"class": "saber",
+				"game_id": "121",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/X2SztKm.png"
+			},
+			{
+				"id": "4-b",
+				"name": "Tristan",
+				"class": "archer",
+				"game_id": "122",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/i4vX0yK.png"
+			},
+			{
+				"id": "4-c",
+				"name": "Gawain",
+				"class": "saber",
+				"game_id": "123",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/j6pPjfm.png"
+			},
+			{
+				"id": "4-d",
+				"name": "Marie Antoinette (Caster)",
+				"class": "caster",
+				"game_id": "130",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/JBMiHGg.png"
+			},
+			{
+				"id": "4-e",
+				"name": "Anne Bonny & Mary Read (Archer)",
+				"class": "archer",
+				"game_id": "131",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/vC3Wv9d.png"
+			},
+			{
+				"id": "4-f",
+				"name": "Mordred (Rider)",
+				"class": "rider",
+				"game_id": "132",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/xfScowO.png"
+			},
+			{
+				"id": "4-g",
+				"name": "Scáthach (Assassin)",
+				"class": "assassin",
+				"game_id": "133",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/FrYitjn.png"
+			},
+			{
+				"id": "4-h",
+				"name": "Kiyohime (Lancer)",
+				"class": "lancer",
+				"game_id": "134",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/qQsMU0w.png"
+			},
+			{
+				"id": "4-i",
+				"name": "Martha (Ruler)",
+				"class": "ruler",
+				"game_id": "135",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/V2iZpW7.png"
+			},
+			{
+				"id": "4-j",
+				"name": "Chloe von Einzbern",
+				"class": "archer",
+				"game_id": "137",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/dVwx4iT.png"
+			},
+			{
+				"id": "4-k",
+				"name": "Elizabeth Báthory (Brave)",
+				"class": "saber",
+				"game_id": "138",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/cYj5JZG.png"
+			},
+			{
+				"id": "4-l",
+				"name": "Vlad III (EXTRA)",
+				"class": "lancer",
+				"game_id": "140",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/hex4iVa.png"
+			},
+			{
+				"id": "4-m",
+				"name": "Jeanne d'Arc (Alter) (Santa Lily)",
+				"class": "lancer",
+				"game_id": "141",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/1mXrBw5.png"
+			},
+			{
+				"id": "4-n",
+				"name": "Gilgamesh (Caster)",
+				"class": "caster",
+				"game_id": "145",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/YsVHRjC.png"
+			},
+			{
+				"id": "4-o",
+				"name": "Medusa (Lancer)",
+				"class": "lancer",
+				"game_id": "146",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/LmdOc4L.png"
+			},
+			{
+				"id": "4-p",
+				"name": "Gorgon",
+				"class": "avenger",
+				"game_id": "147",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/VZfZJcJ.png"
+			},
+			{
+				"id": "4-q",
+				"name": "EMIYA (Alter)",
+				"class": "archer",
+				"game_id": "157",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/qBjrk4k.png"
+			},
+			{
+				"id": "4-r",
+				"name": "Hessian Lobo",
+				"class": "avenger",
+				"game_id": "158",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Z14fJdi.png"
+			},
+			{
+				"id": "4-s",
+				"name": "Yan Qing",
+				"class": "assassin",
+				"game_id": "159",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/0Zfp3Ym.png"
+			},
+			{
+				"id": "4-t",
+				"name": "Chacha",
+				"class": "berserker",
+				"game_id": "162",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/zur21da.png"
+			},
+			{
+				"id": "4-u",
+				"name": "Passionlip",
+				"class": "alterego",
+				"game_id": "164",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/k2FBAGi.png"
+			},
+			{
+				"id": "4-v",
+				"name": "Suzuka Gozen",
+				"class": "saber",
+				"game_id": "165",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/RRv4XL5.png"
+			},
+			{
+				"id": "4-w",
+				"name": "BB",
+				"class": "mooncancer",
+				"game_id": "166",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KHoO7Sl.png"
+			},
+			{
+				"id": "4-x",
+				"name": "Wu Zetian",
+				"class": "assassin",
+				"game_id": "170",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/SPMGMF8.png"
+			},
+			{
+				"id": "4-y",
+				"name": "Penthesilea",
+				"class": "berserker",
+				"game_id": "171",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/RJhCpz3.png"
+			},
+			{
+				"id": "4-z",
+				"name": "Frankenstein (Saber)",
+				"class": "saber",
+				"game_id": "176",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/39wRmTP.png"
+			},
+			{
+				"id": "4-01",
+				"name": "Nitocris (Assassin)",
+				"class": "assassin",
+				"game_id": "177",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/CR1MZTJ.png"
+			},
+			{
+				"id": "4-02",
+				"name": "Oda Nobunaga (Berserker)",
+				"class": "berserker",
+				"game_id": "178",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/M8JssGy.png"
+			},
+			{
+				"id": "4-03",
+				"name": "Helena Blavatsky (Archer)",
+				"class": "archer",
+				"game_id": "180",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/oH614nX.png"
+			},
+			{
+				"id": "4-04",
+				"name": "Minamoto no Raikō (Lancer)",
+				"class": "lancer",
+				"game_id": "181",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/OydihdE.png"
+			},
+			{
+				"id": "4-05",
+				"name": "Ishtar (Rider)",
+				"class": "rider",
+				"game_id": "182",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/I4TMbgM.png"
+			},
+			{
+				"id": "4-06",
+				"name": "Parvati",
+				"class": "lancer",
+				"game_id": "183",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/MOyQHaX.png"
+			},
+			{
+				"id": "4-07",
+				"name": "Tomoe Gozen",
+				"class": "archer",
+				"game_id": "184",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/pbwtVrc.png"
+			},
+			{
+				"id": "4-08",
+				"name": "Mochizuki Chiyome",
+				"class": "assassin",
+				"game_id": "185",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZcWKbOu.png"
+			},
+			{
+				"id": "4-09",
+				"name": "Yagyū Munenori",
+				"class": "saber",
+				"game_id": "187",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KSIIKiW.png"
+			},
+			{
+				"id": "4-0A",
+				"name": "Katō Danzō",
+				"class": "assassin",
+				"game_id": "188",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/TohyCJ6.png"
+			},
+			{
+				"id": "4-0B",
+				"name": "Mecha Eli-chan",
+				"class": "alterego",
+				"game_id": "190",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/7pxfN2Q.png"
+			},
+			{
+				"id": "4-0C",
+				"name": "Mecha Eli-chan Mk.II",
+				"class": "alterego",
+				"game_id": "191",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZrYD1ub.png"
+			},
+			{
+				"id": "4-0D",
+				"name": "Circe",
+				"class": "caster",
+				"game_id": "192",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/JGKBpOq.png"
+			},
+			{
+				"id": "4-0E",
+				"name": "Nezha",
+				"class": "lancer",
+				"game_id": "193",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/BfMlApS.png"
+			},
+			{
+				"id": "4-0F",
+				"name": "Queen of Sheba",
+				"class": "caster",
+				"game_id": "194",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/FXchwcz.png"
+			},
+			{
+				"id": "4-0G",
+				"name": "Attila the San(ta)",
+				"class": "archer",
+				"game_id": "197",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HYegZwx.png"
+			},
+			{
+				"id": "4-0H",
+				"name": "Asagami Fujino",
+				"class": "archer",
+				"game_id": "200",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/FbAEinn.png"
+			},
+			{
+				"id": "4-0I",
+				"name": "Atalanta (Alter)",
+				"class": "berserker",
+				"game_id": "202",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KXCpFXV.png"
+			},
+			{
+				"id": "4-0J",
+				"name": "Chiron",
+				"class": "archer",
+				"game_id": "207",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/c7AX4an.png"
+			},
+			{
+				"id": "4-0K",
+				"name": "Sieg",
+				"class": "caster",
+				"game_id": "208",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/r1ztH0F.png"
+			},
+			{
+				"id": "4-0L",
+				"name": "Sakamoto Ryōma",
+				"class": "rider",
+				"game_id": "211",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/gffxNZA.png"
+			},
+			{
+				"id": "4-0M",
+				"name": "Valkyrie",
+				"class": "lancer",
+				"game_id": "214",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZYxBrE9.png"
+			},
+			{
+				"id": "4-0N",
+				"name": "Ibaraki Dōji (Lancer)",
+				"class": "lancer",
+				"game_id": "217",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HWN4xRV.png"
+			},
+			{
+				"id": "4-0O",
+				"name": "Ushiwakamaru (Assassin)",
+				"class": "assassin",
+				"game_id": "218",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HhrEKCf.png"
+			},
+			{
+				"id": "4-0P",
+				"name": "Jeanne d'Arc (Berserker Alter)",
+				"class": "berserker",
+				"game_id": "219",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/WWyi70Q.png"
+			},
+			{
+				"id": "4-0Q",
+				"name": "Medb (Saber)",
+				"class": "saber",
+				"game_id": "221",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/MGB3fB9.png"
+			},
+			{
+				"id": "4-0R",
+				"name": "Mysterious Heroine XX",
+				"class": "foreigner",
+				"game_id": "222",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/qECPI0s.png"
+			},
+			{
+				"id": "4-0S",
+				"name": "Diarmuid Ua Duibhne (Saber)",
+				"class": "saber",
+				"game_id": "223",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/kexSlFh.png"
+			},
+			{
+				"id": "4-0T",
+				"name": "Shuten Dōji (Caster)",
+				"class": "caster",
+				"game_id": "225",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/RbSai5b.png"
+			},
+			{
+				"id": "4-0U",
+				"name": "Lanling Wang",
+				"class": "saber",
+				"game_id": "227",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/nA2YHAY.png"
+			},
+			{
+				"id": "4-0V",
+				"name": "Qin Liangyu",
+				"class": "lancer",
+				"game_id": "228",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/gxqYILw.png"
+			},
+			{
+				"id": "4-0W",
+				"name": "Yu Miaoyi",
+				"class": "assassin",
+				"game_id": "230",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/UkpWtYo.png"
+			},
+			{
+				"id": "4-0X",
+				"name": "Quetzalcoatl (Samba/Santa)",
+				"class": "ruler",
+				"game_id": "233",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/VQrNQwe.png"
+			},
+			{
+				"id": "4-0Y",
+				"name": "Miyu Edelfelt",
+				"class": "caster",
+				"game_id": "236",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AWwJB8j.png"
+			},
+			{
+				"id": "4-0a",
+				"name": "Astraea",
+				"class": "ruler",
+				"game_id": "242",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/1lMj1p5.png"
+			},
+			{
+				"id": "4-0Z",
+				"name": "Gray",
+				"class": "assassin",
+				"game_id": "243",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HGxUIN0.png"
+			},
+			{
+				"id": "4-0b",
+				"name": "Lakshmibai",
+				"class": "saber",
+				"game_id": "245",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Y0OynEU.png"
+			},
+			{
+				"id": "4-0c",
+				"name": "Aśvatthāman",
+				"class": "archer",
+				"game_id": "248",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/cMR7gNR.png"
+			},
+			{
+				"id": "4-0d",
+				"name": "Nagao Kagetora",
+				"class": "lancer",
+				"game_id": "252",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/qeptThQ.png"
+			},
+			{
+				"id": "4-0e",
+				"name": "Osakabehime (Archer)",
+				"class": "archer",
+				"game_id": "262",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/DzXTQrn.png"
+			},
+			{
+				"id": "4-0f",
+				"name": "Carmilla (Rider)",
+				"class": "rider",
+				"game_id": "263",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/M3DesaG.png"
+			},
+			{
+				"id": "4-0g",
+				"name": "Katsushika Hokusai (Saber)",
+				"class": "saber",
+				"game_id": "264",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/o0fNTHH.png"
+			},
+			{
+				"id": "4-0h",
+				"name": "Mysterious Alter Ego Λ",
+				"class": "lancer",
+				"game_id": "266",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ha9fB6a.png"
+			},
+			{
+				"id": "4-0i",
+				"name": "Okita J Sōji",
+				"class": "assassin",
+				"game_id": "267",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/CzWEU7w.png"
+			},
+			{
+				"id": "4-0j",
+				"name": "Calamity Jane",
+				"class": "archer",
+				"game_id": "269",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/klbjNgV.png"
+			},
+			{
+				"id": "4-0k",
+				"name": "Nightingale (Santa)",
+				"class": "archer",
+				"game_id": "271",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/PnYqRMR.png"
+			},
+			{
+				"id": "4-0l",
+				"name": "Caenis",
+				"class": "lancer",
+				"game_id": "279",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AClFtK4.png"
+			}
+		]
+	},
+	{
+		"list_id": "rare",
+		"list_name": "★3",
+		"list_element": "rareBox",
+		"list_iconpath": "",
+		"class_available": ["saber","archer","lancer","rider","caster","assassin","berserker","avenger"],
+		"disable": false,
+		"list": [
+			{
+				"id": "3-1",
+				"name": "Gaius Julius Caesar",
+				"class": "saber",
+				"game_id": "7",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/DapVmOB.png"
+			},
+			{
+				"id": "3-2",
+				"name": "Gilles de Rais (Saber)",
+				"class": "saber",
+				"game_id": "9",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/4rTvs50.png"
+			},
+			{
+				"id": "3-3",
+				"name": "Robin Hood",
+				"class": "archer",
+				"game_id": "13",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZiJ1dtC.png"
+			},
+			{
+				"id": "3-4",
+				"name": "Euryale",
+				"class": "archer",
+				"game_id": "15",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/7BJp1HT.png"
+			},
+			{
+				"id": "3-5",
+				"name": "Cú Chulainn",
+				"class": "lancer",
+				"game_id": "17",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Uy3iwcA.png"
+			},
+			{
+				"id": "3-6",
+				"name": "Cú Chulainn (Prototype)",
+				"class": "lancer",
+				"game_id": "20",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/lf4lRH2.png"
+			},
+			{
+				"id": "3-7",
+				"name": "Romulus",
+				"class": "lancer",
+				"game_id": "22",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/vkvBvDD.png"
+			},
+			{
+				"id": "3-8",
+				"name": "Medusa",
+				"class": "rider",
+				"game_id": "23",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/BzNaaW6.png"
+			},
+			{
+				"id": "3-9",
+				"name": "Boudica",
+				"class": "rider",
+				"game_id": "26",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/By8vxkg.png"
+			},
+			{
+				"id": "3-A",
+				"name": "Ushiwakamaru",
+				"class": "rider",
+				"game_id": "27",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/VhHPySK.png"
+			},
+			{
+				"id": "3-B",
+				"name": "Alexander",
+				"class": "rider",
+				"game_id": "28",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Zesz9YG.png"
+			},
+			{
+				"id": "3-C",
+				"name": "Medea",
+				"class": "caster",
+				"game_id": "31",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Clfvmiu.png"
+			},
+			{
+				"id": "3-D",
+				"name": "Gilles de Rais",
+				"class": "caster",
+				"game_id": "32",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KJt5dSc.png"
+			},
+			{
+				"id": "3-E",
+				"name": "Mephistopheles",
+				"class": "caster",
+				"game_id": "35",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/JrgF3Oy.png"
+			},
+			{
+				"id": "3-F",
+				"name": "Cú Chulainn (Caster)",
+				"class": "caster",
+				"game_id": "38",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/UYIpYrd.png"
+			},
+			{
+				"id": "3-G",
+				"name": "Jing Ke",
+				"class": "assassin",
+				"game_id": "42",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/2QrhC3p.png"
+			},
+			{
+				"id": "3-H",
+				"name": "Lu Bu Fengxian",
+				"class": "berserker",
+				"game_id": "49",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/36xJ2d8.png"
+			},
+			{
+				"id": "3-I",
+				"name": "Darius III",
+				"class": "berserker",
+				"game_id": "55",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/PjIEY8G.png"
+			},
+			{
+				"id": "3-J",
+				"name": "Kiyohime",
+				"class": "berserker",
+				"game_id": "56",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/XLLXccS.png"
+			},
+			{
+				"id": "3-K",
+				"name": "David",
+				"class": "archer",
+				"game_id": "63",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/4tdfNGI.png"
+			},
+			{
+				"id": "3-L",
+				"name": "Hector",
+				"class": "lancer",
+				"game_id": "64",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/6w8wWDT.png"
+			},
+			{
+				"id": "3-M",
+				"name": "Diarmuid Ua Duibhne",
+				"class": "lancer",
+				"game_id": "71",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/cwNs0p2.png"
+			},
+			{
+				"id": "3-N",
+				"name": "Fergus mac Róich",
+				"class": "saber",
+				"game_id": "72",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/JOazosj.png"
+			},
+			{
+				"id": "3-O",
+				"name": "Paracelsus von Hohenheim",
+				"class": "caster",
+				"game_id": "79",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/d6t9BPG.png"
+			},
+			{
+				"id": "3-P",
+				"name": "Charles Babbage",
+				"class": "caster",
+				"game_id": "80",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/BrEm1kv.png"
+			},
+			{
+				"id": "3-Q",
+				"name": "Henry Jekyll & Hyde",
+				"class": "assassin",
+				"game_id": "81",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/NodWxv0.png"
+			},
+			{
+				"id": "3-R",
+				"name": "Kid Gil",
+				"class": "archer",
+				"game_id": "95",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/0a8gMKc.png"
+			},
+			{
+				"id": "3-S",
+				"name": "Geronimo",
+				"class": "caster",
+				"game_id": "104",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/43AC33N.png"
+			},
+			{
+				"id": "3-T",
+				"name": "Billy the Kid",
+				"class": "archer",
+				"game_id": "105",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/pHEBThV.png"
+			},
+			{
+				"id": "3-U",
+				"name": "Hundred-Faced Hassan",
+				"class": "assassin",
+				"game_id": "110",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/n7XDDjX.png"
+			},
+			{
+				"id": "3-V",
+				"name": "Fūma Kotarō",
+				"class": "assassin",
+				"game_id": "117",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/HGnFSLP.png"
+			},
+			{
+				"id": "3-W",
+				"name": "Hassan of Serenity",
+				"class": "assassin",
+				"game_id": "124",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/WraaofQ.png"
+			},
+			{
+				"id": "3-X",
+				"name": "Tawara Tōta",
+				"class": "archer",
+				"game_id": "125",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZmIjly9.png"
+			},
+			{
+				"id": "3-Y",
+				"name": "Bedivere",
+				"class": "saber",
+				"game_id": "126",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/XmjEtuv.png"
+			},
+			{
+				"id": "3-Z",
+				"name": "Jaguar Man",
+				"class": "lancer",
+				"game_id": "148",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/wtwYgU8.png"
+			},
+			{
+				"id": "3-a",
+				"name": "Christopher Columbus",
+				"class": "rider",
+				"game_id": "172",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/yIG1Eoh.png"
+			},
+			{
+				"id": "3-b",
+				"name": "Hōzōin Inshun",
+				"class": "lancer",
+				"game_id": "186",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/C1KS9kP.png"
+			},
+			{
+				"id": "3-c",
+				"name": "Avicebron",
+				"class": "caster",
+				"game_id": "203",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KqPHkGq.png"
+			},
+			{
+				"id": "3-d",
+				"name": "Antonio Salieri",
+				"class": "avenger",
+				"game_id": "204",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/LJIE2Eg.png"
+			},
+			{
+				"id": "3-e",
+				"name": "Okada Izō",
+				"class": "assassin",
+				"game_id": "230",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/SzhIfdS.png"
+			},
+			{
+				"id": "3-f",
+				"name": "Red Hare",
+				"class": "rider",
+				"game_id": "231",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/QKBUrlz.png"
+			},
+			{
+				"id": "3-g",
+				"name": "William Tell",
+				"class": "archer",
+				"game_id": "246",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/wFWgkLf.png"
+			},
+			{
+				"id": "3-h",
+				"name": "Asclepius",
+				"class": "caster",
+				"game_id": "249",
+				"maxcopy": 5,
+				"stype": 1,
+				"img": true,
+				"imgpath": "https://i.imgur.com/fvpJMOJ.png"
+			},
+			{
+				"id": "3-i",
+				"name": "Mori Nagayoshi",
+				"class": "berserker",
+				"game_id": "251",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/A38JJ67.png"
+			},
+			{
+				"id": "3-j",
+				"name": "Mandricardo",
+				"class": "rider",
+				"game_id": "273",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/pZI7ux8.png"
+			}
+		]
+	},
+	{
+		"list_id": "uncommon",
+		"list_name": "★2",
+		"list_element": "uncommonBox",
+		"list_iconpath": "",
+		"class_available": ["archer","lancer","rider","caster","assassin","berserker"],
+		"disable": false,
+		"list": [
+			{
+				"id": "2-0",
+				"name": "Musashibō Benkei",
+				"class": "lancer",
+				"game_id": "19",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Hsn5gOd.png"
+			},
+			{
+				"id": "2-1",
+				"name": "Leonidas I",
+				"class": "lancer",
+				"game_id": "21",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/CwFAXFT.png"
+			},
+			{
+				"id": "2-2",
+				"name": "Georgios",
+				"class": "rider",
+				"game_id": "24",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/hIkIe79.png"
+			},
+			{
+				"id": "2-3",
+				"name": "Edward Teach",
+				"class": "rider",
+				"game_id": "25",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/a3TKdca.png"
+			},
+			{
+				"id": "2-4",
+				"name": "Hans Christian Andersen",
+				"class": "caster",
+				"game_id": "33",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/JfTWhfN.png"
+			},
+			{
+				"id": "2-5",
+				"name": "William Shakespeare",
+				"class": "caster",
+				"game_id": "34",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/w2004wy.png"
+			},
+			{
+				"id": "2-6",
+				"name": "Cursed Arm Hassan",
+				"class": "assassin",
+				"game_id": "40",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/cRTqKpW.png"
+			},
+			{
+				"id": "2-7",
+				"name": "Charles-Henri Sanson",
+				"class": "assassin",
+				"game_id": "43",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/IH8zT6Z.png"
+			},
+			{
+				"id": "2-8",
+				"name": "Phantom of the Opera",
+				"class": "assassin",
+				"game_id": "44",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/BRTLSxm.png"
+			},
+			{
+				"id": "2-9",
+				"name": "Caligula",
+				"class": "berserker",
+				"game_id": "54",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/FwTzIzP.png"
+			},
+			{
+				"id": "2-A",
+				"name": "Eric Bloodaxe",
+				"class": "berserker",
+				"game_id": "57",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/e2kKgVB.png"
+			},
+			{
+				"id": "2-B",
+				"name": "Paris",
+				"class": "archer",
+				"game_id": "255",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ZH7v7W2.png"
+			},
+			{
+				"id": "2-C",
+				"name": "Gareth",
+				"class": "lancer",
+				"game_id": "256",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/sWyAivK.png"
+			},
+			{
+				"id": "2-D",
+				"name": "Chen Gong",
+				"class": "caster",
+				"game_id": "258",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/u1EXNsx.png"
+			},
+			{
+				"id": "2-E",
+				"name": "Salome",
+				"class": "berserker",
+				"game_id": "260",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/9JsVxzr.png"
+			}
+		]
+	},
+	{
+		"list_id": "common",
+		"list_name": "★1",
+		"list_element": "commonBox",
+		"list_iconpath": "",
+		"class_available": ["saber","archer","rider","caster","assassin","berserker"],
+		"disable": false,
+		"list": [
+			{
+				"id": "1-0",
+				"name": "Arash",
+				"class": "archer",
+				"game_id": "16",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Ft2tyhW.png"
+			},
+			{
+				"id": "1-1",
+				"name": "Wolfgang Amadeus Mozart",
+				"class": "caster",
+				"game_id": "36",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/OMtT4g7.png"
+			},
+			{
+				"id": "1-2",
+				"name": "Sasaki Kojirō",
+				"class": "assassin",
+				"game_id": "39",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/c0qHuE6.png"
+			},
+			{
+				"id": "1-3",
+				"name": "Mata Hari",
+				"class": "assassin",
+				"game_id": "45",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/pMtjthO.png"
+			},
+			{
+				"id": "1-4",
+				"name": "Spartacus",
+				"class": "berserker",
+				"game_id": "50",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/5cAFgvT.png"
+			},
+			{
+				"id": "1-5",
+				"name": "Asterios",
+				"class": "berserker",
+				"game_id": "53",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/rGgVyVh.png"
+			},
+			{
+				"id": "1-6",
+				"name": "Paul Bunyan",
+				"class": "berserker",
+				"game_id": "174",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/tKM9teU.png"
+			},
+			{
+				"id": "1-7",
+				"name": "Jason",
+				"class": "saber",
+				"game_id": "254",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/ynppaIO.png"
+			},
+			{
+				"id": "1-8",
+				"name": "Bartholomew Roberts",
+				"class": "rider",
+				"game_id": "257",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/KiJ55kZ.png"
+			},
+			{
+				"id": "1-9",
+				"name": "Charlotte Corday",
+				"class": "assassin",
+				"game_id": "259",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AjouoOf.png"
+			}
+		]
+	},
+	{
+		"list_id": "none",
+		"list_name": "✩0",
+		"list_element": "noneBox",
+		"list_iconpath": "",
+		"class_available": ["avenger"],
+		"disable": false,
+		"list": [
+			{
+				"id": "0-0",
+				"name": "Angra Mainyu",
+				"class": "avenger",
+				"game_id": "107",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/UkyfnFa.png"
+			}
+		]
+	}
+]

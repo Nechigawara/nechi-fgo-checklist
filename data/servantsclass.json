@@ -1,0 +1,116 @@
+{
+	"shielder" : {
+		"name": "Shielder",
+		"iconlist" : {
+			"sr" : "shielder/icon-gold.png",
+			"rare" : "shielder/icon-silver.png"
+		}
+	},
+	"saber" : {
+		"name": "Saber",
+		"iconlist" : {
+			"ssr" : "saber/icon-gold.png",
+			"sr" : "saber/icon-gold.png",
+			"rare" : "saber/icon-silver.png",
+			"uncommon" : "saber/icon-bronze.png",
+			"common" : "saber/icon-bronze.png"
+		}
+	},
+	"archer" : {
+		"name": "Archer",
+		"iconlist" : {
+			"ssr" : "archer/icon-gold.png",
+			"sr" : "archer/icon-gold.png",
+			"rare" : "archer/icon-silver.png",
+			"uncommon" : "archer/icon-bronze.png",
+			"common" : "archer/icon-bronze.png"
+		}
+	},
+	"lancer" : {
+		"name": "Lancer",
+		"iconlist" : {
+			"ssr" : "lancer/icon-gold.png",
+			"sr" : "lancer/icon-gold.png",
+			"rare" : "lancer/icon-silver.png",
+			"uncommon" : "lancer/icon-bronze.png",
+			"common" : "lancer/icon-bronze.png"
+		}
+	},
+	"rider" : {
+		"name": "Rider",
+		"iconlist" : {
+			"ssr" : "rider/icon-gold.png",
+			"sr" : "rider/icon-gold.png",
+			"rare" : "rider/icon-silver.png",
+			"uncommon" : "rider/icon-bronze.png",
+			"common" : "rider/icon-bronze.png"
+		}
+	},
+	"caster" : {
+		"name": "Caster",
+		"iconlist" : {
+			"ssr" : "caster/icon-gold.png",
+			"sr" : "caster/icon-gold.png",
+			"rare" : "caster/icon-silver.png",
+			"uncommon" : "caster/icon-bronze.png",
+			"common" : "caster/icon-bronze.png"
+		}
+	},
+	"assassin" : {
+		"name": "Assassin",
+		"iconlist" : {
+			"ssr" : "assassin/icon-gold.png",
+			"sr" : "assassin/icon-gold.png",
+			"rare" : "assassin/icon-silver.png",
+			"uncommon" : "assassin/icon-bronze.png",
+			"common" : "assassin/icon-bronze.png"
+		}
+	},
+	"berserker" : {
+		"name": "Berserker",
+		"iconlist" : {
+			"ssr" : "berserker/icon-gold.png",
+			"sr" : "berserker/icon-gold.png",
+			"rare" : "berserker/icon-silver.png",
+			"uncommon" : "berserker/icon-bronze.png",
+			"common" : "berserker/icon-bronze.png"
+		}
+	},
+	"ruler" : {
+		"name": "Ruler",
+		"iconlist" : {
+			"ssr" : "ruler/icon-gold.png",
+			"sr" : "ruler/icon-gold.png"
+		}
+	},
+	"avenger" : {
+		"name": "Avenger",
+		"iconlist" : {
+			"ssr" : "avenger/icon-gold.png",
+			"sr" : "avenger/icon-gold.png",
+			"rare" : "avenger/icon-silver.png",
+			"none" : "avenger/icon-black.png"
+		}
+	},
+	"mooncancer" : {
+		"name": "Moon Cancer",
+		"iconlist" : {
+			"ssr" : "mooncancer/icon-gold.png",
+			"sr" : "mooncancer/icon-gold.png"
+		}
+	},
+	"alterego" : {
+		"name": "Alter Ego",
+		"iconlist" : {
+			"ssr" : "alterego/icon-gold.png",
+			"sr" : "alterego/icon-gold.png"
+		}
+	},
+	"foreigner" : {
+		"name": "Foreigner",
+		"iconlist" : {
+			"ssr" : "foreigner/icon-gold.png",
+			"sr" : "foreigner/icon-gold.png"
+		}
+	}
+}
