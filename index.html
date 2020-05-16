@@ -53,7 +53,7 @@
 			<li>Your compressed URL will be update when the page load. Please bookmark the new url and remove the old one.</li>
 			<li class="text-danger">Old Shorted URL (Start with "?ss=") doesn't work anymore</li>
 			<li>New Shorted URL (Start with "?skey=") will stay the same as long as your data not change. Or until the storage site deleted it.</li>
-			<li>New Shorted URL will not save the site option such as Fast mode. Please use compressed URL.</li>
+			<li>New Shorted URL will not save the site option such as Fast mode. Please use compressed URL. Mashu Option is excluded and will be included.</li>
 		</ul>
 	</div>
 	<div class="card">
@@ -62,12 +62,16 @@
 			<hr/>
 			<form>
 				<div class="form-group form-check">
-					<input type="checkbox" class="form-check-input" id="fastmode">
-					<label class="form-check-label" for="fastmode">Fast Mode (Left & Right Click Only)</label>
+					<input type="checkbox" class="form-check-input" id="mashuSR">
+					<label class="form-check-label" for="mashuSR">Mashu is ★4 SR</label>
 				</div>
 				<div class="form-group form-check">
 					<input type="checkbox" class="form-check-input" id="classmode">
 					<label class="form-check-label" for="classmode">Divide List By Servant Class</label>
+				</div>
+								<div class="form-group form-check">
+					<input type="checkbox" class="form-check-input" id="fastmode">
+					<label class="form-check-label" for="fastmode">Fast Mode (Left & Right Click Only)</label>
 				</div>
 				<button type="button" class="btn btn-secondary" onclick="ToggleEventIcon()">Show/Hide Type Icons</button>
 				<!-- button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Disable for Padoru" disabled>Export as Image (Slow)</button -->
@@ -135,7 +139,7 @@
 			<div class="card-header bg-warning header-shadow">★5 SSR</div>
 			<div class="card-body">
 				<div class="row" id="ssrBox" style="display:none;"></div>
-				<div id="ssrBox-ByClass" style="display:none;"></div>
+				<div class="listbox_class" id="ssrBox-ByClass" style="display:none;"></div>
 				<div class="row" id="ssrBoxFake">
 					<div class="col">Loading...</div>
 				</div>
@@ -144,9 +148,9 @@
 		<div class="card" style="margin-top: 10px;">
 			<div class="card-header bg-warning header-shadow">★4 SR</div>
 			<div class="card-body">
-				<div class="row" id="srBox" style="display:none;"></div>
-				<div id="srBox-ByClass" style="display:none;"></div>
-				<div class="row" id="srBoxFake">
+				<div class="row listbox" id="srBox" style="display:none;"></div>
+				<div class="listbox_class" id="srBox-ByClass" style="display:none;"></div>
+				<div class="row listbox_fake" id="srBoxFake">
 					<div class="col">Loading...</div>
 				</div>
 			</div>
@@ -154,9 +158,9 @@
 		<div class="card" style="margin-top: 10px;">
 			<div class="card-header bg-fgo-rare header-shadow">★3 R</div>
 			<div class="card-body">
-				<div class="row" id="rareBox" style="display:none;"></div>
-				<div id="rareBox-ByClass" style="display:none;"></div>
-				<div class="row" id="rareBoxFake">
+				<div class="row listbox" id="rareBox" style="display:none;"></div>
+				<div class="listbox_class" id="rareBox-ByClass" style="display:none;"></div>
+				<div class="row listbox_fake" id="rareBoxFake">
 					<div class="col">Loading...</div>
 				</div>
 			</div>
@@ -164,9 +168,9 @@
 		<div class="card" style="margin-top: 10px;">
 			<div class="card-header bg-fgo-common header-shadow">★2 Uncommon</div>
 			<div class="card-body">
-				<div class="row" id="uncommonBox" style="display:none;"></div>
-				<div id="uncommonBox-ByClass" style="display:none;"></div>
-				<div class="row" id="uncommonBoxFake">
+				<div class="row listbox" id="uncommonBox" style="display:none;"></div>
+				<div class="listbox_class" id="uncommonBox-ByClass" style="display:none;"></div>
+				<div class="row listbox_fake" id="uncommonBoxFake">
 					<div class="col">Loading...</div>
 				</div>
 			</div>
@@ -174,9 +178,9 @@
 		<div class="card" style="margin-top: 10px;">
 			<div class="card-header bg-fgo-common header-shadow">★1 Common</div>
 			<div class="card-body">
-				<div class="row" id="commonBox" style="display:none;"></div>
-				<div id="commonBox-ByClass" style="display:none;"></div>
-				<div class="row" id="commonBoxFake">
+				<div class="row listbox" id="commonBox" style="display:none;"></div>
+				<div class="listbox_class" id="commonBox-ByClass" style="display:none;"></div>
+				<div class="row listbox_fake" id="commonBoxFake">
 					<div class="col">Loading...</div>
 				</div>
 			</div>
@@ -184,9 +188,9 @@
 		<div class="card" style="margin-top: 10px;">
 			<div class="card-header bg-dark header-shadow">✩0 Non-Rarity</div>
 			<div class="card-body">
-				<div class="row" id="noneBox" style="display:none;"></div>
-				<div id="noneBox-ByClass" style="display:none;"></div>
-				<div class="row" id="noneBoxFake">
+				<div class="row listbox" id="noneBox" style="display:none;"></div>
+				<div class="listbox_class" id="noneBox-ByClass" style="display:none;"></div>
+				<div class="row listbox_fake" id="noneBoxFake">
 					<div class="col">Loading...</div>
 				</div>
 			</div>

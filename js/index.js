@@ -2,7 +2,11 @@
 var icontype = ".png";
 var icondefault = "default.png";
 var icondefault_external_source = false;
+
 var datapath = "data/servants.json";
+var datapath_alternate = "data/servants.alternate.json";
+var dataclasspath = "data/servantsclass.json";
+
 var img_path = "img/servants/";
 var img_class = "img-fluid";
 var image_host = "https://i.imgur.com/";
@@ -29,8 +33,9 @@ var share_title = "See My Servants Here!!";
 
 // Class Config
 var class_divide_class = "ByClass";
-var class_div_icon_class = "col-2";
+var class_div_icon_class = "col-1";
 var class_div_list_class = "col";
+var class_img_path = "img/classes/";
 
 // Servant Type
 var servant_type_box_class = "member-type";
@@ -61,6 +66,9 @@ var fastmode_parameter = "fast";
 var classmode_checkbox = "classmode";
 var classmode_parameter = "classlist";
 
+var mashuSR_checkbox = "mashuSR";
+var mashuSR_parameter = "mashu";
+
 // URL Shortend
 var endpoint = "https://www.jsonstore.io/b79c0c8ea773aa05abd64a356b925c88703d6cbb40679791533b716810e77dc9";
 var url_checkback_part = "/checkback/";
@@ -69,6 +77,8 @@ var url_data_part = "/data/";
 // Save & Load
 var fast_mode_local = "fgo_fastmode";
 var class_mode_local = "fgo_classmode";
+var mashuSR_local = "fgo_mashu";
+
 var list_local = "fgo_list";
 
 var load_text = "List Data found on your current browser. Would you like to load it?";
@@ -82,6 +92,7 @@ var save_btn = "savebutton";
 
 // Global Variables
 var servants_data_list = {};
+var class_data_list = {};
 var user_data = {};
 var rarity_count_data = {
 	"allcount": {
@@ -97,7 +108,9 @@ var rarity_count_data = {
 };
 var raw_user_input = "";
 var compress_input = "";
+
 var current_edit = "";
+var current_edit_ele = null;
 
 // Global Objects
 var customAdapter = null;
@@ -179,6 +192,11 @@ function getImagePath(path, external_source) {
     }
 }
 
+function getImageClassPath(path) {
+    var urlBase = location.href.substring(0, location.href.lastIndexOf("/") + 1);
+    return urlBase + class_img_path + path;
+}
+
 // User Data Check
 function getUserData(id) {
 	if (typeof user_data[id] === "undefined") {
@@ -186,7 +204,6 @@ function getUserData(id) {
 	}
 	return user_data[id];
 }
-
 
 // Convert Data
 function ConvertUserDataToRawInput(input_data)
@@ -214,8 +231,17 @@ function IsClassmode() {
 	return classmode_enable;
 }
 
+// ClassMode Check
+function IsMashuSR() {
+	var MashuIsSR = $('#' + mashuSR_checkbox).is(':checked');
+	return MashuIsSR;
+}
+
 // Click Div
-function memBerClick(id, name, s_element) {
+function memBerClick(s_element) {
+	// Variable
+	var id = $(s_element).attr("id");
+	var name = $(s_element).data("original-title");
 	// Fast Mode, Change Value Directly
 	if (IsFastmode()) {
 		// Change Value
@@ -225,6 +251,7 @@ function memBerClick(id, name, s_element) {
 	}
 	// Mark current_edit
 	current_edit = id;
+	current_edit_ele = s_element;
     var current_user_data = getUserData(id);
 	var current_edit_max = servants_data_list[id].maxcopy;
 	// New Check or Update
@@ -251,18 +278,21 @@ function memBerClick(id, name, s_element) {
 }
 
 // Click Div
-function memBerRightClick(id, name, s_element) {
+function memBerRightClick(s_element) {
 	// Fast Mode, Change Value Directly
 	if (!IsFastmode()) {
 		return;
 	}
+	// Variable
+	var id = $(s_element).attr("id");
+	var name = $(s_element).data("original-title");
 	// Mark current_edit
 	userDataUpdateFast(id, -1, s_element);
 }
 
 function userDataRemove() {
 	// Prevent Blank Key
-	if (current_edit == "") {
+	if (current_edit == "" || current_edit_ele == null) {
 		return;
 	}
 	// Confirm
@@ -289,7 +319,7 @@ function userDataRemove() {
 				// Update Member Element
 				$('#' + current_edit).removeClass(member_class_checked);
 				// Update Value on List
-				UpdateCopyVal(current_edit, 0);
+				UpdateCopyVal(current_edit, 0, current_edit_ele);
 				// Update Count
 				// Hide Update Check Modal
 				$('#updateModal').modal('hide');
@@ -330,9 +360,9 @@ function userDataUpdateFast(id, val, s_element) {
 		if (new_val <= 0 || new_val > current_edit_max) {
 			// Remove Instead
 			// Update Member Element
-			$('#' + id).removeClass(member_class_checked);
+			$(s_element).removeClass(member_class_checked);
 			// Update Value on List
-			UpdateCopyVal(id, 0);
+			UpdateCopyVal(id, 0, s_element);
 			// Update Count
 			count_update(id, -1);
 			// Clear Number
@@ -342,7 +372,7 @@ function userDataUpdateFast(id, val, s_element) {
 			// Update user data
 			user_data[id] = new_val;
 			// Update Value on List
-			UpdateCopyVal(id, new_val);
+			UpdateCopyVal(id, new_val, s_element);
 		}
 	}
 	else {
@@ -350,9 +380,9 @@ function userDataUpdateFast(id, val, s_element) {
 			// Add user data
 			user_data[id] = current_edit_max;
 			// Update Member Element
-			$('#' + id).addClass(member_class_checked);
+			$(s_element).addClass(member_class_checked);
 			// Update Value on List
-			UpdateCopyVal(id, user_data[id]);
+			UpdateCopyVal(id, user_data[id], s_element);
 		}
 		else {
 			// Add user data
@@ -360,7 +390,7 @@ function userDataUpdateFast(id, val, s_element) {
 			// Update Count
 			count_update(id, 1);
 			// Update Member Element
-			$('#' + id).addClass(member_class_checked);
+			$(s_element).addClass(member_class_checked);
 		}
 	}
 	// Update Raw Input & URL
@@ -370,7 +400,7 @@ function userDataUpdateFast(id, val, s_element) {
 
 function userDataUpdate() {
 	// Prevent Blank Key
-	if (current_edit == "") {
+	if (current_edit == "" || current_edit_ele == null) {
 		return;
 	}
 	// Get UserData
@@ -382,7 +412,7 @@ function userDataUpdate() {
 		// Update user data
 		user_data[current_edit] = new_val;
 		// Update Value on List
-		UpdateCopyVal(current_edit, new_val);
+		UpdateCopyVal(current_edit, new_val, current_edit_ele);
 		// Hide Update Check Modal
 		$('#updateModal').modal('hide');
 	}
@@ -398,7 +428,7 @@ function userDataUpdate() {
 		// Update Member Element
 		$('#' + current_edit).addClass(member_class_checked);
 		// Update Value on List
-		UpdateCopyVal(current_edit, new_val);
+		UpdateCopyVal(current_edit, new_val, current_edit_ele);
 		// Hide New Check Modal
 		$('#addModal').modal('hide');
 	}
@@ -409,17 +439,17 @@ function userDataUpdate() {
 	current_edit = "";
 }
 
-function UpdateCopyVal(id, new_val) {
+function UpdateCopyVal(id, new_val, s_element) {
 	// Prevent Blank Key
 	if (id == "") {
 		return;
 	}
 	// Update Value on List
 	if (new_val > 1) {
-		$('#' + morecopy_prefix + id).html(morecopy_text + new_val.toString());
+		$(s_element).find('#' + morecopy_prefix + id).html(morecopy_text + new_val.toString());
 	}
 	else {
-		$('#' + morecopy_prefix + id).html("");
+		$(s_element).find('#' + morecopy_prefix + id).html("");
 	}
 }
 
@@ -436,6 +466,14 @@ function getClassModeURLstring() {
 	}
 	return "";
 }
+
+function getMashuSRURLstring() {
+	if (IsMashuSR()) {
+		return mashuSR_parameter + "=1";
+	}
+	return "";
+}
+
 
 function UpdateURL() {
 	// Sort Key First
@@ -466,6 +504,18 @@ function UpdateURL() {
 	else {
 		compress_input = null;
 		$('#' + save_btn).prop('disabled', true);
+	}
+	
+	// Mashu is SR
+	var mashuSR_str = getMashuSRURLstring();
+	if (mashuSR_str != "") {
+		if (!new_parameter.startsWith("?")) {
+			new_parameter = "?";
+		}
+		else {
+			new_parameter += "&";
+		}
+		new_parameter += mashuSR_str;
 	}
 	
 	// Class Mode
@@ -507,6 +557,9 @@ function UpdateURLOptionModeOnly() {
 	var urlParams = null;
 	
 	// Option Check
+	var mashuSR_str = getMashuSRURLstring();
+	var mashuSR_input = "";
+	
 	var classmode_str = getClassModeURLstring();
 	var classmode_input = "";
 	
@@ -514,11 +567,16 @@ function UpdateURLOptionModeOnly() {
 	var fastmode_input = "";
 	
 	// Mode String Founded
-	if (classmode_str != "" || fastmode_str != "") {
+	if (mashuSR_str != "" || classmode_str != "" || fastmode_str != "") {
 		if (url_part != "") {
 			urlParams = new URLSearchParams(url_part);
+			mashuSR_input = urlParams.get(mashuSR_parameter);
 			classmode_input = urlParams.get(classmode_parameter);
 			fastmode_input = urlParams.get(fastmode_parameter);
+			if (mashuSR_input != null) {
+				url_part = url_part.replace("&" + mashuSR_parameter + "=" + mashuSR_input,'');
+				url_part = url_part.replace(mashuSR_parameter + "=" + mashuSR_input,'');
+			}
 			if (classmode_input != null) {
 				url_part = url_part.replace("&" + classmode_parameter + "=" + classmode_input,'');
 				url_part = url_part.replace(classmode_parameter + "=" + classmode_input,'');
@@ -539,10 +597,28 @@ function UpdateURLOptionModeOnly() {
 		// Finish Input
 		var last_str = "";
 		
+		// Data Checked; mashu is SR
+		if (mashuSR_str != "")
+		{
+			last_str += mashuSR_str;
+			localStorage[mashuSR_local] = 1;
+		}
+		else
+		{
+			localStorage[mashuSR_local] = 0;
+		}
+		
 		// Option Checked; Class Mode
 		if (classmode_str != "")
 		{
-			last_str += classmode_str;
+			if (last_str != "")
+			{
+				last_str += "&" + classmode_str;
+			}
+			else
+			{
+				last_str += classmode_str;
+			}
 			localStorage[class_mode_local] = 1;
 		}
 		else
@@ -573,8 +649,13 @@ function UpdateURLOptionModeOnly() {
 	}
 	else if (url_part != "") {
 		urlParams = new URLSearchParams(url_part);
+		mashuSR_input = urlParams.get(mashuSR_parameter);
 		classmode_input = urlParams.get(classmode_parameter);
 		fastmode_input = urlParams.get(fastmode_parameter);
+		if (mashuSR_input != null) {
+			url_part = url_part.replace("&" + mashuSR_parameter + "=" + mashuSR_input,'');
+			url_part = url_part.replace(mashuSR_parameter + "=" + mashuSR_input,'');
+		}
 		if (classmode_input != null) {
 			url_part = url_part.replace("&" + classmode_parameter + "=" + classmode_input,'');
 			url_part = url_part.replace(classmode_parameter + "=" + classmode_input,'');
@@ -584,11 +665,13 @@ function UpdateURLOptionModeOnly() {
 			url_part = url_part.replace(fastmode_parameter + "=" + fastmode_input,'');
 		}
 		// Local Storage Option
+		localStorage[mashuSR_local] = 0;
 		localStorage[class_mode_local] = 0;
 		localStorage[fast_mode_local] = 0;
 	}
 	else {
 		// Local Storage Option
+		localStorage[mashuSR_local] = 0;
 		localStorage[class_mode_local] = 0;
 		localStorage[fast_mode_local] = 0;
 	}
@@ -603,16 +686,49 @@ function UpdateURLOptionModeOnly() {
     window.history.pushState({path:newurl},'',newurl);
 }
 
+// Class Mode Change
+function UpdateClassMode() {
+	UpdateURLOptionModeOnly();
+	finish_loading();
+}
+
+// Get compress_input
+function get_compress_input()
+{
+	var MashuIsSR = getMashuSRURLstring();
+	if (MashuIsSR)
+	{
+		return compress_input + "&" + MashuIsSR;
+	}
+	else
+	{
+		return compress_input;
+	}
+}
+
 // Make Data
 function MakeData(servants_data) {
 	// Clear Tooltip
 	$('[data-toggle="tooltip-member"]').tooltip('dispose');
+	
+	// Clear Contents
+	$( ".listbox" ).html("");
+	$( ".listbox_class" ).html("");
+	//$( "." + morecopy_class).html("");
+	morecopy_class
+	rarity_count_data.allcount.max = 0;
+	rarity_count_data.noteventcount.max = 0;
+	rarity_count_data.allcount.have = 0;
+	rarity_count_data.noteventcount.have = 0;
+	
     // Draw Button & Create User Data
     var list_box = [];
     var list_img = [];
+	
     // Add Default Photo
     var img_default = getImagePath(icondefault, icondefault_external_source);
     list_img.push(loadSprite(img_default));
+	
     // Loop
     for (var aa = 0, ll = servants_data.length; aa < ll; aa++) {
         // list get
@@ -634,11 +750,11 @@ function MakeData(servants_data) {
 			"have": 0
 		};
 		
-				// Prepare Var for Member Loop
+		// Prepare Var for Member Loop
         var current_list = current_rarity.list;
         var current_element = "#" + current_rarity.list_element;
         var current_path = current_rarity.list_iconpath;
-        var current_html = "";
+        //var current_html = "";
         list_box.push(current_element);
 		
 		// Class Mode; Prepare Element
@@ -651,8 +767,17 @@ function MakeData(servants_data) {
 				var current_class = list_class_available[bb];
 				// Prepare Div
 				current_class_html += '<div class="row">';
-				current_class_html += '<div class="' + class_div_icon_class + '">'
-				current_class_html += current_class;
+				current_class_html += '<div class="' + class_div_icon_class + '">';
+				
+				// Class Icon
+				var current_class_data = class_data_list[current_class];
+				var current_class_data_icn = getImageClassPath(current_class_data.iconlist[current_rarity.list_id]);
+				list_img.push(loadSprite(current_class_data_icn));
+				
+				var current_class_data_icn_ele = '<img src="' + current_class_data_icn + '" class="' + img_class + '" title="' + current_class_data.name + '" data-toggle="tooltip-member" data-placement="bottom"/>';
+				current_class_html += current_class_data_icn_ele;
+				
+				//current_class_html += current_class;  //Test
 				current_class_html += "</div>";
 				current_class_html += '<div class="row ' + class_div_list_class + '" id="' + current_rarity.list_element + '_' + current_class + '">';
 				//current_class_html += current_class; //Test
@@ -663,7 +788,6 @@ function MakeData(servants_data) {
 			}
 			// Update List Div
 			$(current_element + "-" + class_divide_class).html(current_class_html);
-			$(current_element + "-" + class_divide_class).show();
 		}
 
         // Loop List
@@ -706,24 +830,24 @@ function MakeData(servants_data) {
 			}
             current_servant_html += current_servant_class + '"'
             // On Click Function
-			var escape_input_name = (current_servant.name.replace(/'/g, "\\'"));
-            var current_onclick = ' onclick="memBerClick(' + "'" + current_servant.id + "', '" + escape_input_name + "', this)" + '"';
-            current_servant_html += current_onclick;
+			//var escape_input_name = (current_servant.name.replace(/'/g, "\\'"));
+            //var current_onclick = ' onclick="memBerClick(' + "'" + current_servant.id + "', '" + escape_input_name + "', this)" + '"';
+            //current_servant_html += current_onclick;
 			// On Context Function
-			var current_oncontext = ' oncontextmenu="memBerRightClick(' + "'" + current_servant.id + "', '" + escape_input_name + "', this);return false;" + '"';
-            current_servant_html += current_oncontext;
+			//var current_oncontext = ' oncontextmenu="memBerRightClick(' + "'" + current_servant.id + "', '" + escape_input_name + "', this);return false;" + '"';
+            //current_servant_html += current_oncontext;
             // Close div open tags
             current_servant_html += '>';
             // Image
-            //if (current_servant.img == false) {
+            if (current_servant.img == false) {
                 current_servant_img = img_default;
-            //} else if (current_servant.imgpath == null) {
-            //    current_servant_img = getImagePath(current_path + '/' + current_servant.id + icontype, false);
-            //    list_img.push(loadSprite(current_servant_img));
-            //} else {
-            //    current_servant_img = getImagePath(current_servant.imgpath, true);
-            //    list_img.push(loadSprite(current_servant_img));
-            //}
+            } else if (current_servant.imgpath == null) {
+                current_servant_img = getImagePath(current_path + '/' + current_servant.id + icontype, false);
+                list_img.push(loadSprite(current_servant_img));
+            } else {
+                current_servant_img = getImagePath(current_servant.imgpath, true);
+                list_img.push(loadSprite(current_servant_img));
+            }
             current_servant_html += '<img src="' + current_servant_img + '" class="' + img_class + '"/>';
             // Multiple Copy + Event Only Tag
             current_servant_html += '<div id="' + morecopy_prefix + current_servant.id + '" class="' + morecopy_class + '">';
@@ -740,27 +864,55 @@ function MakeData(servants_data) {
             // Close Element
             current_servant_html += '</div></div>';
             // Add to main list
+			var item = $(current_servant_html);
 			if (!IsClassmode())
 			{
-				current_html += current_servant_html;
+				$(current_element).append(item);
+				//current_html += current_servant_html;
+				// Bind Element 
+				$(current_element).on("click", "#" + current_servant.id , function() {
+					memBerClick(this);
+				});	
+				$(current_element).on("contextmenu", "#" + current_servant.id , function() {
+					memBerRightClick(this);
+					return false;
+				});	
 			}
 			else
 			{
-				$(current_element + '_' + current_servant.class).append(current_servant_html);
+				$(current_element + '_' + current_servant.class).append(item);
+				// Bind Element 
+				$(current_element + '_' + current_servant.class).on("click", "#" + current_servant.id , function() {
+					memBerClick(this);
+				});	
+				$(current_element + '_' + current_servant.class).on("contextmenu", "#" + current_servant.id , function() {
+					memBerRightClick(this);
+					return false;
+				});	
 			}
+			
         }
         // Update List Div
-		if (!IsClassmode())
-		{
-			$(current_element).html(current_html);
-		}
+		//if (!IsClassmode())
+		//{
+		//	$(current_element).html(current_html);
+		//}
     }
     // Refresh, Close Loading Modal
     $.when.apply(null, list_img).done(function() {
         for (var aa = 0, ll = list_box.length; aa < ll; aa++) {
             var current_box = list_box[aa];
             $(current_box + box_fake_subfix).hide();
-            $(current_box).show();
+			if (!IsClassmode())
+			{
+				$(current_box).show();
+				$(current_box + "-" + class_divide_class).hide();
+			}
+			else
+			{
+				$(current_box + "-" + class_divide_class).show();
+				$(current_box).hide();
+			}
         }
 		// Count
 		updateCountHTML();
@@ -965,21 +1117,21 @@ $(document).ready(function() {
 		dataAdapter: customAdapter,
 		data: copy_choice_allow
 	});
+	var MashuSR_input = urlParams.get(mashuSR_parameter);
 	var fastmode_input = urlParams.get(fastmode_parameter);
 	var classmode_input = urlParams.get(classmode_parameter);
 	compress_input = urlParams.get(compress_input_parameter);
 	
-	
-	// FastMode
-	if (fastmode_input != null) {
-		var fastmode_enable = (parseInt(fastmode_input) > 0);
-		$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
+	// Mashu is SR
+	if (MashuSR_input != null) {
+		var Mashu_IS_SR = (parseInt(MashuSR_input) > 0);
+		$('#' + mashuSR_checkbox).prop('checked', Mashu_IS_SR);
 	}
 	else {
-		// FastMode
-		if (localStorage[fast_mode_local]) {
-			var fastmode_enable = (parseInt(localStorage[fast_mode_local]) > 0);
-			$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
+		// ClassMode
+		if (localStorage[mashuSR_local]) {
+			var Mashu_IS_SR = (parseInt(localStorage[mashuSR_local]) > 0);
+			$('#' + mashuSR_checkbox).prop('checked', Mashu_IS_SR);
 		}
 	}
 	
@@ -993,6 +1145,19 @@ $(document).ready(function() {
 		if (localStorage[class_mode_local]) {
 			var classmode_enable = (parseInt(localStorage[class_mode_local]) > 0);
 			$('#' + classmode_checkbox).prop('checked', classmode_enable);
+		}
+	}
+	
+	// FastMode
+	if (fastmode_input != null) {
+		var fastmode_enable = (parseInt(fastmode_input) > 0);
+		$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
+	}
+	else {
+		// FastMode
+		if (localStorage[fast_mode_local]) {
+			var fastmode_enable = (parseInt(localStorage[fast_mode_local]) > 0);
+			$('#' + fastmode_checkbox).prop('checked', fastmode_enable);
 		}
 	}
 	
@@ -1032,11 +1197,28 @@ $(document).ready(function() {
 		UpdateURLOptionModeOnly();
 	});
 	$('#' + classmode_checkbox).change(function () {
-		UpdateURLOptionModeOnly();
+		UpdateClassMode();
+	});
+	$('#' + mashuSR_checkbox).change(function () {
+		UpdateClassMode();
+	});
+	
+	// Set Modal Closing Event
+	$("#addModal").on("hidden.bs.modal", function () {
+		current_edit = "";
+		current_edit_ele = null;
+	});
+	$("#updateModal").on("hidden.bs.modal", function () {
+		current_edit = "";
+		current_edit_ele = null;
 	});
 });
 
 function finish_loading() {
+	// Clear Contents
+	$( ".listbox" ).hide();
+	$( ".listbox_class" ).hide();
+	$( ".listbox_fake" ).show();
 	// Convert User Data from Input
     var array_input = raw_user_input.split(",");
     for (var ii = 0, li = array_input.length; ii < li; ii++) {
@@ -1047,9 +1229,9 @@ function finish_loading() {
     }
 	// Update URL
 	UpdateURL();
-    // Ajax
-    $.ajax({
-        url: datapath,
+    // Ajax; Class Data
+	$.ajax({
+        url: dataclasspath,
         contentType: "application/json",
         dataType: "json",
         cache: false,
@@ -1058,9 +1240,31 @@ function finish_loading() {
                 xhr.overrideMimeType("application/json");
             }
         },
-        success: function(result) {
-            // Load Data to Variable
-            MakeData(result);
+        success: function(outer_result) {
+			// Inject Class Data
+			class_data_list = outer_result;
+			// Ajax; Servant Data
+            $.ajax({
+				url: IsMashuSR()? datapath_alternate : datapath,
+				contentType: "application/json",
+				dataType: "json",
+				cache: false,
+				beforeSend: function(xhr) {
+					if (xhr.overrideMimeType) {
+						xhr.overrideMimeType("application/json");
+					}
+				},
+				success: function(result) {
+					// Load Data to Variable
+					MakeData(result);
+				},
+				error: function(result) {
+					// Alert
+					alert("Not working!!");
+					// Close Loading Modal
+					$('#loadingModal').modal('hide')
+				}
+			});
         },
         error: function(result) {
             // Alert
@@ -1079,8 +1283,9 @@ function ToggleEventIcon() {
 // Short URL
 //=============================================================================================================================
 function shareURL(site) {
+	var current_compress_input = get_compress_input();
 	// Check for Existing Key
-	$.getJSON(endpoint + "/checkback/" + compress_input, function (get_data) {
+	$.getJSON(endpoint + "/checkback/" + current_compress_input, function (get_data) {
 		exisiting_data = get_data["result"];
 		if (exisiting_data != null) {
 			var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + short_input_parameter + "=" + exisiting_data;
@@ -1091,12 +1296,12 @@ function shareURL(site) {
 			$.ajax({
 				'url': endpoint + url_data_part + key,
 				'type': 'POST',
-				'data': JSON.stringify(compress_input),
+				'data': JSON.stringify(current_compress_input),
 				'dataType': 'json',
 				'contentType': 'application/json; charset=utf-8',
 				'success': function(data){
 					$.ajax({
-						'url': endpoint + url_checkback_part + compress_input,
+						'url': endpoint + url_checkback_part + current_compress_input,
 						'type': 'POST',
 						'data': JSON.stringify(key),
 						'dataType': 'json',

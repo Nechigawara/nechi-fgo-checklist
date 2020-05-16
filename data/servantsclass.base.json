@@ -1,0 +1,28 @@
+{
+	"shielder" : {
+		"name": "Shielder",
+		"iconlist" : {
+			"sr" : "shielder/icon-gold.png",
+			"rare" : "shielder/icon-silver.png"
+		}
+	},
+	"saber" : {
+		"name": "Saber",
+		"iconlist" : {
+			"ssr" : "saber/icon-gold.png",
+			"sr" : "saber/icon-gold.png",
+			"rare" : "saber/icon-silver.png",
+			"uncommon" : "saber/icon-bronze.png",
+			"common" : "saber/icon-bronze.png"
+		}
+	},
+	"avenger" : {
+		"name": "Avenger",
+		"iconlist" : {
+			"ssr" : "avenger/icon-gold.png",
+			"sr" : "avenger/icon-gold.png",
+			"rare" : "avenger/icon-silver.png",
+			"none" : "avenger/icon-black.png"
+		}
+	}
+}
