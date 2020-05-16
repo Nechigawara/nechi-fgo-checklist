@@ -9,10 +9,12 @@ Library Use:
 * Select2 + Select2 Bootstrap Theme
 * html2canvas
 * lz-string
+* TinyURL API from https://codepen.io/Ephellon/pen/EvvGGp
 
 External Sevice Use:
 * imgur
-* jsonstore.io
+* jsonstore.io (obsolete)
+* TinyURL
 
 What to do:
 * Improve the site as I see fit?
