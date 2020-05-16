@@ -81,6 +81,14 @@ div.member-np {
 	1px 1px 10px #ccc;
 }
 
+div.member-mashu {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+	color: #aaa;
+	text-shadow:1px 1px 10px #000, 1px 1px 10px #ccc;
+}
+
 div.member-locked {
     position: absolute;
     bottom: 5%;

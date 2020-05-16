@@ -29,6 +29,7 @@
 	<script src="js/lib/select2.full.min.js" crossorigin="anonymous"></script>
 	<script src="js/lib/lz-string.min.js" crossorigin="anonymous"></script>
 	<script src="js/lib/html2canvas.min.js" crossorigin="anonymous"></script>
+	<script src="js/lib/tinyURL.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- Start -->
@@ -37,7 +38,7 @@
 <nav class="navbar navbar-dark bg-secondary">
   <span class="navbar-brand" href="#">
     <img src="img/DSGO.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Nechigawara's FGO Servant Checklist with NP Count
+    Nechigawara's FGO Servant Checklist with NP Count 2.0
   </span>
   <ul class="nav navbar-nav ml-auto">
 	<li class="nav-item">
@@ -48,12 +49,10 @@
 <!-- Content -->
 <div class="container body-content" style="padding-top: 10px;">
 	<div class="alert alert-warning">
-		<strong>Attention!  The site may load a little bit long on first visit for Images caching.</strong> I revamp how compress URL & Shorten URL works on the site.
+		<strong>Attention!  The site may load a little bit long on first visit for Images caching.</strong>
 		<ul>
-			<li>Your compressed URL will be update when the page load. Please bookmark the new url and remove the old one.</li>
-			<li class="text-danger">Old Shorted URL (Start with "?ss=") doesn't work anymore</li>
-			<li>New Shorted URL (Start with "?skey=") will stay the same as long as your data not change. Or until the storage site deleted it.</li>
-			<li>New Shorted URL will not save the site option such as Fast mode. Please use compressed URL. Mashu Option is excluded and will be included.</li>
+			<li>Add Class Categorize & Mashu ★4 SR Option.</li>
+			<li>Share option change to <a href="https://tinyurl.com/" target="_blank">TinyURL</a>.</li>
 		</ul>
 	</div>
 	<div class="card">
@@ -200,7 +199,8 @@
 	<div id="note">
 		Note:
 		<ul>
-			<li><i class="fas fa-lock"></i> = Unlockable Servants</li>
+			<li><i class="fas fa-shield-alt"></i> = Starter Servants</li>
+			<li><i class="fas fa-lock"></i> = Story Unlock Servants</li>
 			<li><i class="fas fa-star"></i> = Limited Servants</li>
 			<li><i class="fas fa-gift"></i> = Event Reward</li>
 		</ul>

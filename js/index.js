@@ -41,9 +41,10 @@ var class_img_path = "img/classes/";
 var servant_type_box_class = "member-type";
 var sevent_typelist = [
 	{ "id": 0, "show": false, "eventonly": false, "ctext": null, "class": null }, // Default
-	{ "id": 1, "show": true, "eventonly": false, "ctext": '<i class="fas fa-lock"></i>', "class": "member-locked" }, // Story Locked
-	{ "id": 2, "show": true, "eventonly": false, "ctext": '<i class="fas fa-star"></i>', "class": "member-limited" }, // Limited
-	{ "id": 3, "show": true, "eventonly": true, "ctext": '<i class="fas fa-gift"></i>', "class": "member-eventonly" } // Event Prizes
+	{ "id": 1, "show": true, "eventonly": false, "ctext": '<i class="fas fa-shield-alt"></i>', "class": "member-mashu" }, // Mashu
+	{ "id": 2, "show": true, "eventonly": false, "ctext": '<i class="fas fa-lock"></i>', "class": "member-locked" }, // Story Locked
+	{ "id": 3, "show": true, "eventonly": false, "ctext": '<i class="fas fa-star"></i>', "class": "member-limited" }, // Limited
+	{ "id": 4, "show": true, "eventonly": true, "ctext": '<i class="fas fa-gift"></i>', "class": "member-eventonly" } // Event Prizes
 ];
 
 // Confirm
@@ -52,6 +53,7 @@ var member_clear_conf = "Are you sure you want to clear all checked servants?";
 
 // Share
 var share_text = "This is your current shorted URL. Can't guarantee how long the shorted URL will last (Use free data storage service 😜).<br/>So please keep Full URL in a safe place (Bookmark, ETC.)."
+var share_none_text = "There is nothing to share."
 
 // Statistic
 var statistic_area = "statisticBox";
@@ -467,9 +469,13 @@ function getClassModeURLstring() {
 	return "";
 }
 
-function getMashuSRURLstring() {
+function getMashuSRURLstring(allowZero) {
 	if (IsMashuSR()) {
 		return mashuSR_parameter + "=1";
+	}
+	else if (allowZero)
+	{
+		return mashuSR_parameter + "=0";
 	}
 	return "";
 }
@@ -507,7 +513,7 @@ function UpdateURL() {
 	}
 	
 	// Mashu is SR
-	var mashuSR_str = getMashuSRURLstring();
+	var mashuSR_str = getMashuSRURLstring(false);
 	if (mashuSR_str != "") {
 		if (!new_parameter.startsWith("?")) {
 			new_parameter = "?";
@@ -557,7 +563,7 @@ function UpdateURLOptionModeOnly() {
 	var urlParams = null;
 	
 	// Option Check
-	var mashuSR_str = getMashuSRURLstring();
+	var mashuSR_str = getMashuSRURLstring(false);
 	var mashuSR_input = "";
 	
 	var classmode_str = getClassModeURLstring();
@@ -695,7 +701,7 @@ function UpdateClassMode() {
 // Get compress_input
 function get_compress_input()
 {
-	var MashuIsSR = getMashuSRURLstring();
+	var MashuIsSR = getMashuSRURLstring(false);
 	if (MashuIsSR)
 	{
 		return compress_input + "&" + MashuIsSR;
@@ -1128,7 +1134,7 @@ $(document).ready(function() {
 		$('#' + mashuSR_checkbox).prop('checked', Mashu_IS_SR);
 	}
 	else {
-		// ClassMode
+		// Mashu is SR
 		if (localStorage[mashuSR_local]) {
 			var Mashu_IS_SR = (parseInt(localStorage[mashuSR_local]) > 0);
 			$('#' + mashuSR_checkbox).prop('checked', Mashu_IS_SR);
@@ -1283,6 +1289,26 @@ function ToggleEventIcon() {
 // Short URL
 //=============================================================================================================================
 function shareURL(site) {
+	if (compress_input == "")
+	{
+		bootbox.alert(share_none_text);
+		return;
+	}
+	// Make Share URL
+	var full_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + compress_input_parameter + "=" + compress_input;
+	var mashuSR_str = getMashuSRURLstring(true);
+	if (mashuSR_str != "")
+	{
+		full_url += "&" + mashuSR_str
+	}
+	// URL Compress
+	tinyurl(full_url, () => {
+		shareURL_Do(site, tinyurl.url);
+    });
+};
+
+
+function shareURL_old(site) {
 	var current_compress_input = get_compress_input();
 	// Check for Existing Key
 	$.getJSON(endpoint + "/checkback/" + current_compress_input, function (get_data) {
