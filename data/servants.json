@@ -936,6 +936,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/2htHbs9.png"
+			},
+			{
+				"id": "5-0W",
+				"name": "Voyager",
+				"class": "foreigner",
+				"game_id": "281",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Z4w9GOG.png"
 			}
 		]
 	},
@@ -2036,6 +2046,16 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AClFtK4.png"
+			},
+			{
+				"id": "4-0m",
+				"name": "Kijyo Kōyō",
+				"class": "berserker",
+				"game_id": "282",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/PWTdU9H.png"
 			}
 		]
 	},
