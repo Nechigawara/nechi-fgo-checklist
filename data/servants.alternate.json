@@ -2071,7 +2071,7 @@
 				"id": "4-0n",
 				"name": "Utsumi Erice",
 				"class": "lancer",
-				"game_id": null,
+				"game_id": 283,
 				"maxcopy": 5,
 				"stype": 4,
 				"img": true,
