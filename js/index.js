@@ -89,8 +89,18 @@ var save_text = "Would you like to save current list data? This will overwrite t
 var load_fin_text = "List Loaded";
 var save_fin_text = "List Saved";
 
+var load_fail_text = "Error when Loding Data";
+
 var load_btn = "loadbutton";
 var save_btn = "savebutton";
+
+var file_hidden_id = "theFile";
+var save_file_btn = "savebutton_f";
+var save_file_text = "Would you like to save current list data?";
+
+var export_header = "thisisfgochecklist_data";
+var export_header_sperater = ":";
+var export_filename = "fgo_checklist.fgol";
 
 // Global Variables
 var servants_data_list = {};
@@ -506,10 +516,12 @@ function UpdateURL() {
 		new_parameter += compress_input_parameter + "=" + compress_input;
 		// Button
 		$('#' + save_btn).prop('disabled', false);
+		$('#' + save_file_btn).prop('disabled', false);
 	}
 	else {
 		compress_input = null;
 		$('#' + save_btn).prop('disabled', true);
+		$('#' + save_file_btn).prop('disabled', true);
 	}
 	
 	// Mashu is SR
@@ -1040,12 +1052,7 @@ function loadLocalData() {
 				// Show Loading Modal
 				$('#loadingModal').modal('show');
 				// Load List
-				compress_input = localStorage[list_local];
-				raw_user_input = LZString.decompressFromEncodedURIComponent(compress_input);
-				// Update HTML
-				finish_loading();
-				// Alert
-				bootbox.alert(load_fin_text, null);
+				loadDataDo(localStorage[list_local]);
 			}
 			else {
 				if (raw_user_input == null)
@@ -1086,10 +1093,96 @@ function saveLocalData() {
     });
 }
 
+function openFileOption()
+{
+	document.getElementById(file_hidden_id).click();
+}
+
+function loadLocalFile() {
+	var input = document.getElementById(file_hidden_id);
+	 if (input.files && input.files[0]) {
+        var reader = new FileReader();
+		
+		reader.onload = function (e) {
+			var getFile = reader.result;
+			var n_txt = getFile.startsWith(export_header + export_header_sperater);
+			if (n_txt) {
+				var res = getFile.replace(export_header + export_header_sperater, "");
+				return loadDataDo(res); 
+			}
+			else {
+				// Alert
+				return bootbox.alert(load_fail_text, null);
+			}
+        }
+
+        reader.readAsText(input.files[0]);
+    }
+}
+
+function loadDataDo(getresult) {
+		// Get Value
+		compress_input = getresult;
+		if (compress_input == null || compress_input == undefined) {
+			compress_input = null
+			bootbox.alert(load_fail_text, null);
+			return;
+		}
+		// Get Raw
+		raw_user_input = LZString.decompressFromEncodedURIComponent(compress_input);
+		// Error; Stop
+		if (raw_user_input == null || raw_user_input == undefined) {
+			raw_user_input = null;
+			bootbox.alert(load_fail_text, null);
+			return;
+		}
+		// Update HTML
+		finish_loading();
+		// Alert
+		bootbox.alert(load_fin_text, null);
+}
+
+function saveLocalFile() {
+	// Update URL First
+	UpdateURL();
+	// Confirm if compress_input not null
+	if (compress_input == null) return;
+	// Confirm 
+	bootbox.confirm({
+        message: save_text,
+        buttons: {
+            cancel: {
+                label: '<i class="fa fa-times"></i> Cancel'
+            },
+            confirm: {
+                label: '<i class="fa fa-check"></i> Confirm'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+				saveLocalFileDo(compress_input);
+			}
+        }
+    });
+}
+
+function saveLocalFileDo() {
+  var blob = new Blob([export_header + export_header_sperater + compress_input], {
+    type: "text/plain;charset=utf-8"
+  });
+  saveAs(blob, export_filename);
+}
+
 // Onload
 $(document).ready(function() {
 	// Show Loading Modal
     $('#loadingModal').modal('show');
+	
+	// Load File Prepare
+	$("#" + file_hidden_id).change(function(){
+		loadLocalFile();
+	});
+	
 	// URL Params
 	var urlParams = new URLSearchParams(window.location.search);
 	// URL Redirect; New
