@@ -15,6 +15,7 @@ External Sevice Use:
 * imgur
 * jsonstore.io (obsolete)
 * TinyURL
+* FileSaver.js
 
 What to do:
 * Improve the site as I see fit?
