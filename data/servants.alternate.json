@@ -1210,6 +1210,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Z4w9GOG.png"
+			},
+			{
+				"id": "5-0X",
+				"name": "Artoria (Caster)",
+				"class": "caster",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": null
 			}
 		]
 	},
