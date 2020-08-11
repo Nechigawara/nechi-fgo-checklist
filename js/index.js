@@ -37,6 +37,9 @@ var class_div_icon_class = "col-1 class_icon_box";
 var class_div_list_class = "col";
 var class_img_path = "img/classes/";
 
+var class_count_have = "class_have_";
+var class_count_max = "class_max_";
+
 // Servant Type
 var servant_type_box_class = "member-type";
 var sevent_typelist = [
@@ -132,6 +135,8 @@ var own_data_eachclass = {};
 
 var own_data_notevent = {};
 var own_data_eachclass_notevent = {};
+
+var max_data_eachclass = {};
 
 var JumpToTarget = null;
 
@@ -831,6 +836,7 @@ function MakeData(servants_data) {
         // list get
         var current_rarity = servants_data[aa];
 		var current_key = current_rarity.list_id;
+		
 		// Skip if Disable
 		if (current_rarity.disable) {
 			continue;
@@ -870,8 +876,16 @@ function MakeData(servants_data) {
 			var list_class_available = current_rarity.class_available;
 			var current_class_html = "";
 			for (var bb = 0, bb_s = list_class_available.length; bb < bb_s; bb++) {
+				
 				// Class Var
 				var current_class = list_class_available[bb];
+				
+				// Make Max Data
+				if (typeof max_data_eachclass[current_key] === "undefined") {
+					max_data_eachclass[current_key] = {};
+				}
+				max_data_eachclass[current_key][current_class] = 0;
+				
 				// Prepare Div
 				current_class_html += '<div class="row" id="' + current_key + "_" + current_class + '">';
 				current_class_html += '<div class="' + class_div_icon_class + '" style="text-align: center">';
@@ -883,6 +897,12 @@ function MakeData(servants_data) {
 				
 				var current_class_data_icn_ele = '<img src="' + current_class_data_icn + '" class="' + img_class + '" title="' + current_class_data.name + '" data-toggle="tooltip-member" data-placement="bottom"/>';
 				current_class_html += current_class_data_icn_ele;
+				
+				// Class  Basic Count
+				current_class_html += "<div>";
+				current_class_html += '<span id="' + class_count_have + current_key + "_" + current_class + '">0</span>/'
+				current_class_html += '<span id="' + class_count_max + current_key + "_" + current_class + '">0</span>'
+				current_class_html += "</div>";
 				
 				// All + None Button
 				//current_class_html += '<div class="btn-group btn-group-xs" role="group">'
@@ -922,6 +942,9 @@ function MakeData(servants_data) {
             var current_servant_img = '';
 			
 			// Count Data: All
+			if (IsClassmode()) {
+				max_data_eachclass[current_key][current_servant.class] += 1;
+			}
 			//rarity_count_data.allcount.max += 1;
 			//rarity_count_data.allcount.list[current_key].max += 1;
 			//if (current_user_data != null) {
@@ -1108,6 +1131,23 @@ function updateCountHTML() {
 		$("#" + r_noteventcount.list_element + "NotEventHave").html(rarity_base_NotEvent);
 		$("#" + r_noteventcount.list_element + "NotEventPercent").html(parseFloat(Math.round(r_NotEventPercent * 100) / 100).toFixed(2));
     }
+	
+	// Class
+	for (var curr_rare in max_data_eachclass) {
+		for (var curr_class in max_data_eachclass[curr_rare]) {
+			
+			var curr_class_have = 0;
+			
+			if (own_data_eachclass.hasOwnProperty(curr_rare)) {
+				if (own_data_eachclass[curr_rare].hasOwnProperty(curr_class)) {
+					curr_class_have = own_data_eachclass[curr_rare][curr_class].length;
+				}
+			}
+			
+			$("#" + class_count_have + curr_rare + "_" + curr_class).html(curr_class_have);
+			$("#" + class_count_max + curr_rare + "_" + curr_class).html(max_data_eachclass[curr_rare][curr_class]);
+		}
+	}
 }
 
 // Clear
