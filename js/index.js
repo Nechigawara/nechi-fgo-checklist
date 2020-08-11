@@ -1240,6 +1240,10 @@ function loadLocalFile() {
 }
 
 function loadDataDo(getresult) {
+		// Clear User Data
+		user_data = {};
+		compress_input = "";
+		raw_user_input = "";
 		// Get Value
 		compress_input = getresult;
 		if (compress_input == null || compress_input == undefined) {
