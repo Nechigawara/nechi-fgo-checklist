@@ -33,7 +33,7 @@ var share_title = "See My Servants Here!!";
 
 // Class Config
 var class_divide_class = "ByClass";
-var class_div_icon_class = "col-1";
+var class_div_icon_class = "col-1 class_icon_box";
 var class_div_list_class = "col";
 var class_img_path = "img/classes/";
 
@@ -133,6 +133,8 @@ var own_data_eachclass = {};
 var own_data_notevent = {};
 var own_data_eachclass_notevent = {};
 
+var JumpToTarget = null;
+
 // Global Objects
 var customAdapter = null;
 var list_new = null;
@@ -161,6 +163,14 @@ $.fn.select2.amd.define('select2/data/customAdapter', ['select2/data/array', 'se
         return CustomDataAdapter;
     }
 );
+
+function jumpTo(){
+	if (JumpToTarget === null) {
+		return;
+	}
+    document.getElementById(JumpToTarget).scrollIntoView();   //Even IE6 supports this
+	JumpToTarget = null; 
+}
 
 function orderKeys(not_sorted) {
 
@@ -311,6 +321,10 @@ function memBerRightClick(s_element) {
 	userDataUpdateFast(id, -1, s_element);
 }
 
+function userDataRemoveDo(id) {
+	delete user_data[id];
+}
+
 function userDataRemove() {
 	// Prevent Blank Key
 	if (current_edit == "" || current_edit_ele == null) {
@@ -333,7 +347,7 @@ function userDataRemove() {
 				var current_user_data = getUserData(current_edit);
 				// Delete User Data
 				if (current_user_data != null) {
-					delete user_data[current_edit];
+					userDataRemoveDo(current_edit);
 				}
 				// Update Count
 				count_update(current_edit, -1, true);
@@ -436,7 +450,7 @@ function userDataUpdateFast(id, val, s_element) {
 			// Update Count
 			count_update(id, -1, true);
 			// Clear Number
-			delete user_data[id];
+			userDataRemoveDo(id);
 		}
 		else {
 			// Update user data
@@ -859,8 +873,8 @@ function MakeData(servants_data) {
 				// Class Var
 				var current_class = list_class_available[bb];
 				// Prepare Div
-				current_class_html += '<div class="row">';
-				current_class_html += '<div class="' + class_div_icon_class + '">';
+				current_class_html += '<div class="row" id="' + current_key + "_" + current_class + '">';
+				current_class_html += '<div class="' + class_div_icon_class + '" style="text-align: center">';
 				
 				// Class Icon
 				var current_class_data = class_data_list[current_class];
@@ -869,6 +883,14 @@ function MakeData(servants_data) {
 				
 				var current_class_data_icn_ele = '<img src="' + current_class_data_icn + '" class="' + img_class + '" title="' + current_class_data.name + '" data-toggle="tooltip-member" data-placement="bottom"/>';
 				current_class_html += current_class_data_icn_ele;
+				
+				// All + None Button
+				//current_class_html += '<div class="btn-group btn-group-xs" role="group">'
+				current_class_html += '<button type="button" class="btn btn-outline-primary btn-xs" onclick="SelectAllData(false, ' + "'" + 
+					current_key + "', '" + current_class + "'" +')">All</button>';
+				current_class_html += '<button type="button" class="btn btn-outline-danger btn-xs" onclick="SelectAllData(true, ' +  "'" + 
+					current_key + "', '"+ current_class + "'" +')">None</button>'
+				//current_class_html += "</div>";
 				
 				//current_class_html += current_class;  //Test
 				current_class_html += "</div>";
@@ -1026,6 +1048,7 @@ function MakeData(servants_data) {
 		// ToolTip + Box
 		$('[data-toggle="tooltip-member"]').tooltip();
         $('#loadingModal').modal('hide');
+		jumpTo();
     });
 }
 
@@ -1436,7 +1459,7 @@ $(document).ready(function() {
 	});
 });
 
-function SelectAllData() {
+function SelectAllData(isRevert, input_rarity, input_class) {
 	// Confirm 
 	bootbox.confirm({
         message: select_all_text,
@@ -1450,15 +1473,17 @@ function SelectAllData() {
         },
         callback: function (result) {
             if (result) {
-				SelectAllDataDo();
+				SelectAllDataDo(isRevert, input_rarity, input_class);
 			}
         }
     });
 }
 
-function SelectAllDataDo() {	
+function SelectAllDataDo(isRevert, input_rarity, input_class) {	
+	
 	// Open Loading Modal
 	$('#loadingModal').modal('show')
+	
 	// Ajax; Servant Data
 	$.ajax({
 		url: IsMashuSR()? datapath_alternate : datapath,
@@ -1472,20 +1497,67 @@ function SelectAllDataDo() {
 		},
 		success: function(result) {
 			var servants_data = result;
-			// Update User Input 
-			for (var aa = 0, ll = servants_data.length; aa < ll; aa++) {
-				// list get
-				var current_rarity = servants_data[aa];
-				var current_list = current_rarity.list;
-		
-				for (var i = 0, l = current_list.length; i < l; i++) {
+			
+			if (typeof input_rarity !== "undefined" && typeof input_class !== "undefined") {
+				
+				// Create Jump Target
+				JumpToTarget = input_rarity + "_" + input_class;
+				
+				// Make List
+				var tem_list = servants_data.filter(function(item) {
+					return item.list_id === input_rarity;
+				})
+				//console.log(tem_list);
+				var current_list = tem_list[0].list;
+				
+				for (var i = 0, l = current_list.length; i < l; i++) {	
 					var current_servant = current_list[i];
 					
-					if (typeof user_data[current_servant.id] === "undefined") {
-						user_data[current_servant.id] = 1
+					if (current_servant.class === input_class) {
+						
+						if (isRevert) {
+							if (typeof user_data[current_servant.id] !== "undefined") {
+								userDataRemoveDo(current_servant.id);
+							}
+						}
+						else 
+						{
+							if (typeof user_data[current_servant.id] === "undefined") {
+								user_data[current_servant.id] = 1;
+							}
+						}
 					}
 				}
 			}
+			else {
+				
+				// Update User Input 
+				for (var aa = 0, ll = servants_data.length; aa < ll; aa++) {
+					// list get
+					var current_rarity = servants_data[aa];
+					var current_list = current_rarity.list;
+		
+					for (var i = 0, l = current_list.length; i < l; i++) {
+						var current_servant = current_list[i];
+					
+						if (isRevert) {
+							if (typeof user_data[current_servant.id] !== "undefined") {
+								userDataRemoveDo(current_servant.id);
+							}
+						}
+						else 
+						{
+							if (typeof user_data[current_servant.id] === "undefined") {
+								user_data[current_servant.id] = 1;
+							}
+						}
+
+					}
+				}				
+			}
+			
+			// Clear Raw Input
+			raw_user_input = null;
 			// Send to Finish
 			finish_loading(result);
 		},
@@ -1505,13 +1577,16 @@ function finish_loading(servant_pass_data) {
 	$( ".listbox_fake" ).show();
 		
 	// Convert User Data from Input
-    var array_input = raw_user_input.split(",");
-    for (var ii = 0, li = array_input.length; ii < li; ii++) {
-        var current_split = array_input[ii].split(">");
-		if (current_split[0] != "" && current_split[1] != "") {
-			user_data[current_split[0]] = parseInt(current_split[1]);
+	if (raw_user_input !== null)
+	{
+		var array_input = raw_user_input.split(",");
+		for (var ii = 0, li = array_input.length; ii < li; ii++) {
+			var current_split = array_input[ii].split(">");
+			if (current_split[0] != "" && current_split[1] != "") {
+				user_data[current_split[0]] = parseInt(current_split[1]);
+			}
 		}
-    }
+	}
 	// Update URL
 	UpdateURL();
     // Ajax; Class Data

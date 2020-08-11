@@ -8,6 +8,17 @@
 	background-color: #908067 !important;
 }
 
+.btn-group-xs > .btn, .btn-xs {
+  padding: .20rem .3rem;
+  font-size: .775rem;
+  line-height: .4;
+  border-radius: .1.5rem;
+}
+
+.class_icon_box {
+  border-right: 1px dashed #333;
+}
+
 div.member-outer {
     padding: 3px;
     margin: 0;
