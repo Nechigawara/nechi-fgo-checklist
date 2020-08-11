@@ -1020,7 +1020,7 @@
 			{
 				"id": "4-5",
 				"name": "EMIYA",
-				"class": "Archer",
+				"class": "archer",
 				"game_id": "11",
 				"maxcopy": 5,
 				"stype": 0,

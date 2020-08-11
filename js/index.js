@@ -52,8 +52,11 @@ var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
 var member_clear_conf = "Are you sure you want to clear all checked servants?";
 
 // Share
-var share_text = "This is your current shorted URL. Can't guarantee how long the shorted URL will last (Use free data storage service 😜).<br/>So please keep Full URL in a safe place (Bookmark, ETC.)."
+var share_text = "This is your current shorted URL. Can't guarantee how long the shorted URL will last (Use free data storage service 😜).<br/>So please keep Full URL or Backup File in a safe place (Bookmark, ETC.)."
 var share_none_text = "There is nothing to share."
+
+// Select Text
+var select_all_text = "The change cannot be revert. Continue?"
 
 // Statistic
 var statistic_area = "statisticBox";
@@ -123,6 +126,12 @@ var compress_input = "";
 
 var current_edit = "";
 var current_edit_ele = null;
+
+var own_data = {};
+var own_data_eachclass = {};
+
+var own_data_notevent = {};
+var own_data_eachclass_notevent = {};
 
 // Global Objects
 var customAdapter = null;
@@ -327,7 +336,7 @@ function userDataRemove() {
 					delete user_data[current_edit];
 				}
 				// Update Count
-				count_update(current_edit, -1);
+				count_update(current_edit, -1, true);
 				// Update Member Element
 				$('#' + current_edit).removeClass(member_class_checked);
 				// Update Value on List
@@ -345,16 +354,65 @@ function userDataRemove() {
     });
 }
 
-function count_update(id, val) {
+function count_update(id, val, showloading) {
+	
 	var current_edit_eventonly = servants_data_list[id].eventonly;
+	var current_edit_class = servants_data_list[id].class;
 	var current_key = servants_data_list[id].key;
-	// Update Count
-	rarity_count_data.allcount.have += val;
-	rarity_count_data.allcount.list[current_key].have += val;
-	if (!current_edit_eventonly) {
-		rarity_count_data.noteventcount.have += val;
-		rarity_count_data.noteventcount.list[current_key].have += val;
+	
+
+	// Check if Key Exist
+	if (!(current_key in own_data) ) {
+		own_data[current_key] = [];
+		own_data_eachclass[current_key] = {};
+		own_data_notevent[current_key] = [];
+		own_data_eachclass_notevent[current_key] = {};
 	}
+	// Check if Class Exist
+	if (!(current_edit_class in own_data_eachclass[current_key]) ) {
+		own_data_eachclass[current_key][current_edit_class] = [];
+		own_data_eachclass_notevent[current_key][current_edit_class] = [];
+	}
+	
+	// Update Count
+	if (val === -1) {
+		own_data[current_key] = own_data[current_key].filter(function(item) {
+			return item !== id
+		})
+		own_data_eachclass[current_key][current_edit_class] = own_data_eachclass[current_key][current_edit_class].filter(function(item) {
+			return item !== id
+		})
+		if (!current_edit_eventonly) {
+			own_data_notevent[current_key] = own_data_notevent[current_key].filter(function(item) {
+				return item !== id
+			})
+			own_data_eachclass_notevent[current_key][current_edit_class] = own_data_eachclass_notevent[current_key][current_edit_class].filter(function(item) {
+				return item !== id
+			})
+		}
+	}
+	else {
+		own_data[current_key].push(id);
+		own_data_eachclass[current_key][current_edit_class].push(id);
+		if (!current_edit_eventonly) {
+			own_data_notevent[current_key].push(id);
+			own_data_eachclass_notevent[current_key][current_edit_class].push(id);
+		}
+	}
+	
+	if (showloading) {
+		// Show Loading Modal
+		//$('#loadingModal').modal('hide');
+		//alert(own_data[current_key].length);
+	}
+	
+	// Update Count
+	//rarity_count_data.allcount.have += val;
+	//rarity_count_data.allcount.list[current_key].have += val;
+	//if (!current_edit_eventonly) {
+	//	rarity_count_data.noteventcount.have += val;
+	//	rarity_count_data.noteventcount.list[current_key].have += val;
+	//}
 }
 
 function userDataUpdateFast(id, val, s_element) {
@@ -376,7 +434,7 @@ function userDataUpdateFast(id, val, s_element) {
 			// Update Value on List
 			UpdateCopyVal(id, 0, s_element);
 			// Update Count
-			count_update(id, -1);
+			count_update(id, -1, true);
 			// Clear Number
 			delete user_data[id];
 		}
@@ -400,7 +458,7 @@ function userDataUpdateFast(id, val, s_element) {
 			// Add user data
 			user_data[id] = 1;
 			// Update Count
-			count_update(id, 1);
+			count_update(id, 1, true);
 			// Update Member Element
 			$(s_element).addClass(member_class_checked);
 		}
@@ -436,7 +494,7 @@ function userDataUpdate() {
 		// Add user data
 		user_data[current_edit] = new_val;
 		// Update Count
-		count_update(current_edit, 1);
+		count_update(current_edit, 1, true);
 		// Update Member Element
 		$('#' + current_edit).addClass(member_class_checked);
 		// Update Value on List
@@ -733,11 +791,18 @@ function MakeData(servants_data) {
 	$( ".listbox" ).html("");
 	$( ".listbox_class" ).html("");
 	//$( "." + morecopy_class).html("");
-	morecopy_class
+	//morecopy_class
+	
+	// Reset Value
 	rarity_count_data.allcount.max = 0;
 	rarity_count_data.noteventcount.max = 0;
-	rarity_count_data.allcount.have = 0;
-	rarity_count_data.noteventcount.have = 0;
+	//rarity_count_data.allcount.have = 0;
+	//rarity_count_data.noteventcount.have = 0;
+	own_data = {};
+	own_data_eachclass = {};
+
+	own_data_notevent = {};
+	own_data_eachclass_notevent = {};
 	
     // Draw Button & Create User Data
     var list_box = [];
@@ -756,17 +821,27 @@ function MakeData(servants_data) {
 		if (current_rarity.disable) {
 			continue;
 		}
+		
 		// Count Data Prepare
+		var tem_list = current_rarity.list.filter(function(item) {
+			var current_servant_type = sevent_typelist[item.stype];
+			return !current_servant_type.eventonly;
+		})
+		
 		rarity_count_data.allcount.list[current_key] = {
 			"list_element": current_rarity.list_element,
-			"max": 0,
-			"have": 0
+			"max": current_rarity.list.length,
+			//"have": 0
 		};
+		rarity_count_data.allcount.max += current_rarity.list.length;
+
 		rarity_count_data.noteventcount.list[current_key] = {
 			"list_element": current_rarity.list_element,
-			"max": 0,
-			"have": 0
+			"max": tem_list.length,
+			//"have": 0
 		};
+		
+		rarity_count_data.noteventcount.max += tem_list.length;
 		
 		// Prepare Var for Member Loop
         var current_list = current_rarity.list;
@@ -815,28 +890,40 @@ function MakeData(servants_data) {
 			var current_type = sevent_typelist[current_servant.stype];
 			servants_data_list[current_servant.id] = current_list[i];
 			servants_data_list[current_servant.id].key = current_key;
+			servants_data_list[current_servant.id].class = current_servant.class;
 			servants_data_list[current_servant.id].eventonly = current_type.eventonly; 
+			
 			// Prepare
 			var current_user_data = getUserData(current_servant.id);
             var current_servant_html = '<div class="' + member_class_grid + '"><div';
             var current_servant_class = ' class="' + member_class;
             var current_servant_img = '';
+			
 			// Count Data: All
-			rarity_count_data.allcount.max += 1;
-			rarity_count_data.allcount.list[current_key].max += 1;
-			if (current_user_data != null) {
-				rarity_count_data.allcount.have += 1;
-				rarity_count_data.allcount.list[current_key].have += 1;
-			}
+			//rarity_count_data.allcount.max += 1;
+			//rarity_count_data.allcount.list[current_key].max += 1;
+			//if (current_user_data != null) {
+			//	rarity_count_data.allcount.have += 1;
+			//	rarity_count_data.allcount.list[current_key].have += 1;
+			//}
+			
 			// Count Data: Exclude Event Prize
-			if (!current_servant.eventonly) {
-				rarity_count_data.noteventcount.max += 1;
-				rarity_count_data.noteventcount.list[current_key].max += 1;
-				if (current_user_data != null) {
-					rarity_count_data.noteventcount.have += 1;
-					rarity_count_data.noteventcount.list[current_key].have += 1;
-				}
+			//if (!current_servant.eventonly) {
+				//rarity_count_data.noteventcount.max += 1;
+				//rarity_count_data.noteventcount.list[current_key].max += 1;
+				//if (current_user_data != null) {
+				//	rarity_count_data.noteventcount.have += 1;
+				//	rarity_count_data.noteventcount.list[current_key].have += 1;
+				//}
+			//}
+			
+			// Update Real Count Data
+			if (current_user_data != null) {
+				//rarity_count_data.allcount.have += 1;
+				//rarity_count_data.allcount.list[current_key].have += 1;
+				count_update(current_servant.id, 1, false);
 			}
+			
             // Create Servant Element
             current_servant_html += ' id="' + current_servant.id + '" title="' + current_servant.name + '"';
 			current_servant_html += ' data-toggle="tooltip-member" data-placement="bottom"';
@@ -898,7 +985,7 @@ function MakeData(servants_data) {
 			}
 			else
 			{
-				$(current_element + '_' + current_servant.class).append(item);
+				$(current_element + '_' + current_servant["class"]).append(item);
 				// Bind Element 
 				$(current_element + '_' + current_servant.class).on("click", "#" + current_servant.id , function() {
 					memBerClick(this);
@@ -944,29 +1031,58 @@ function MakeData(servants_data) {
 
 // Update Count HTML
 function updateCountHTML() {
+	
+	// Prepare Temp Int
+	var all_base = 0;
+	for (var key in own_data) {
+		if (own_data.hasOwnProperty(key)) {
+			all_base += own_data[key].length;
+		}
+	}
+	
+	var all_base_NotEvent = 0;
+	for (var key in own_data_notevent) {
+		if (own_data_notevent.hasOwnProperty(key)) {
+			all_base_NotEvent += own_data_notevent[key].length;
+		}
+	}
+	
 	// All Rarity
-	var AllPercent = Number(rarity_count_data.allcount.have / rarity_count_data.allcount.max * 100);
+	var AllPercent = Number(all_base / rarity_count_data.allcount.max * 100);
 	$("#" + statistic_area + "AllMax").html(rarity_count_data.allcount.max);
-	$("#" + statistic_area + "AllHave").html(rarity_count_data.allcount.have);
+	$("#" + statistic_area + "AllHave").html(all_base);
 	$("#" + statistic_area + "AllPercent").html(parseFloat(Math.round(AllPercent * 100) / 100).toFixed(2));
-	var NotEventPercent = Number(rarity_count_data.noteventcount.have / rarity_count_data.noteventcount.max * 100);
+	var NotEventPercent = Number(all_base_NotEvent / rarity_count_data.noteventcount.max * 100);
 	$("#" + statistic_area + "NotEventMax").html(rarity_count_data.noteventcount.max);
-	$("#" + statistic_area + "NotEventHave").html(rarity_count_data.noteventcount.have);
+	$("#" + statistic_area + "NotEventHave").html(all_base_NotEvent);
 	$("#" + statistic_area + "NotEventPercent").html(parseFloat(Math.round(NotEventPercent * 100) / 100).toFixed(2));
+	
 	// Each Rarity
 	for (var prop in rarity_count_data.allcount.list) {
-        // skip loop if the property is from prototype
+		// skip loop if the property is from prototype
         if(!rarity_count_data.allcount.list.hasOwnProperty(prop)) continue;
+		
+		// Prepare Temp Int
+		var rarity_base = 0;
+		if (own_data.hasOwnProperty(prop)) {
+			rarity_base = own_data[prop].length;
+		}
+	
+		var rarity_base_NotEvent = 0;
+		if (own_data_notevent.hasOwnProperty(prop)) {
+			rarity_base_NotEvent = own_data_notevent[prop].length;
+		}
+
 		// all & notevent
 		var r_allcount = rarity_count_data.allcount.list[prop];
-		var r_AllPercent = Number(r_allcount.have / r_allcount.max * 100);
+		var r_AllPercent = Number(rarity_base / r_allcount.max * 100);
 		$("#" + r_allcount.list_element + "AllMax").html(r_allcount.max);
-		$("#" + r_allcount.list_element + "AllHave").html(r_allcount.have);
+		$("#" + r_allcount.list_element + "AllHave").html(rarity_base);
 		$("#" + r_allcount.list_element + "AllPercent").html(parseFloat(Math.round(r_AllPercent * 100) / 100).toFixed(2));
 		var r_noteventcount = rarity_count_data.noteventcount.list[prop];
-		var r_NotEventPercent = Number(r_noteventcount.have / r_noteventcount.max * 100);
+		var r_NotEventPercent = Number(rarity_base_NotEvent / r_noteventcount.max * 100);
 		$("#" + r_noteventcount.list_element + "NotEventMax").html(r_noteventcount.max);
-		$("#" + r_noteventcount.list_element + "NotEventHave").html(r_noteventcount.have);
+		$("#" + r_noteventcount.list_element + "NotEventHave").html(rarity_base_NotEvent);
 		$("#" + r_noteventcount.list_element + "NotEventPercent").html(parseFloat(Math.round(r_NotEventPercent * 100) / 100).toFixed(2));
     }
 }
@@ -987,12 +1103,15 @@ function ClearAllData() {
         callback: function (result) {
             if (result) {
 				// Remove all checked Element
-				$('div.' + member_class_checked +' > div.' + morecopy_class).html('');
-				$('div.' + member_class_checked).removeClass(member_class_checked);
+				//$('div.' + member_class_checked +' > div.' + morecopy_class).html('');
+				//$('div.' + member_class_checked).removeClass(member_class_checked);
 				// Clear User Data
 				user_data = {};
 				// Update Raw Input & URL
-				UpdateURL();
+				//UpdateURL();
+				compress_input = "";
+				raw_user_input = "";
+				finish_loading();
 			}
         }
     });
@@ -1313,11 +1432,74 @@ $(document).ready(function() {
 	});
 });
 
-function finish_loading() {
+function SelectAllData() {
+	// Confirm 
+	bootbox.confirm({
+        message: select_all_text,
+        buttons: {
+            cancel: {
+                label: '<i class="fa fa-times"></i> Cancel'
+            },
+            confirm: {
+                label: '<i class="fa fa-check"></i> Confirm'
+            }
+        },
+        callback: function (result) {
+            if (result) {
+				SelectAllDataDo();
+			}
+        }
+    });
+}
+
+function SelectAllDataDo() {	
+	// Open Loading Modal
+	$('#loadingModal').modal('show')
+	// Ajax; Servant Data
+	$.ajax({
+		url: IsMashuSR()? datapath_alternate : datapath,
+		contentType: "application/json",
+		dataType: "json",
+		cache: false,
+		beforeSend: function(xhr) {
+			if (xhr.overrideMimeType) {
+				xhr.overrideMimeType("application/json");
+			}
+		},
+		success: function(result) {
+			var servants_data = result;
+			// Update User Input 
+			for (var aa = 0, ll = servants_data.length; aa < ll; aa++) {
+				// list get
+				var current_rarity = servants_data[aa];
+				var current_list = current_rarity.list;
+		
+				for (var i = 0, l = current_list.length; i < l; i++) {
+					var current_servant = current_list[i];
+					
+					if (typeof user_data[current_servant.id] === "undefined") {
+						user_data[current_servant.id] = 1
+					}
+				}
+			}
+			// Send to Finish
+			finish_loading(result);
+		},
+		error: function(result) {
+			// Alert
+			alert("Not working!!");
+			// Close Loading Modal
+			$('#loadingModal').modal('hide')
+		}
+	});
+}
+
+function finish_loading(servant_pass_data) {
 	// Clear Contents
 	$( ".listbox" ).hide();
 	$( ".listbox_class" ).hide();
 	$( ".listbox_fake" ).show();
+		
 	// Convert User Data from Input
     var array_input = raw_user_input.split(",");
     for (var ii = 0, li = array_input.length; ii < li; ii++) {
@@ -1342,6 +1524,14 @@ function finish_loading() {
         success: function(outer_result) {
 			// Inject Class Data
 			class_data_list = outer_result;
+			
+			// If Passing
+			if (typeof servant_pass_data !== "undefined") {
+				// Load Data to Variable
+				MakeData(servant_pass_data);
+				return;
+			}
+			
 			// Ajax; Servant Data
             $.ajax({
 				url: IsMashuSR()? datapath_alternate : datapath,
