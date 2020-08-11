@@ -70,7 +70,7 @@
 					<input type="checkbox" class="form-check-input" id="classmode">
 					<label class="form-check-label" for="classmode">Divide List By Servant Class</label>
 				</div>
-								<div class="form-group form-check">
+				<div class="form-group form-check">
 					<input type="checkbox" class="form-check-input" id="fastmode">
 					<label class="form-check-label" for="fastmode">Fast Mode (Left & Right Click Only)</label>
 				</div>
@@ -78,6 +78,8 @@
 				<!-- button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Disable for Padoru" disabled>Export as Image (Slow)</button -->
 				<button type="button" class="btn btn-info" onclick="ExportCanvas()">Export as Image (Slow)</button>
 				<button type="button" class="btn btn-danger" onclick="ClearAllData()">Clear</button>
+				<hr/>
+				<button type="button" class="btn btn-primary" onclick="SelectAllData()">Select All Servants with 1 NP (Not Effect already selected)</button>
 			</form>
 			<hr/>
 			<form>
@@ -148,7 +150,7 @@
 		<div class="card" style="margin-top: 10px;">
 			<div class="card-header bg-warning header-shadow">★5 SSR</div>
 			<div class="card-body">
-				<div class="row" id="ssrBox" style="display:none;"></div>
+				<div class="row listbox" id="ssrBox" style="display:none;"></div>
 				<div class="listbox_class" id="ssrBox-ByClass" style="display:none;"></div>
 				<div class="row" id="ssrBoxFake">
 					<div class="col">Loading...</div>
