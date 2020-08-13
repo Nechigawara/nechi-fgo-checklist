@@ -456,6 +456,7 @@ function userDataUpdateFast(id, val, s_element) {
 			count_update(id, -1, true);
 			// Clear Number
 			userDataRemoveDo(id);
+			
 		}
 		else {
 			// Update user data
@@ -472,6 +473,8 @@ function userDataUpdateFast(id, val, s_element) {
 			$(s_element).addClass(member_class_checked);
 			// Update Value on List
 			UpdateCopyVal(id, user_data[id], s_element);
+			// Update Count
+			count_update(id, 1, true);
 		}
 		else {
 			// Add user data
