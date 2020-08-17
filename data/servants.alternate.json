@@ -956,6 +956,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/VBhKHsI.png"
+			},
+			{
+				"id": "5-0Y",
+				"name": "Sesshōin Kiara (Moon Cancer)",
+				"class": "mooncancer",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": null
 			}
 		]
 	},
@@ -2086,6 +2096,26 @@
 				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/jbts1Lm.png"
+			},
+			{
+				"id": "4-0o",
+				"name": "Illyasviel von Einzbern (Archer)",
+				"class": "archer",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": null
+			},
+			{
+				"id": "4-0p",
+				"name": "Brynhildr (Berserker)",
+				"class": "berserker",
+				"game_id": ,
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": null
 			}
 		]
 	},
