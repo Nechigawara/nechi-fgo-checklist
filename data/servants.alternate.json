@@ -951,7 +951,7 @@
 				"id": "5-0X",
 				"name": "Artoria Caster",
 				"class": "caster",
-				"game_id": null,
+				"game_id": "284",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
@@ -961,11 +961,11 @@
 				"id": "5-0Y",
 				"name": "Sesshōin Kiara (Moon Cancer)",
 				"class": "mooncancer",
-				"game_id": null,
+				"game_id": "285",
 				"maxcopy": 5,
 				"stype": 3,
-				"img": false,
-				"imgpath": null
+				"img": true,
+				"imgpath": "https://i.imgur.com/EgcYV5m.png"
 			}
 		]
 	},
@@ -2091,7 +2091,7 @@
 				"id": "4-0n",
 				"name": "Utsumi Erice",
 				"class": "lancer",
-				"game_id": 283,
+				"game_id": "283",
 				"maxcopy": 5,
 				"stype": 4,
 				"img": true,
@@ -2101,21 +2101,31 @@
 				"id": "4-0o",
 				"name": "Illyasviel von Einzbern (Archer)",
 				"class": "archer",
-				"game_id": null,
+				"game_id": "286",
 				"maxcopy": 5,
 				"stype": 3,
-				"img": false,
-				"imgpath": null
+				"img": true,
+				"imgpath": "https://i.imgur.com/1GHRQ96.png"
 			},
 			{
 				"id": "4-0p",
 				"name": "Brynhildr (Berserker)",
 				"class": "berserker",
-				"game_id": null,
+				"game_id": "287",
 				"maxcopy": 5,
 				"stype": 3,
-				"img": false,
-				"imgpath": null
+				"img": true,
+				"imgpath": "https://i.imgur.com/5Zb2lJI.png"
+			},
+			{
+				"id": "4-0q",
+				"name": "Yu Miaoyi (Lancer)",
+				"class": "lancer",
+				"game_id": "288",
+				"maxcopy": 5,
+				"stype": 4,
+				"img": true,
+				"imgpath": "https://i.imgur.com/kz1efz4.png"
 			}
 		]
 	},
