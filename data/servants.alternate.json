@@ -966,6 +966,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/9uwxBAS.png"
+			},
+			{
+				"id": "5-0Z",
+				"name": "Abigail Williams (Summer)",
+				"class": "foreigner",
+				"game_id": "289",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/WMM1bCb.png"
 			}
 		]
 	},
@@ -2126,6 +2136,26 @@
 				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/iFEeaSa.png"
+			},
+			{
+				"id": "4-0r",
+				"name": "Tomoe Gozen (Saber)",
+				"class": "saber",
+				"game_id": "290",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/bHZcJi6.png"
+			},
+			{
+				"id": "4-0s",
+				"name": "Murasaki Shikibu (Rider)",
+				"class": "rider",
+				"game_id": "291",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/3G2LxLb.png"
 			}
 		]
 	},
