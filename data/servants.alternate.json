@@ -976,6 +976,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/WMM1bCb.png"
+			},
+			{
+				"id": "5-0a",
+				"name": "Himiko",
+				"class": "ruler",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
@@ -2156,6 +2166,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/3G2LxLb.png"
+			},
+			{
+				"id": "4-0t",
+				"name": "Saitō Hajime",
+				"class": "saber",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": false,
+				"imgpath": "
 			}
 		]
 	},
@@ -2886,6 +2906,16 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AjouoOf.png"
+			},
+			{
+				"id": "1-A",
+				"name": "Oda Nobukatsu",
+				"class": "archer",
+				"game_id": "",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": false,
+				"imgpath": ""
 			}
 		]
 	},
