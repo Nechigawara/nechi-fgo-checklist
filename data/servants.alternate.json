@@ -981,11 +981,11 @@
 				"id": "5-0a",
 				"name": "Himiko",
 				"class": "ruler",
-				"game_id": "",
+				"game_id": "292",
 				"maxcopy": 5,
 				"stype": 3,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/8ADA3N8.png"
 			}
 		]
 	},
@@ -2171,11 +2171,11 @@
 				"id": "4-0t",
 				"name": "Saitō Hajime",
 				"class": "saber",
-				"game_id": "",
+				"game_id": "293",
 				"maxcopy": 5,
 				"stype": 3,
-				"img": false,
-				"imgpath": ""
+				"img": true,
+				"imgpath": "https://i.imgur.com/uvO1amY.png"
 			}
 		]
 	},
@@ -2911,11 +2911,11 @@
 				"id": "1-A",
 				"name": "Oda Nobukatsu",
 				"class": "archer",
-				"game_id": "",
+				"game_id": "294",
 				"maxcopy": 5,
-				"stype": 0,
-				"img": false,
-				"imgpath": ""
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/aZb2D0u.png"
 			}
 		]
 	},
