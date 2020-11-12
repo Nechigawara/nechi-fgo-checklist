@@ -986,6 +986,26 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/8ADA3N8.png"
+			},
+			{
+				"id": "5-0b",
+				"name": "Van Gogh",
+				"class": "foreigner",
+				"game_id": "295",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/RWYZypm.png"
+			},
+			{
+				"id": "5-0c",
+				"name": "Nemo",
+				"class": "rider",
+				"game_id": "296",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/f2V5sHh.png"
 			}
 		]
 	},
