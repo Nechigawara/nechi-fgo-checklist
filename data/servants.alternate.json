@@ -1270,6 +1270,16 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/f2V5sHh.png"
+			},
+			{
+				"id": "5-0d",
+				"name": "Ashiya Dōman",
+				"class": "alterego",
+				"game_id": "297",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/JzZrJSS.png"
 			}
 		]
 	},
@@ -2720,6 +2730,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/uvO1amY.png"
+			},
+			{
+				"id": "4-0u",
+				"name": "Watanabe no Tsuna",
+				"class": "saber",
+				"game_id": "298",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Pf8lkp7.png"
 			}
 		]
 	},
