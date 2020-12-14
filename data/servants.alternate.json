@@ -1016,6 +1016,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/JzZrJSS.png"
+			},
+			{
+				"id": "5-0e",
+				"name": "Ibuki Dōji",
+				"class": "saber",
+				"game_id": "299",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/WRSI3Oy.png"
 			}
 		]
 	},
