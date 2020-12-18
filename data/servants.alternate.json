@@ -1026,6 +1026,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/WRSI3Oy.png"
+			},
+			{
+				"id": "5-0f",
+				"name": "Vritra",
+				"class": "lancer",
+				"game_id": "300",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/VXPYla8.png"
 			}
 		]
 	},
@@ -2226,6 +2236,16 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Pf8lkp7.png"
+			},
+			{
+				"id": "4-0v",
+				"name": "Karna (Santa)",
+				"class": "saber",
+				"game_id": "301",
+				"maxcopy": 5,
+				"stype": 4,
+				"img": true,
+				"imgpath": "https://i.imgur.com/2xGPm4D.png"
 			}
 		]
 	},
