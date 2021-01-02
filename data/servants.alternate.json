@@ -1036,6 +1036,16 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/VXPYla8.png"
+			},
+			{
+				"id": "5-0g",
+				"name": "Senji Muramasa",
+				"class": "saber",
+				"game_id": "302",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/aoflxai.png"
 			}
 		]
 	},
