@@ -1056,6 +1056,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/zcp0oub.png"
+			},
+			{
+				"id": "5-0i",
+				"name": "Caren C Hortensia (Amor Caren)",
+				"class": "ruler",
+				"game_id": "305",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/npPDiq5.png"
 			}
 		]
 	},
