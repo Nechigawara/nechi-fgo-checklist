@@ -1066,6 +1066,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/npPDiq5.png"
+			},
+			{
+				"id": "5-0j",
+				"name": "Galatea",
+				"class": "berserker",
+				"game_id": "306",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/kXLiQjP.png"
 			}
 		]
 	},
