@@ -1076,6 +1076,16 @@
 				"stype": 0,
 				"img": true,
 				"imgpath": "https://i.imgur.com/kXLiQjP.png"
+			},
+			{
+				"id": "5-0k",
+				"name": "Miss Crane",
+				"class": "caster",
+				"game_id": "306",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/WLFAuOw.png"
 			}
 		]
 	},
@@ -2296,6 +2306,16 @@
 				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/sKIKJYC.png"
+			},
+			{
+				"id": "4-0x",
+				"name": "Mysterious Idol X (Alter)",
+				"class": "foreigner",
+				"game_id": "308",
+				"maxcopy": 5,
+				"stype": 4,
+				"img": true,
+				"imgpath": "https://i.imgur.com/TmyLZQF.png"
 			}
 		]
 	},
