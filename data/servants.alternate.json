@@ -1086,6 +1086,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/WLFAuOw.png"
+			},
+			{
+				"id": "5-0l",
+				"name": "Morgan le Fay ",
+				"class": "berserker",
+				"game_id": "309",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/OfAkmex.png"
 			}
 		]
 	},
@@ -2316,6 +2326,26 @@
 				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/TmyLZQF.png"
+			},
+			{
+				"id": "4-0y",
+				"name": "Fairy Knight Gawain",
+				"class": "saber",
+				"game_id": "310",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/1LICEHv.png"
+			},
+			{
+				"id": "4-0z",
+				"name": "Fairy Knight Tristan",
+				"class": "archer",
+				"game_id": "311",
+				"maxcopy": 5,
+				"stype": 2,
+				"img": true,
+				"imgpath": "https://i.imgur.com/qXcAIv6.png"
 			}
 		]
 	},
