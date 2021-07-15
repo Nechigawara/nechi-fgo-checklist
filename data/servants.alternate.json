@@ -1089,13 +1089,23 @@
 			},
 			{
 				"id": "5-0l",
-				"name": "Morgan le Fay ",
+				"name": "Morgan le Fay",
 				"class": "berserker",
 				"game_id": "309",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/OfAkmex.png"
+			},
+			{
+				"id": "5-0m",
+				"name": "Fairy Knight Lancelot ",
+				"class": "lancer",
+				"game_id": "312",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/EdZ8Mbu.png"
 			}
 		]
 	},
@@ -2346,6 +2356,16 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/qXcAIv6.png"
+			},
+			{
+				"id": "4-10",
+				"name": "Percival",
+				"class": "lancer",
+				"game_id": "313",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/43FbLDu.png"
 			}
 		]
 	},
