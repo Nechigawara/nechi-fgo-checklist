@@ -1099,13 +1099,23 @@
 			},
 			{
 				"id": "5-0m",
-				"name": "Fairy Knight Lancelot ",
+				"name": "Fairy Knight Lancelot",
 				"class": "lancer",
 				"game_id": "312",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/EdZ8Mbu.png"
+			},
+			{
+				"id": "5-0n",
+				"name": "Koyanskaya of Light",
+				"class": "assassin",
+				"game_id": "314",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/IgDFhAn.png"
 			}
 		]
 	},
