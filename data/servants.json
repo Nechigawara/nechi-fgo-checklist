@@ -2373,7 +2373,7 @@
 				"class": "rider",
 				"game_id": "315",
 				"maxcopy": 5,
-				"stype": 3,
+				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/osStLLM.png"
 			}
