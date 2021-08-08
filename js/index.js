@@ -1606,7 +1606,7 @@ function SelectAllDataDo(isRevert, input_rarity, input_class) {
 		},
 		error: function(result) {
 			// Alert
-			alert("Not working!!");
+			alert("Not working : Can't Select All Data!!");
 			// Close Loading Modal
 			$('#loadingModal').modal('hide')
 		}
@@ -1671,7 +1671,7 @@ function finish_loading(servant_pass_data) {
 				},
 				error: function(result) {
 					// Alert
-					alert("Not working!!");
+					alert("Not working!! : Can't Cache Servant Data on Ajax");
 					// Close Loading Modal
 					$('#loadingModal').modal('hide')
 				}
@@ -1679,7 +1679,7 @@ function finish_loading(servant_pass_data) {
         },
         error: function(result) {
             // Alert
-            alert("Not working!!");
+            alert("Not working!! : Can't Cache Servant Class Data on Ajax");
             // Close Loading Modal
             $('#loadingModal').modal('hide')
         }
