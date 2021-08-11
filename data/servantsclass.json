@@ -112,5 +112,12 @@
 			"ssr" : "foreigner/icon-gold.png",
 			"sr" : "foreigner/icon-gold.png"
 		}
+	},
+	"pretender" : {
+		"name": "Pretender",
+		"iconlist" : {
+			"ssr" : "pretender/icon-gold.png",
+			"sr" : "pretender/icon-gold.png"
+		}
 	}
 }
