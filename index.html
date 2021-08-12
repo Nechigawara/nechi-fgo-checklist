@@ -6,13 +6,13 @@
 	<link rel="icon" href="favicon.ico">
 	<!-- OG -->
 	<meta property="og:title"              content="Nechigawara's FGO Servant Checklist with NP Count" />
-	<meta property="og:description"        content="Just another FGO Servant Checklist, but with NP Count. I gonna try my best to update the list ASAP." />
+	<meta property="og:description"        content="Just another FGO Servant Checklist, but with NP Count. I'm gonna try my best to update the list ASAP." />
 	<meta property="og:image"              content="img/fgo-check-og.jpg" />
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@Nechigawara">
 	<meta name="twitter:creator" content="@Nechigawara">
 	<meta name="twitter:title" content="Nechigawara's FGO Servant Checklist with NP Count">
-	<meta name="twitter:description" content="Just another FGO Servant Checklist, but with NP Count. I gonna try my best to update the list ASAP.">
+	<meta name="twitter:description" content="Just another FGO Servant Checklist, but with NP Count. I'm gonna try my best to update the list ASAP.">
 	<meta name="twitter:image" content="img/fgo-check-og.jpg">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" crossorigin="anonymous">
@@ -50,11 +50,12 @@
 <!-- Content -->
 <div class="container body-content" style="padding-top: 10px;">
 	<div class="alert alert-warning">
-		<strong>Attention!  The site may load a little bit long on first visit for Images caching.</strong>
+		<strong>Attention! The site may take a while loading on first visit due to caching images.</strong><br />
+		Most recent changes:
 		<ul>
-			<li>Add Class Categorize & Mashu ★4 SR Option.</li>
-			<li>Share option change to <a href="https://tinyurl.com/" target="_blank">TinyURL</a>.</li>
-			<li>Now you can manually import/export the list as a file. Currently not support Option import/export.</li>
+			<li>Add Class Categorization & Mashu ★4 (SR) options.</li>
+			<li>Share option changed to <a href="https://is.gd/" target="_blank">Is.gd</a>.</li>
+			<li>Now you can manually import/export the list as a file. (Servant data only; options currently not supported.)</li>
 		</ul>
 	</div>
 	<div class="card">
@@ -91,9 +92,9 @@
 				<div style="display:none">
 					<input type="file" id="theFile" style="display:none" accept=".fgol"/>
 				</div>
-				This function required <a href="https://github.com/eligrey/FileSaver.js/#supported-browsers" target="_blank">supported browser</a>.<br/>
-				<button type="button" id="loadbutton_f" class="btn btn-info" onclick="openFileOption()">Load List from File</button>
-				<button type="button" id="savebutton_f" class="btn btn-success" onclick="saveLocalFile()" disabled>Save List to File</button>
+				This function requires a <a href="https://github.com/eligrey/FileSaver.js/#supported-browsers" target="_blank">supported browser</a>.<br/>
+				<button type="button" id="loadbutton_f" class="btn btn-info" onclick="openFileOption()">Load list from file</button>
+				<button type="button" id="savebutton_f" class="btn btn-success" onclick="saveLocalFile()" disabled>Save list to file</button>
 			</form>
 			<!-- Social Share -->
 			<hr/>
@@ -106,7 +107,7 @@
 				 <!-- Twitter -->
 				 <button type="button" class="btn twitter" onclick="shareURL('twitter')" data-toggle="tooltip" data-placement="bottom" title="Share to Twitter"><i class="fab fa-twitter"></i></button>
 				 <!-- Just Link -->
-				 <button type="button" class="btn btn-info" onclick="shareURL('')" data-toggle="tooltip" data-placement="bottom" title="Just Shorten URL"><i class="fas fa-link"></i></button>
+				 <button type="button" class="btn btn-info" onclick='window.open("http://is.gd/create.php?format=simple&amp;url="+encodeURIComponent(location.href),"_blank")' data-toggle="tooltip" data-placement="bottom" title="Just Shorten URL"><i class="fas fa-link"></i></button>
 			</div>
 			<!-- small>
 				<p>Changelog</p>
@@ -212,14 +213,14 @@
 	<div id="note">
 		Note:
 		<ul>
-			<li><i class="fas fa-shield-alt"></i> = Starter Servants</li>
+			<li><i class="fas fa-shield-alt"></i> = Starter Servant</li>
 			<li><i class="fas fa-lock"></i> = Story Unlock Servants</li>
 			<li><i class="fas fa-star"></i> = Limited Servants</li>
 			<li><i class="fas fa-gift"></i> = Event Reward</li>
 		</ul>
 	</div>
 	<div class="alert alert-info">
-		Sister sites those forked from this one.
+		Sister sites forked from this one.
 		<ul>
 			<li><a href="https://an-kishi.github.io/pricon-checklist/" target="_blank">Princess Connect Re:Dive Characters Checklist</a></li>
 		</ul>
@@ -231,7 +232,7 @@
     <p>
 		By Nechigawara Sanzenin. This aplication is licensed under <a href="https://github.com/Nechigawara/nechi-fgo-checklist/blob/master/LICENSE" target="_blank">MIT</a>.<br/>
 		Fate/Grand Order and related materials are registered trademarks and properties of TYPE-MOON, Marvelous Inc., and Aniplex Inc.<br/>
-		Images Host at <a href="https://imgur.com" target="_blank">imgur.com</a>.
+		Images hosted at <a href="https://imgur.com" target="_blank">imgur.com</a>.
 		<!-- Padoru Credit>
 		<span>BB Padoru by <a href="https://www.facebook.com/reichan.noshiyo" target="_blank">Rei Noshiyo</a></span-->
 	</p>
@@ -250,9 +251,9 @@
       <div class="modal-body">
 		<form>
 			<div class="form-group">
-				<label for="npAdd">NP You have currently</label>
+				<label for="npAdd">Current NP level</label>
 				<select class="form-control" id="npAdd"></select>
-				<small id="npAddHelp" class="form-text text-muted">How many time that you np uppraded this servant?</small>
+				<small id="npAddHelp" class="form-text text-muted">How many times have you upgraded this Servant's NP?</small>
 			</div>
 		</form>
       </div>
@@ -278,7 +279,7 @@
 			<div class="form-group">
 				<label for="npUpdate">NP You have currently</label>
 				<select class="form-control" id="npUpdate"></select>
-				<small id="npUpdateHelp" class="form-text text-muted">How many time that you np uppraded this servant?</small>
+				<small id="npUpdateHelp" class="form-text text-muted">How many times have you upgraded this Servant's NP?</small>
 			</div>
 		</form>
 		<hr/>
