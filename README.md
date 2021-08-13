@@ -1,5 +1,6 @@
 Just another FGO Servant Checklist, but with NP Count.
 I make it possible to use with other gasha game which use multiple copy fomula.
+https://nechigawara.github.io/nechi-fgo-checklist/
 
 Library Use:
 * jQuery
@@ -9,12 +10,12 @@ Library Use:
 * Select2 + Select2 Bootstrap Theme
 * html2canvas
 * lz-string
-* TinyURL API from https://codepen.io/Ephellon/pen/EvvGGp
 
 External Sevice Use:
 * imgur
 * jsonstore.io (obsolete)
-* TinyURL
+* TinyURL (obsolete)
+* is.gd
 * FileSaver.js
 
 What to do:
