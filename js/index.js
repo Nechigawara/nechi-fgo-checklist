@@ -1706,9 +1706,27 @@ function shareURL(site) {
 	{
 		full_url += "&" + mashuSR_str
 	}
-	// URL Compress
-	tinyurl(full_url, () => {
-		shareURL_Do(site, tinyurl.url);
+	// URL Compress ; TinyURL
+	//tinyurl(full_url, () => {
+	//	shareURL_Do(site, tinyurl.url);
+    //});
+	// URL Compress ; is.gd
+	$.ajax({
+        url: "https://is.gd/create.php",
+        dataType: "json",
+		data: { format : "json", url : full_url },
+        success: function(result) {
+			if (result.hasOwnProperty('errorcode')) {
+                alert("Not working!! : is.gd Error: " + result.errormessage);
+            }
+            else {
+                shareURL_Do(site, result.shorturl);
+            }
+        },
+        error: function(result) {
+            // Alert
+            alert("Not working!! : Can't connect to is.gd");
+        }
     });
 };
 
