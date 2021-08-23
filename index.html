@@ -6,13 +6,13 @@
 	<link rel="icon" href="favicon.ico">
 	<!-- OG -->
 	<meta property="og:title"              content="Nechigawara's FGO Servant Checklist with NP Count" />
-	<meta property="og:description"        content="Just another FGO Servant Checklist, but with NP Count. I gonna try my best to update the list ASAP." />
+	<meta property="og:description"        content="Just another FGO Servant Checklist, but with NP Count. I'm gonna try my best to update the list ASAP." />
 	<meta property="og:image"              content="img/fgo-check-og.jpg" />
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@Nechigawara">
 	<meta name="twitter:creator" content="@Nechigawara">
 	<meta name="twitter:title" content="Nechigawara's FGO Servant Checklist with NP Count">
-	<meta name="twitter:description" content="Just another FGO Servant Checklist, but with NP Count. I gonna try my best to update the list ASAP.">
+	<meta name="twitter:description" content="Just another FGO Servant Checklist, but with NP Count. I'm gonna try my best to update the list ASAP.">
 	<meta name="twitter:image" content="img/fgo-check-og.jpg">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" crossorigin="anonymous">
@@ -60,7 +60,7 @@
 	</div>
 	<div class="card">
 		<div class="card-body" style="text-align:center;">
-			<p>Just another FGO Servant Checklist, but with NP Count. I gonna try my best to update the list ASAP.</p>
+			<p>Just another FGO Servant Checklist, but with NP Count. I'm gonna try my best to update the list ASAP.</p>
 			<hr/>
 			<form>
 				<div class="form-group form-check">
@@ -80,12 +80,12 @@
 				<button type="button" class="btn btn-info" onclick="ExportCanvas()">Export as Image (Slow)</button>
 				<button type="button" class="btn btn-danger" onclick="ClearAllData()">Clear</button>
 				<hr/>
-				<button type="button" class="btn btn-primary" onclick="SelectAllData(false)">Select All Servants with 1 NP (Not Effect already selected)</button>
+				<button type="button" class="btn btn-primary" onclick="SelectAllData(false)">Mark <i>all</i> Servants as owned at NP1 (will not affect already selected Servants)</button>
 			</form>
 			<hr/>
 			<form>
-				<button type="button" id="loadbutton" class="btn btn-info" onclick="loadLocalData()" disabled>Load List from Current Browser</button>
-				<button type="button" id="savebutton" class="btn btn-success" onclick="saveLocalData()" disabled>Save List to Current Browser</button>
+				<button type="button" id="loadbutton" class="btn btn-info" onclick="loadLocalData()" disabled>Load list from current browser</button>
+				<button type="button" id="savebutton" class="btn btn-success" onclick="saveLocalData()" disabled>Save list to current crowser</button>
 			</form>
 			<hr/>
 			<form>
@@ -277,7 +277,7 @@
       <div class="modal-body">
         <form>
 			<div class="form-group">
-				<label for="npUpdate">NP You have currently</label>
+				<label for="npUpdate">Current NP level</label>
 				<select class="form-control" id="npUpdate"></select>
 				<small id="npUpdateHelp" class="form-text text-muted">How many times have you upgraded this Servant's NP?</small>
 			</div>
