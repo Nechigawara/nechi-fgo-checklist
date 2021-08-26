@@ -51,15 +51,15 @@ var sevent_typelist = [
 ];
 
 // Confirm
-var member_uncheck_conf = "Are you sure you want to uncheck this servant?";
-var member_clear_conf = "Are you sure you want to clear all checked servants?";
+var member_uncheck_conf = "Are you sure you want to uncheck this Servant?";
+var member_clear_conf = "Are you sure you want to clear all checked Servants?";
 
 // Share
-var share_text = "This is your current shorted URL. Can't guarantee how long the shorted URL will last (Use free data storage service 😜).<br/>So please keep Full URL or Backup File in a safe place (Bookmark, ETC.)."
+var share_text = "This is your current shortened URL:"
 var share_none_text = "There is nothing to share."
 
 // Select Text
-var select_all_text = "The change cannot be revert. Continue?"
+var select_all_text = "The change cannot be reverted. Continue?"
 
 // Statistic
 var statistic_area = "statisticBox";
@@ -89,20 +89,20 @@ var mashuSR_local = "fgo_mashu";
 
 var list_local = "fgo_list";
 
-var load_text = "List Data found on your current browser. Would you like to load it?";
-var save_text = "Would you like to save current list data? This will overwrite the old data if exist.";
+var load_text = "List data found on your current browser. Would you like to load it?";
+var save_text = "Would you like to save current list data? This will overwrite old data if it exists.";
 
-var load_fin_text = "List Loaded";
-var save_fin_text = "List Saved";
+var load_fin_text = "List loaded";
+var save_fin_text = "List saved";
 
-var load_fail_text = "Error when Loding Data";
+var load_fail_text = "Error loading data";
 
 var load_btn = "loadbutton";
 var save_btn = "savebutton";
 
 var file_hidden_id = "theFile";
 var save_file_btn = "savebutton_f";
-var save_file_text = "Would you like to save current list data?";
+var save_file_text = "Would you like to save the current list data?";
 
 var export_header = "thisisfgochecklist_data";
 var export_header_sperater = ":";
@@ -1187,7 +1187,7 @@ function ClearAllData() {
 function ExportCanvas() {
 	// Confirm
 	bootbox.confirm({
-        message: "Warning, Image result will not look exact like in the page. Capture Library problems.<br/>I recommend sharing the link or use external capture tool intead.<br/>Continue?",
+        message: "WARNING: Image result will not look exactly like in the page. (Capture library issues.)<br/>I recommend sharing the link or using an external capture tool instead.<br/>Continue?",
         buttons: {
             cancel: {
                 label: '<i class="fa fa-times"></i> Cancel'
@@ -1606,7 +1606,7 @@ function SelectAllDataDo(isRevert, input_rarity, input_class) {
 		},
 		error: function(result) {
 			// Alert
-			alert("Not working : Can't Select All Data!!");
+			alert("Error attempting to select all data!");
 			// Close Loading Modal
 			$('#loadingModal').modal('hide')
 		}
@@ -1671,7 +1671,7 @@ function finish_loading(servant_pass_data) {
 				},
 				error: function(result) {
 					// Alert
-					alert("Not working!! : Can't Cache Servant Data on Ajax");
+					alert("Error caching Servant Class Data on AJAX!");
 					// Close Loading Modal
 					$('#loadingModal').modal('hide')
 				}
@@ -1679,7 +1679,7 @@ function finish_loading(servant_pass_data) {
         },
         error: function(result) {
             // Alert
-            alert("Not working!! : Can't Cache Servant Class Data on Ajax");
+            alert("Error caching Servant Class Data on AJAX!");
             // Close Loading Modal
             $('#loadingModal').modal('hide')
         }
@@ -1717,7 +1717,7 @@ function shareURL(site) {
 		data: { format : "json", url : full_url },
         success: function(result) {
 			if (result.hasOwnProperty('errorcode')) {
-                alert("Not working!! : is.gd Error: " + result.errormessage);
+                alert("Error generating shortened URL! is.gd Error: " + result.errormessage);
             }
             else {
                 shareURL_Do(site, result.shorturl);
@@ -1725,7 +1725,7 @@ function shareURL(site) {
         },
         error: function(result) {
             // Alert
-            alert("Not working!! : Can't connect to is.gd");
+            alert("Error connecting to is.gd shortening service. Please try again later.");
         }
     });
 };
