@@ -1126,6 +1126,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/3IUvITG.png"
+			},
+			{
+				"id": "5-0p",
+				"name": "Okita Sōji (Saber Alter) ",
+				"class": "saber",
+				"game_id": "317",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/Ogs77uz.png"
 			}
 		]
 	},
@@ -2386,6 +2396,36 @@
 				"stype": 2,
 				"img": true,
 				"imgpath": "https://i.imgur.com/osStLLM.png"
+			},
+			{
+				"id": "4-12",
+				"name": "Anastasia & Viy",
+				"class": "archer",
+				"game_id": "318",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/bLLACUJ.png"
+			},
+			{
+				"id": "4-13",
+				"name": "Charlotte Corday (Caster)",
+				"class": "caster",
+				"game_id": "319",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/c2qP00k.png"
+			},
+			{
+				"id": "4-14",
+				"name": "Leonardo Da Vinci (Ruler)",
+				"class": "ruler",
+				"game_id": "320",
+				"maxcopy": 5,
+				"stype": 4,
+				"img": true,
+				"imgpath": "https://i.imgur.com/l9q7EX6.png"
 			}
 		]
 	},
