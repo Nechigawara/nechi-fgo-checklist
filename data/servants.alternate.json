@@ -1129,13 +1129,23 @@
 			},
 			{
 				"id": "5-0p",
-				"name": "Okita Sōji (Saber Alter) ",
+				"name": "Okita Sōji (Saber Alter)",
 				"class": "saber",
 				"game_id": "317",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/Ogs77uz.png"
+			},
+			{
+				"id": "5-0q",
+				"name": "Kama (Avenger)",
+				"class": "avenger",
+				"game_id": "321",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/yDNW98y.png"
 			}
 		]
 	},
@@ -2436,6 +2446,26 @@
 				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/l9q7EX6.png"
+			},
+			{
+				"id": "4-15",
+				"name": "Caenis (Rider)",
+				"class": "rider",
+				"game_id": "322",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/2j3AtdF.png"
+			},
+			{
+				"id": "4-16",
+				"name": "Sei Shōnagon (Berserker) ",
+				"class": "berserker",
+				"game_id": "323",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/AvL1eVU.png"
 			}
 		]
 	},
