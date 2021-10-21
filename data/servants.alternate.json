@@ -1146,6 +1146,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/yDNW98y.png"
+			},
+			{
+				"id": "5-0r",
+				"name": "Jacques de Molay",
+				"class": "foreigner",
+				"game_id": "324",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/F0t0n1a.png"
 			}
 		]
 	},
@@ -2459,13 +2469,33 @@
 			},
 			{
 				"id": "4-16",
-				"name": "Sei Shōnagon (Berserker) ",
+				"name": "Sei Shōnagon (Berserker)",
 				"class": "berserker",
 				"game_id": "323",
 				"maxcopy": 5,
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/AvL1eVU.png"
+			},
+			{
+				"id": "4-17",
+				"name": "Zenobia",
+				"class": "archer",
+				"game_id": "325",
+				"maxcopy": 5,
+				"stype": 0,
+				"img": true,
+				"imgpath": "https://i.imgur.com/hahvExA.png"
+			},
+			{
+				"id": "4-18",
+				"name": "Elizabeth Báthory (Cinderella)",
+				"class": "rider",
+				"game_id": "326",
+				"maxcopy": 5,
+				"stype": 4,
+				"img": true,
+				"imgpath": "https://i.imgur.com/h2VOVIg.png"
 			}
 		]
 	},
