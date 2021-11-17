@@ -1156,6 +1156,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/F0t0n1a.png"
+			},
+			{
+				"id": "5-0s",
+				"name": "Izumo no Okuni",
+				"class": "caster",
+				"game_id": "327",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/e3XLbRm.png"
 			}
 		]
 	},
@@ -2486,6 +2496,16 @@
 				"stype": 4,
 				"img": true,
 				"imgpath": "https://i.imgur.com/h2VOVIg.png"
+			},
+			{
+				"id": "4-19",
+				"name": "Mysterious Ranmaru X",
+				"class": "avenger",
+				"game_id": "328",
+				"maxcopy": 5,
+				"stype": 4,
+				"img": true,
+				"imgpath": "https://i.imgur.com/DQfYfFX.png"
 			}
 		]
 	},
