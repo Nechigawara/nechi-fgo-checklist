@@ -1166,6 +1166,16 @@
 				"stype": 3,
 				"img": true,
 				"imgpath": "https://i.imgur.com/e3XLbRm.png"
+			},
+			{
+				"id": "5-0t",
+				"name": "Sakamoto Ryōma (Lancer)",
+				"class": "lancer",
+				"game_id": "329",
+				"maxcopy": 5,
+				"stype": 3,
+				"img": true,
+				"imgpath": "https://i.imgur.com/PVRgkGA.png"
 			}
 		]
 	},
